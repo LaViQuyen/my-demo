@@ -1,0 +1,23 @@
+@if (isEditing) {
+  <app-label-on-map-editing
+    [question]="question"
+    [isEditing]="isEditing"
+  ></app-label-on-map-editing>
+}
+@if (isTesting) {
+  <app-label-on-map-testing
+    [question]="question"
+    [isTesting]="isTesting"
+    [(selectedId)]="selectedId"
+    [(selectedQuestionIndex)]="selectedQuestionIndex"
+    (onAnswer)="onAnswer.emit($event)"
+  ></app-label-on-map-testing>
+}
+
+@if (isReadOnly || (!isEditing && !isTesting)) {
+  <app-label-on-map-readonly
+    [question]="question"
+    [isReadOnly]="isReadOnly"
+  ></app-label-on-map-readonly>
+}
+

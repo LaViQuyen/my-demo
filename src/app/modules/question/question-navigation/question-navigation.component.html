@@ -1,0 +1,28 @@
+<div class="d-flex align-items-center">
+  <input
+    [checked]="selectedQuestionIndex() !== null && (selectedQuestionIndex() && selectedQuestionIndex()?.isReviewed)"
+    (change)="reviewQuestion()" type="checkbox" />
+  <label class="ms-1">Review</label>
+  <div class="d-flex question-nav">
+    @for (question of mapAnsweredById | keyvalue : returnZero; track question.key) {
+      @for (questionIndex of question.value; track questionIndex.index) {
+        <div
+          [ngClass]="{
+                'active': (selectedQuestionIndex() && questionIndex.index && questionIndex.index === selectedQuestionIndex()!.index) || (questionIndex.id && selectedId() && selectedId() === questionIndex.id),
+                'answered': questionIndex && questionIndex.isAnswer,
+                'rounded-circle': questionIndex.isReviewed
+                }"
+          (click)="onClickQuestion(question.key, questionIndex)"
+          class="question-index">
+          {{ questionIndex.index + 1 }}
+        </div>
+      }
+    }
+  </div>
+  <button class="navigation-btn previous" (click)="prev()">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+  <button class="navigation-btn next" (click)="next()">
+    <mat-icon>arrow_forward</mat-icon>
+  </button>
+</div>

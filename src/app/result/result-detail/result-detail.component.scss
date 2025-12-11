@@ -1,0 +1,63 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+.card {
+  height: 120px;
+  margin: 16px 0;
+  width: 400px;
+  align-items: stretch;
+}
+
+.search {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 16px;
+}
+
+.card-result-title {
+  display: flex;
+  margin: 0 0 0 10px;
+  line-height: 24px;
+  margin-left: 10px;
+  cursor: pointer;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-result-content {
+  cursor: pointer;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin: 16px 0;
+}
+
+.question-group {
+  margin: 16px 0 0 0;
+}
+
+.card-content {
+  width: 100%;
+  height: 100%;
+}
+
+.card-content-text {
+  line-height: 32px;
+  height: 64px;
+}
+
+.result {
+  text-align: left;
+  cursor: pointer;
+}
+
+.feedback-container {
+  width: 30%;
+  padding: 20px;
+  height: fit-content;
+}

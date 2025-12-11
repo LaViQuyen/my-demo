@@ -1,0 +1,37 @@
+<div class="question-group">
+  <angular-editor
+    name="questionContent"
+    [id]="question.id"
+    [config]="config"
+    [(ngModel)]="question.content"
+    (ngModelChange)="onPaste($event)"
+  ></angular-editor>
+  <div class="choice-group w-100">
+    @for (choice of question.choices; track $index) {
+      <div class="d-flex align-items-center w-100 mb-2">
+        <input [checked]="selectedChoice === choice.id" (click)="onSelectCorrectAnswer(choice.id)"
+               type="radio" />
+        <div class="mt-2 ms-2 w-100">
+                <textarea
+                  class="w-100"
+                  autocomplete="off"
+                  [disabled]="isReadOnly"
+                  [name]="choice.id"
+                  type="text"
+                  [(ngModel)]="choice.content"
+                ></textarea>
+        </div>
+        <mat-icon (click)="removeChoice($index)" color="warn">delete</mat-icon>
+      </div>
+    }
+  </div>
+  <button
+    mat-button
+    color="primary"
+    type="button"
+    (click)="addChoice()"
+  >
+    <mat-icon>add</mat-icon>
+    More option
+  </button>
+</div>

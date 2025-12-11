@@ -1,0 +1,88 @@
+<div class="d-flex">
+  <div class="container--left col-6">
+    @for (question of data.questions; track $index) {
+      <div class="paragraph">
+        <div class="input-answer mb-1">
+          <select
+            [disabled]="!mapEditingById[question.id]"
+            [(ngModel)]="question.correctAnswer"
+          >
+            @for (answer of data.answers; track $index) {
+              <option [value]="answer.id">
+                {{ answer.content }}
+              </option>
+            }
+          </select>
+        </div>
+        <div class="input-reading">
+          @if (mapEditingById[question.id]) {
+            <angular-editor
+              class="editor"
+              name="questionContent"
+              [id]="question.id"
+              [(ngModel)]="question.content"
+              (ngModelChange)="onPaste($event)"
+              [config]="config"
+            ></angular-editor>
+          } @else {
+            <span
+              class="reading-content"
+              [innerHTML]="question.content"
+            ></span>
+          }
+        </div>
+        <div class="d-flex align-items-center mb-3">
+          <button
+            mat-button
+            color="primary"
+            (click)="editContent(question.id)"
+          >
+            <mat-icon>
+              @if (mapEditingById[question.id]) {
+                save
+              } @else {
+                edit
+              }
+            </mat-icon>
+          </button>
+          <button mat-button color="warn" (click)="removeParagraph($index)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </div>
+      </div>
+    }
+    @if (!isSaved && !isTesting && !isReadOnly) {
+      <button mat-raised-button (click)="addParagraph()">
+        <mat-icon>add</mat-icon>
+        Add Paragraph
+      </button>
+    }
+  </div>
+  <!-- Container right -->
+  <div
+    id="container-right"
+    class="container--right ms-2"
+    [ngClass]="{ testing: isTesting }"
+  >
+    <angular-editor
+      [config]="config"
+      [(ngModel)]="data.content"
+    ></angular-editor>
+    <div>
+      @for (answer of data.answers; track $index) {
+        <div class="d-flex align-items-center mt-2">
+          <textarea class="w-100" [(ngModel)]="answer.content"></textarea>
+          <div class="question-actions">
+            <button mat-button color="warn" (click)="removeAnswer($index)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </div>
+        </div>
+      }
+    </div>
+    <button class="mt-2" mat-raised-button (click)="addAnswer()">
+      <mat-icon>add</mat-icon>
+      Add Heading
+    </button>
+  </div>
+</div>

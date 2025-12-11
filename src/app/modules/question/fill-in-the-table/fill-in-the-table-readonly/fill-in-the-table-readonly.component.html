@@ -1,0 +1,62 @@
+<div class="mt-2">
+  @if (question.tableContent) {
+    <b><span [innerHTML]="question.content"></span></b>
+    <div class="d-flex flex-column mt-3">
+      <table>
+        <th [colSpan]="headerColSpan">
+          <p class="my-2">
+            {{ question.name }}
+          </p>
+        </th>
+        @for (row of question.tableContent! | keyvalue; track $index; ) {
+          <tr>
+            @for (column of row.value | keyvalue; track $index; ) {
+              <td>
+                <div class="d-flex flex-column flex-wrap m-2"
+                     [ngClass]="{'justify-content-center': row.key === 'tr0' || column.key === 'td0'}">
+                  @for (line of column.value; track $index; ) {
+                    <div class="d-flex flex-row flex-wrap align-items-center">
+                      @for (content of line; track $index; ) {
+                        <div class="mx-1">
+                          @if ((content | isInput)) {
+                            @let choiceId = content | extractId;
+                            @let choice = mapChoiceById[choiceId];
+                            @if (mapChoiceById[choiceId]) {
+                              @if (isReadOnly) {
+                                <span
+                                  [ngClass]="{
+                                'text-success': choice | isCorrectAnswer,
+                                'text-danger': !(choice | isCorrectAnswer)
+                              }">
+                                {{ !choice.answer || choice.answer === '' ? '❌' : choice.answer }}
+                              </span>
+                                @if (!(choice | isCorrectAnswer)) {
+                                  | <span
+                                    class="text-success">{{ choice.correctAnswer }}</span>
+                                }
+                              } @else {
+                                <input class="mt-1"  disabled [value]="mapChoiceById[choiceId].correctAnswer" />
+                              }
+                            }
+                          } @else {
+                            @if (row.key === 'tr0' || column.key === 'td0') {
+                              <b>
+                                <p class="my-2">{{ content }}</p>
+                              </b>
+                            } @else {
+                              <p class="my-2">{{ content }}</p>
+                            }
+                          }
+                        </div>
+                      }
+                    </div>
+                  }
+                </div>
+              </td>
+            }
+          </tr>
+        }
+      </table>
+    </div>
+  }
+</div>

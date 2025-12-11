@@ -1,0 +1,59 @@
+<div class="container">
+  @if (!isReadonly) {
+    <h3>
+      Hãy đánh giá trải nghiệm sử dụng Phòng Lab tại Be Able VN. Xin cảm ơn.
+    </h3>
+  }
+  <form [formGroup]="ratingForm" (ngSubmit)="onSubmit()">
+    <div class="rating-stars">
+      @for (star of stars; track $index; let i = $index) {
+        <mat-icon
+          [class.active]="i < selectedStars"
+          [class.hovered]="i < hoveredStars && !isReadonly"
+          (click)="emitRating(i + 1)"
+          (mouseenter)="hoveredStars = i + 1"
+          (mouseleave)="hoveredStars = selectedStars"
+        >
+          star
+        </mat-icon>
+      }
+    </div>
+
+    @if (isReadonly) {
+      <div class="read-feedback">
+        {{ content }}
+      </div>
+    }
+
+    @if (rating < 4 && this.isFeedback) {
+      <h3>Để Be Able VN có thể nâng cao chất lượng trải nghiệm Phòng Lab,</h3>
+      <h3>
+        Quý Học viên vui lòng chia sẻ và góp ý về trải nghiệm sử dụng của mình.
+      </h3>
+      <mat-form-field class="feedback">
+        <textarea
+          matInput
+          formControlName="feedback"
+          name="feedback"
+          id="feedback"
+          rows="10"
+        ></textarea>
+        @if (ratingForm.get("feedback")?.hasError("required")) {
+          <mat-error color="danger"> Hãy nhập nhận xét </mat-error>
+        }
+      </mat-form-field>
+    }
+
+    @if (!isReadonly) {
+      <button
+        class="submit-button"
+        mat-raised-button
+        color="primary"
+        type="submit"
+        [disabled]="rating === 0"
+      >
+        Hoàn tất
+      </button>
+    }
+  </form>
+</div>

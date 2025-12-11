@@ -1,0 +1,24 @@
+@if (!isSaved && !isTesting && !isReadOnly) {
+  <app-matching-header-editing
+    [data]="data"
+    [isEditing]="!isSaved"
+  ></app-matching-header-editing>
+}
+
+@if (isTesting) {
+  <app-matching-header-testing
+    [data]="data"
+    [isTesting]="isTesting"
+    [(selectedId)]="selectedId"
+    (onAnswer)="onAnswer.emit($event)"
+  >
+  </app-matching-header-testing>
+}
+
+@if (isSaved || isReadOnly) {
+  <app-matching-header-readonly
+    [data]="data"
+    [isReadOnly]="isReadOnly"
+    [isSaved]="isSaved"
+  ></app-matching-header-readonly>
+}

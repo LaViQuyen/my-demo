@@ -1,0 +1,58 @@
+<form>
+  <div class="question-group">
+    <div class="form-group">
+      @if (isEditing) {
+        <angular-editor
+          name="questionContent"
+          [id]="question.id"
+          [config]="config"
+          [(ngModel)]="question.content"
+          (ngModelChange)="onPaste($event)"
+        ></angular-editor>
+        <div class="my-2">
+          <label for="numberOfAnswer">Number of answers</label>
+          <input id="numberOfAnswer" name="numberOfAnswer"
+                 class="ms-2"
+                 [(ngModel)]="question.numberOfChoices" />
+        </div>
+      } @else {
+        <span [innerHTML]="question.content"> </span>
+      }
+    </div>
+
+    <div class="choice-group">
+      @for (choice of question.choices; track $index) {
+        <div class="mt-2 d-flex align-items-center">
+          @if (question.numberOfChoices! > 1) {
+            <input [checked]="question.correctAnswer.includes(choice.id)" type="checkbox"
+                   (click)="onSelectMultipleCorrectAnswer($event, choice.id)" />
+          } @else {
+            <input [checked]="selectedOption === choice.id" type="radio"
+                   (click)="onSelectSingleCorrectAnswer(choice.id)" />
+          }
+          @if (isEditing) {
+            <textarea class="w-100 ms-2" autocomplete="off" [name]="choice.id" [(ngModel)]="choice.content"></textarea>
+            <button
+              mat-button
+              color="warn"
+              class="ms-2"
+              (click)="removeChoice($index)"
+            >
+              <mat-icon>delete</mat-icon>
+            </button>
+          } @else {
+            <div class="ms-2">{{ choice.content }}</div>
+          }
+        </div>
+      }
+    </div>
+    <button
+      mat-raised-button
+      class="d-flex justify-content-center align-items-center mt-3"
+      (click)="addChoice()"
+    >
+      <mat-icon>add</mat-icon>
+      Answer
+    </button>
+  </div>
+</form>

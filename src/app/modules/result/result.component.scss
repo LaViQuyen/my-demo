@@ -1,0 +1,38 @@
+.result-container {
+  display: grid;
+  max-height: calc(100vh - 9rem);
+  grid-template-columns: repeat(auto-fill, 300px);
+  grid-template-rows: repeat(10000, 120px);
+  grid-gap: 40px;
+}
+
+.search {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 16px;
+}
+
+.card {
+  height: max-content;
+  align-items: stretch;
+  cursor: pointer;
+}
+
+.card-title {
+  display: flex;
+  line-height: 24px;
+  margin-left: 10px;
+  cursor: pointer;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media print {
+  button {
+    visibility: hidden;
+  }
+
+  a[href]:after {
+    content: none !important;
+  }
+}

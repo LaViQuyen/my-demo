@@ -1,0 +1,49 @@
+@if (question.arrayContent) {
+  <div class="d-flex flex-column" [id]="question.id">
+    <b><span textSelection [innerHTML]="question.content"></span></b>
+    <div class="d-flex flex-column mt-2 ms-2">
+      @for (line of question.arrayContent; track $index; ) {
+        <div class="d-flex flex-row flex-wrap align-items-center mb-4">
+          @for (content of line; track $index) {
+            <div class="d-flex align-items-center">
+              @if (content | isInput) {
+                @let choiceId = content | extractId;
+                @let choice = mapChoiceById[choiceId];
+                <div
+                  class="mt-1 drop-container"
+                  [ngClass]="{'active': selectedId() === content.match(inputPattern)![1]}"
+                  [id]="choiceId"
+                  [draggable]="true"
+                  (dragstart)="onDragStart($event, choice.answer!)"
+                  (click)="onAnswerChoice.emit(choice)"
+                  (drop)="onDropAnswer($event, choice)"
+                  (dragover)="onDragOver($event, content.match(inputPattern)![1])"
+                  (dragleave)="removeDropOver($event, content.match(inputPattern)![1])">
+                  {{ mapAnswerById[choice.answer!] ? mapAnswerById[choice.answer!].content : '' }}
+                </div>
+              } @else {
+                <div>
+                  {{ content }}
+                </div>
+              }
+            </div>
+          }
+        </div>
+      }
+    </div>
+    <div id="container-right" class="d-flex flex-column p-1">
+      @for (answer of answers; track $index) {
+        <mat-card class="w-50 p-2 my-2"
+                  draggable="true"
+                  [id]="answer.id"
+                  (dragstart)="onDragStart($event, answer.id)"
+                  (drop)="onAnswerBackDrop($event)"
+                  (dragover)="onAnswerBackDragOver($event)"
+                  (dragleave)="onAnswerBackDragLeave($event)"
+        >
+          {{ answer.content }}
+        </mat-card>
+      }
+    </div>
+  </div>
+}

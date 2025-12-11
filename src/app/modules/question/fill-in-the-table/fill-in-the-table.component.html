@@ -1,0 +1,25 @@
+@if (isEditing) {
+  <app-fill-in-the-table-editing
+    [question]="question"
+    [isEditing]="isEditing"
+    (onSave)="onSaveQuestion()"
+  ></app-fill-in-the-table-editing>
+}
+
+@if (isTesting) {
+  <app-fill-in-the-table-testing
+    [question]="question"
+    [isTesting]="isTesting"
+    [(selectedId)]="selectedId"
+    (onAnswer)="onAnswer.emit($event)"
+    (onAnswerChoice)="onAnswerChoice.emit($event)"
+  >
+  </app-fill-in-the-table-testing>
+}
+
+@if (isReadOnly || (!isEditing && !isTesting)) {
+  <app-fill-in-the-table-readonly
+    [question]="question"
+    [isReadOnly]="isReadOnly"
+  ></app-fill-in-the-table-readonly>
+}

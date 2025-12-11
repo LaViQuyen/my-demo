@@ -1,0 +1,28 @@
+.question {
+  margin: 32px 0 0 0;
+}
+
+.actions {
+  margin: 16px 0 0 0;
+}
+
+.question-type-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.add-question-button {
+  margin: 0 10px 0 0;
+}
+
+.choice-group {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .sub-question-group {
+    max-height: 400px;
+    overflow: scroll;
+  }
+}

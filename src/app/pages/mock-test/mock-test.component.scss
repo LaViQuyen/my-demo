@@ -1,0 +1,9 @@
+.container {
+  max-width: calc(100vw - 100px);
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%;
+  }
+}

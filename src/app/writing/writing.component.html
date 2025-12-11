@@ -1,0 +1,45 @@
+<div class="writing-test-layout">
+  <div class="left-pane">
+    <div class="question-content">
+      @if (!isSaved && !isReadOnly && !isTesting) {
+        <angular-editor
+          name="question-editor"
+          [id]="data.id"
+          [config]="config"
+          [(ngModel)]="data.content"
+          (ngModelChange)="onPaste($event)"
+          placeholder="Enter writing task prompt here..."
+        ></angular-editor>
+      } 
+      @else {
+        <div class="prompt-display">
+          <div [innerHTML]="data.content"></div>
+          </div>
+      }
+    </div>
+  </div>
+
+  <div class="right-pane">
+    @if (isTesting || isReadOnly) {
+      <div class="answer-area">
+        <angular-editor
+          class="student-editor"
+          [config]="testEditorConfig"
+          [(ngModel)]="data.answer"
+          (ngModelChange)="onWritingChange($event)"
+          [disabled]="isReadOnly"
+        ></angular-editor>
+        
+        <div class="word-count-badge">
+          Word count: {{ data.wordCount || 0 }}
+        </div>
+      </div>
+    }
+    @else if (!isTesting && !isReadOnly && isSaved) {
+      <div class="placeholder-msg">
+        <mat-icon>edit_note</mat-icon>
+        <p>Ready to start writing task?</p>
+      </div>
+    }
+  </div>
+</div>

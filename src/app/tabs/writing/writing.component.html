@@ -1,0 +1,41 @@
+<div class="d-flex writing-container mt-3">
+  <div class="question-group">
+    @if (!isSaved && !isReadOnly && !isTesting) {
+      <angular-editor
+        name="reading-question"
+        class="editor"
+        [id]="data.id"
+        [config]="config"
+        [(ngModel)]="data.content"
+        (ngModelChange)="onPaste($event)"
+      ></angular-editor>
+    } @else {
+      <span [innerHTML]="data.content" class="writing-description">
+        {{ data.content }}
+      </span>
+    }
+  </div>
+  @if (isTesting) {
+    <div class="input-writing">
+      <angular-editor
+        class="student-input"
+        [config]="testEditorConfig"
+        [(ngModel)]="data.answer"
+        (ngModelChange)="onWritingChange($event)"
+      ></angular-editor>
+      <div>Word count: {{ data.wordCount }}</div>
+    </div>
+  }
+  @if (isReadOnly) {
+    <div class="result-container">
+      <angular-editor
+        disabled="true"
+        class="student-input"
+        [config]="testEditorConfig"
+        [(ngModel)]="data.answer"
+        (ngModelChange)="onWritingChange($event)"
+      ></angular-editor>
+      <div>Word count: {{ data.wordCount }}</div>
+    </div>
+  }
+</div>

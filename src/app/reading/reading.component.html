@@ -1,0 +1,126 @@
+@if (data) {
+  <div class="container">
+    @if (data.isMatchHeader) {
+      <app-matching-header
+        [data]="data"
+        [answers]="answers()"
+        [isSaved]="isSaved"
+        [isReadOnly]="isReadOnly"
+        [isTesting]="isTesting"
+        [isEditing]="isEditing"
+      ></app-matching-header>
+    } @else {
+      <div class="question-group">
+        <mat-accordion>
+          @if (data) {
+            @for (
+              question of data.questions;
+              track question.id;
+              let questionIndex = $index
+            ) {
+              <app-multiple-question
+                [question]="question"
+                [isEditing]="mapQuestionEditting[question.id]"
+                [isReadOnly]="isReadOnly"
+                [isTesting]="isTesting"
+                [isSaved]="mapSavedQuestion[question.id]"
+                (onSave)="onSaveQuestion(question.id)"
+                (onEdit)="onEditQuestion(question.id)"
+              ></app-multiple-question>
+              @if (!isSaved && !isTesting && !isReadOnly) {
+                <div class="actions">
+                  @if (mapQuestionEditting[question.id]) {
+                    <button
+                      mat-button
+                      color="primary"
+                      type="button"
+                      class="btn btn-danger"
+                      (click)="onSaveQuestion(question.id)"
+                    >
+                      <mat-icon>save</mat-icon>
+                    </button>
+                  } @else {
+                    <button
+                      mat-button
+                      color="primary"
+                      type="button"
+                      class="btn btn-danger"
+                      (click)="onEditQuestion(question.id)"
+                    >
+                      <mat-icon>edit</mat-icon>
+                    </button>
+                  }
+                  <button
+                    mat-button
+                    type="button"
+                    class="btn btn-danger"
+                    (click)="duplicateQuestion(question)"
+                  >
+                    <mat-icon>content_copy</mat-icon>
+                  </button>
+                  <button
+                    mat-button
+                    color="warn"
+                    type="button"
+                    class="btn btn-danger"
+                    (click)="removeQuestion(questionIndex)"
+                  >
+                    <mat-icon>delete</mat-icon>
+                  </button>
+                  @if (questionIndex !== 0) {
+                    <button
+                      mat-button
+                      type="button"
+                      class="btn btn-danger"
+                      (click)="moveQuestionUp(questionIndex)"
+                    >
+                      <mat-icon>arrow_upward</mat-icon>
+                    </button>
+                  }
+                  @if (questionIndex !== data.questions.length - 1) {
+                    <button
+                      mat-button
+                      type="button"
+                      class="btn btn-danger"
+                      (click)="moveQuestionDown(questionIndex)"
+                    >
+                      <mat-icon>arrow_downward</mat-icon>
+                    </button>
+                  }
+                </div>
+              }
+            }
+          }
+        </mat-accordion>
+        @if (!isSaved && !isTesting && !isReadOnly) {
+          <div class="add-question">
+            <button
+              mat-button
+              type="button"
+              class="btn btn-danger"
+              (click)="addQuestion(2)"
+            >
+              <mat-icon>add</mat-icon> Add question
+            </button>
+          </div>
+        }
+      </div>
+      <div class="input-reading">
+        @if (!isSaved && !isReadOnly && !isTesting) {
+          <angular-editor
+            class="editor"
+            name="questionContent"
+            [id]="data.id"
+            [(ngModel)]="data.content"
+            (ngModelChange)="onPaste($event)"
+            [config]="config"
+          ></angular-editor>
+        } @else {
+          @if (data) {
+            <p textSelection class="reading-content" [innerHTML]="data.content"></p>
+          }
+        }
+      </div>
+    }
+  </div>
+}

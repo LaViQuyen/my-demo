@@ -1,0 +1,55 @@
+<div class="d-flex testing-container">
+  <div class="col-6 container--left">
+    @for (question of data.questions; track $index) {
+      <div class="paragraph">
+        <div class="w-50 border border-1 mt-3" (click)="onAnswer.emit(question)">
+          <div
+            [id]="question.id"
+            [ngClass]="{'bg-white' : question.id === selectedId()}"
+            class="answer-drop-container py-2"
+            (dragover)="onDragOver($event, question.id)"
+            (dragleave)="removeDropOver($event, question.id)"
+            (drop)="onDropAnswer($event, question)"
+          >
+            <div
+              class=" p-1"
+              [draggable]="isTesting"
+              (dragstart)="onDragStart($event, data.questions![$index].answer.toString())">
+                <span>
+                  {{ (question.answer | choiceContent: data.answers!)?.content ?? "" }}
+                </span>
+            </div>
+          </div>
+        </div>
+        <div class="input-reading">
+          <span
+            class="reading-content"
+            textSelection
+            [innerHTML]="question.content">
+          </span>
+        </div>
+      </div>
+    }
+  </div>
+  <!-- Container right -->
+  <div
+    id="container-right"
+    class="ms-2"
+    [ngClass]="{ testing: isTesting }"
+    (drop)="onAnswerBackDrop($event)"
+    (dragover)="onAnswerBackDragOver($event)"
+    (dragleave)="onAnswerBackDragLeave($event)"
+  >
+    <span [innerHTML]="this.data.content"></span>
+    <div class="heading-container">
+      @for (answer of answers; track $index) {
+        <mat-card
+          class="p-2 my-2"
+          [draggable]="isTesting"
+          (dragstart)="onDragStart($event, answer.id)">
+          {{ answer.content }}
+        </mat-card>
+      }
+    </div>
+  </div>
+</div>

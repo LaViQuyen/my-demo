@@ -1,0 +1,123 @@
+@if (state["isTesting"]) {
+  <mat-card class="timer">
+    <mat-card-content>
+      <h2>{{ minutes }}:{{ seconds | number: "2.0" }}</h2></mat-card-content
+    >
+  </mat-card>
+}
+<div class="container">
+  <div class="question-group">
+    <div class="writing-info">
+      @if (state["isEditing"]) {
+        <mat-form-field>
+          <mat-label>Name</mat-label>
+          <input [(ngModel)]="data.name" />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Time</mat-label>
+          <input [(ngModel)]="data.timeout" />
+        </mat-form-field>
+      }
+
+      @if (state["isTesting"] || state["isReadOnly"]) {
+        <mat-form-field>
+          <mat-label>Name</mat-label>
+          <input
+            [(ngModel)]="data.studentName"
+            [disabled]="state['isReadOnly'] || isReady"
+          />
+        </mat-form-field>
+      }
+      @if (state["isTesting"] && !isReady) {
+        <div class="save-button">
+          <button
+            mat-raised-button
+            [disabled]="!data.studentName || data.studentName === ''"
+            (click)="onStart()"
+          >
+            Start
+          </button>
+        </div>
+      }
+
+      @if (isReady || state["isReadOnly"] || state["isEditing"]) {
+        <mat-tab-group
+          mat-align-tabs="center"
+          animationDuration="0ms"
+          headerPosition="below"
+        >
+          @for (part of data.parts; track $index) {
+            <mat-tab>
+              <ng-template matTabLabel="">{{ $index + 1 }}</ng-template>
+              <div style="margin-bottom: 10px">
+                <app-writing
+                  [data]="part"
+                  [isSaved]="mapSavedPart[$index]!"
+                  [isEditing]="state['isEditing']"
+                  [isTesting]="state['isTesting']"
+                  [isReadOnly]="state['isReadOnly']"
+                ></app-writing>
+                @if (state["isEditing"]) {
+                  <div class="actions">
+                    @if (mapSavedPart[$index]) {
+                      <button
+                        mat-button
+                        color="primary"
+                        type="button"
+                        (click)="onEditClick($index)"
+                      >
+                        <mat-icon>edit</mat-icon>
+                        Edit part
+                      </button>
+                    } @else {
+                      <button
+                        mat-button
+                        color="primary"
+                        type="button"
+                        (click)="onSavePart($index)"
+                      >
+                        <mat-icon>save</mat-icon>
+                        Save part
+                      </button>
+                    }
+                    <button
+                      mat-button
+                      color="warn"
+                      type="button"
+                      (click)="remove($index)"
+                    >
+                      <mat-icon>delete</mat-icon>
+                      Remove part
+                    </button>
+                  </div>
+                }
+              </div>
+            </mat-tab>
+          }
+        </mat-tab-group>
+      }
+      @if (state["isEditing"]) {
+        <div class="add-button">
+          <button mat-button color="primary" (click)="onAddPart()">
+            <mat-icon>add</mat-icon>
+            Add Part
+          </button>
+        </div>
+      }
+    </div>
+    @if (state["isEditing"]) {
+      <div class="save-button">
+        <button mat-raised-button color="primary" (click)="onSaveClick()">
+          Save and Quit
+        </button>
+      </div>
+    }
+    @if (state["isTesting"] && this.isReady) {
+      <div class="save-button">
+        <button mat-raised-button color="primary" (click)="onSubmit()">
+          Submit
+        </button>
+      </div>
+    }
+  </div>
+</div>

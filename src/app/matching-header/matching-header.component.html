@@ -1,0 +1,185 @@
+<div class="container">
+  <div class="container--left">
+    @for (question of data.questions; track $index) {
+      <div class="paragraph">
+        <div class="input-answer">
+          @if (!isTesting && !isReadOnly && !isSaved) {
+            <mat-form-field style="width: 100%">
+              <mat-select
+                [disabled]="!mapEditingById[question.id]"
+                [(ngModel)]="question.correctAnswer"
+              >
+                @for (answer of data.answers; track $index) {
+                  <mat-option [value]="answer.id">
+                    {{ answer.content }}
+                  </mat-option>
+                }
+              </mat-select>
+            </mat-form-field>
+          } @else {
+            <div
+              [id]="question.id"
+              class="answer-drop-container"
+              (dragover)="onDragOver($event, question.id)"
+              (dragleave)="removeDropOver($event, question.id)"
+              (drop)="onDropAnswer($event, question.id)"
+            >
+              {{
+                !isTesting && !isReadOnly
+                  ? (question.correctAnswer | choiceContent: data.answers!)!
+                    .content
+                  : ""
+              }}
+              <div
+                class="answer-drop"
+                [draggable]="isTesting"
+                (dragstart)="
+                  onDragStart($event, data.questions[$index].answer.toString())
+                "
+              >
+                <span
+                  [ngClass]="{
+                    correct:
+                      isReadOnly && question.answer === question.correctAnswer,
+                    incorrect:
+                      isReadOnly && question.answer !== question.correctAnswer,
+                  }"
+                >
+                  {{
+                    (question.answer | choiceContent: data.answers!)?.content ??
+                    ""
+                  }}
+                </span>
+
+                @if (isReadOnly && question.answer !== question.correctAnswer) {
+                  <span class="correct">
+                    /
+                    {{
+                      (question.correctAnswer | choiceContent: data.answers!)
+                        ?.content ?? ""
+                    }}
+                  </span>
+                }
+              </div>
+            </div>
+          }
+        </div>
+        <div class="input-reading">
+          @if (mapEditingById[question.id]) {
+            <angular-editor
+              class="editor"
+              name="questionContent"
+              [id]="question.id"
+              [(ngModel)]="question.content"
+              (ngModelChange)="onPaste($event)"
+              [config]="config"
+            ></angular-editor>
+          } @else {
+            @if (data) {
+              <span
+                class="reading-content"
+                textSelection [innerHTML]="question.content"
+              ></span>
+            }
+          }
+        </div>
+        @if (!isSaved && !isTesting && !isReadOnly) {
+          <div class="question-actions">
+            <button
+              mat-button
+              color="primary"
+              (click)="editContent(question.id)"
+            >
+              <mat-icon>
+                @if (mapEditingById[question.id]) {
+                  save
+                } @else {
+                  edit
+                }
+              </mat-icon>
+            </button>
+            <button mat-button color="warn" (click)="removeParagraph($index)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </div>
+        }
+      </div>
+    }
+    @if (!isSaved && !isTesting && !isReadOnly) {
+      <button mat-raised-button (click)="addParagraph()">
+        <mat-icon>add</mat-icon>
+        Add Paragraph
+      </button>
+    }
+  </div>
+  <!-- Container right -->
+  <div
+    id="container-right"
+    class="container--right"
+    [ngClass]="{ testing: isTesting }"
+    (drop)="onAnswerBackDrop($event)"
+    (dragover)="onAnswerBackDragOver($event)"
+    (dragleave)="onAnswerBackDragLeave($event)"
+  >
+    @if (!isReadOnly) {
+      <div class="description">
+        @if (!isSaved && !isTesting && !isReadOnly) {
+          <angular-editor
+            [config]="config"
+            [(ngModel)]="this.data.content"
+          ></angular-editor>
+        } @else {
+          <span [innerHTML]="this.data.content"></span>
+        }
+      </div>
+      <div class="heading-container" [style.maxHeight]="isSaved ? '27rem' : '19rem'">
+        @for (answer of answers; track $index) {
+          <div class="answer">
+            @if (mapEditingById[answer.id]) {
+              <mat-form-field class="heading-input">
+                <mat-label>Content</mat-label>
+                <textarea matInput [(ngModel)]="answer.content"></textarea>
+              </mat-form-field>
+            } @else {
+              <mat-card
+                class="answer"
+                [draggable]="isTesting"
+                (dragstart)="onDragStart($event, answer.id)"
+              >
+                <mat-card-content>
+                  {{ answer.content }}
+                </mat-card-content>
+              </mat-card>
+            }
+            @if (!isSaved && !isTesting && !isReadOnly) {
+              <div class="question-actions">
+                <button
+                  mat-button
+                  color="primary"
+                  (click)="editContent(answer.id)"
+                >
+                  <mat-icon>
+                    @if (mapEditingById[answer.id]) {
+                      save
+                    } @else {
+                      edit
+                    }
+                  </mat-icon>
+                </button>
+                <button mat-button color="warn" (click)="removeAnswer($index)">
+                  <mat-icon>delete</mat-icon>
+                </button>
+              </div>
+            }
+          </div>
+        }
+      </div>
+    }
+    @if (!isSaved && !isTesting && !isReadOnly) {
+      <button class="add-answer-button" mat-raised-button (click)="addAnswer()">
+        <mat-icon>add</mat-icon>
+        Add Heading
+      </button>
+    }
+  </div>
+</div>

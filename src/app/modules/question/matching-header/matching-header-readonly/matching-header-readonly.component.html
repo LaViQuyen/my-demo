@@ -1,0 +1,58 @@
+<div class="d-flex">
+  <div class="col-6 container--left">
+    @for (question of data.questions; track $index) {
+      <div class="paragraph my-4">
+        <div class="mb-2 border border-black w-50 p-1">
+          @if (isSaved) {
+            <b>
+              {{ (question.correctAnswer | choiceContent: data.answers!)?.content ?? "" }}
+            </b>
+          } @else {
+            <span
+              [ngClass]="{
+              correct:
+                isReadOnly && question.answer === question.correctAnswer,
+              incorrect:
+                isReadOnly && question.answer !== question.correctAnswer,
+            }">
+            {{ (question.answer | choiceContent: data.answers!)?.content ?? "" }}
+              @if (isReadOnly && question.answer.length === 0) {
+                ❌
+              }
+              @if (isReadOnly && question.answer !== question.correctAnswer) {
+                <span class="correct">
+                | {{ (question.correctAnswer | choiceContent: data.answers!)?.content ?? "" }}
+                </span>
+              }
+            </span>
+          }
+        </div>
+        <div class="input-reading">
+          <span
+            class="reading-content"
+            [innerHTML]="question.content"
+          ></span>
+        </div>
+      </div>
+    }
+  </div>
+  <!-- Container right -->
+  <div
+    id="container-right"
+    class="ms-2 container--right"
+    [ngClass]="{ testing: isTesting }"
+  >
+    <div class="description">
+      <span textSelection [innerHTML]="data.content"></span>
+    </div>
+    @if (isSaved) {
+      <div>
+        @for (answer of data.answers; track $index) {
+          <mat-card class="p-3 m-2">
+            {{ answer.content }}
+          </mat-card>
+        }
+      </div>
+    }
+  </div>
+</div>

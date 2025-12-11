@@ -1,0 +1,59 @@
+.container {
+  display: grid;
+  max-height: calc(100vh - 300px);
+  grid-template-columns: repeat(auto-fill, 300px);
+  grid-template-rows: repeat(10000, 120px);
+  grid-gap: 40px;
+}
+
+.result {
+  text-align: left;
+  cursor: pointer;
+}
+
+.content {
+  flex-wrap: wrap;
+}
+
+.search {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 16px;
+}
+
+.question {
+  margin-top: 16px;
+}
+
+.card {
+  height: max-content;
+  align-items: stretch;
+}
+
+.card-title {
+  display: flex;
+  margin: 0 0 0 10px;
+  line-height: 24px;
+  margin-left: 10px;
+  cursor: pointer;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-content {
+  cursor: pointer;
+}
+
+.band-score {
+  margin-left: 50px;
+}
+
+@media print {
+  button {
+    visibility: hidden;
+  }
+
+  a[href]:after {
+    content: none !important;
+  }
+}

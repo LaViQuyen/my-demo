@@ -1,0 +1,124 @@
+@if (question.arrayContent) {
+  <div class="d-flex flex-column">
+    <div class="description">
+      <angular-editor
+        [name]="question.id"
+        [config]="config"
+        [(ngModel)]="question.content"
+        (ngModelChange)="onPaste($event)"
+      ></angular-editor>
+    </div>
+    <div class="d-flex flex-column">
+      @for (line of question.arrayContent; track $index; ) {
+        @let lineIndex = $index;
+        <div class="d-flex flex-row flex-wrap align-items-center">
+          @for (content of line; track $index; ) {
+            @let contentIndex = $index;
+            @let isShowActions = mapShowActionByIndex[lineIndex][contentIndex];
+            @let isSavedText = mapSaveTextByIndex[lineIndex][contentIndex];
+            <div class="d-flex justify-content-center align-items-center mt-2">
+              @if (content | isInput) {
+                @let choiceId = content | extractId;
+                <select class="ms-1 mt-1"
+                        [(ngModel)]="mapChoiceById[choiceId].correctAnswer"
+                >
+                  @for (answer of question.answers; track $index) {
+                    <option [value]="answer.id">
+                      {{ answer.content }}
+                    </option>F
+                  }
+                </select>
+                <div class="d-flex align-items-center justify-content-center">
+                  <mat-icon color="warn" (click)="onDeleteText(lineIndex, contentIndex)">delete</mat-icon>
+                  <button class="d-flex align-items-center mx-1" (click)="addText(lineIndex, contentIndex + 1)">
+                    <mat-icon color="primary">add</mat-icon>
+                    Text
+                  </button>
+                </div>
+              } @else {
+                <div class="d-flex justify-content-center align-items-center">
+                  @if (isSavedText) {
+                    <div (click)="onEditText(lineIndex, contentIndex)">
+                      {{
+                        content === "" ? "..." : content
+                      }}
+                    </div>
+                  } @else {
+                    <input class="mt-1" [(ngModel)]="question.arrayContent[lineIndex][contentIndex]" />
+                    @if (isShowActions) {
+                      <div class="d-flex">
+                        @if (mapSaveTextByIndex[lineIndex][contentIndex]) {
+                          <mat-icon color="primary" (click)="onEditText(lineIndex, contentIndex)">
+                            edit
+                          </mat-icon>
+                        } @else {
+                          <mat-icon color="primary" (click)="onSaveText(lineIndex, contentIndex)">
+                            check
+                          </mat-icon>
+                        }
+                        <mat-icon color="warn" (click)="onDeleteText(lineIndex, contentIndex)">delete</mat-icon>
+                      </div>
+                    }
+                  }
+                </div>
+                @if (isShowActions) {
+                  <div class="d-flex justify-content-center align-items-center">
+                    <button class="d-flex align-items-center ms-1" (click)="addInput(lineIndex, contentIndex)">
+                      <mat-icon color="primary">add</mat-icon>
+                      Answer
+                    </button>
+                  </div>
+                }
+              }
+
+            </div>
+          }
+        </div>
+        <div class="d-flex mt-2">
+          <button mat-button class="d-flex align-items-center me-1" (click)="addNewLine(lineIndex)">
+            <mat-icon color="primary">add</mat-icon>
+            Line
+          </button>
+          <button mat-button class="d-flex align-items-center me-1" (click)="onDeleteLine(lineIndex)">
+            <mat-icon color="warn">delete</mat-icon>
+            Line
+          </button>
+          @if (lineIndex !== 0) {
+            <button mat-button class="d-flex align-items-center me-1" type="button" (click)="moveLineUp(lineIndex)">
+              <mat-icon>arrow_upward</mat-icon>
+            </button>
+          }
+          @if (lineIndex !== question.arrayContent.length - 1) {
+            <button mat-button class="d-flex align-items-center me-1" type="button" (click)="moveLineDown(lineIndex)">
+              <mat-icon>arrow_downward</mat-icon>
+            </button>
+          }
+        </div>
+      }
+
+    </div>
+  </div>
+  @if (question.arrayContent.length === 0 && isEditing) {
+    <button class="d-flex align-items-center mt-1" (click)="addNewLine(-1)">
+      <mat-icon color="primary">add</mat-icon>
+      Line
+    </button>
+  }
+
+  <div>
+    @for (answer of question.answers; track $index) {
+      <div class="d-flex align-items-center justify-content-center my-1">
+        <textarea class="w-100" [(ngModel)]="question.answers![$index].content"></textarea>
+        <button mat-button color="warn" (click)="deleteAnswer($index)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </div>
+
+    }
+  </div>
+
+  <button mat-raised-button class="mt-1" (click)="addAnswer()">
+    <mat-icon>add</mat-icon>
+    <span>answer</span>
+  </button>
+}

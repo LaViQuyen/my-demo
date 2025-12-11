@@ -1,0 +1,29 @@
+table,
+tr,
+td,
+th {
+  border: 1px solid black;
+  min-height: 2rem;
+  min-width: 4rem;
+  background: var(--primary-color);
+}
+
+.drop-container {
+  min-width: 15rem;
+  margin-left: 10px;
+  height: 1.5rem;
+  border: 1px solid black;
+}
+
+#container-right {
+  min-height: 100px;
+}
+
+#container-right.drop-over,
+.drop-container.drop-over {
+  border: 1px dashed black;
+}
+
+.drop-container.active {
+  background-color: #fff;
+}

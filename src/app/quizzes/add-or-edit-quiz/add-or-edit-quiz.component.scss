@@ -1,0 +1,30 @@
+.actions {
+  display: flex;
+  margin: 16px 0;
+}
+
+.add-button {
+  display: flex;
+  gap: 16px;
+  height: 64px;
+  margin-top: 16px;
+}
+
+.question-group {
+  margin: 16px 0;
+}
+
+.timeout {
+  margin-top: 16px;
+}
+
+.upload-file {
+  margin: 0 0 16px 0;
+}
+
+.timer {
+  position: fixed;
+  top: 0;
+  left: calc(100vw / 2);
+  z-index: 100;
+}

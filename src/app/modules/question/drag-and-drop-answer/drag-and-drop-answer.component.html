@@ -1,0 +1,23 @@
+@if (isEditing) {
+  <app-drag-and-drop-answer-editing
+    [question]="question"
+    [isEditing]="isEditing"
+  ></app-drag-and-drop-answer-editing>
+}
+@if (isTesting) {
+  <app-drag-and-drop-answer-testing
+    [question]="question"
+    [isTesting]="isTesting"
+    [(selectedId)]="selectedId"
+    (onAnswer)="onAnswer.emit($event)"
+    (onAnswerChoice)="onAnswerChoice.emit($event)"
+  ></app-drag-and-drop-answer-testing>
+}
+
+@if (isReadOnly || (!isEditing && !isTesting)) {
+  <app-drag-and-drop-answer-readonly
+    [question]="question"
+    [isReadOnly]="isReadOnly"
+  ></app-drag-and-drop-answer-readonly>
+}
+

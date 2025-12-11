@@ -1,0 +1,17 @@
+.card {
+  display: flex;
+  flex-direction: row;
+}
+
+.card-content {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.folder-icon {
+  line-height: 2rem;
+  padding-right: 1rem;
+  color: var(--success-color);
+}

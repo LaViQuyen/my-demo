@@ -1,0 +1,53 @@
+<b><span [innerHTML]="question.content"></span></b>
+
+@if (question.arrayContent) {
+  <div class="d-flex flex-column mt-3 ms-2">
+    @for (line of question.arrayContent;
+      track $index; ) {
+      <div class="d-flex flex-row flex-wrap align-items-center">
+        @for (content of line; track $index; ) {
+          <div class="d-flex mb-4">
+            @if (content | isInput) {
+              @let choiceId = content | extractId;
+              @let choice = mapChoiceById[choiceId];
+              <div
+                class="mx-1 px-2 question__text"
+                [ngClass]="{'edit': isEditing}"
+              >
+                @if (isReadOnly) {
+                  <span
+                    [ngClass]="{
+                      'text-success': choice | isCorrectAnswer,
+                      'text-danger': !(choice | isCorrectAnswer)
+                    }"
+                  >
+                      {{
+                      (choice.answer! | choiceContent: question.answers!)
+                        ?.content ?? '❌'
+                    }}
+                  </span>
+                  @if (!(choice | isCorrectAnswer)) {
+                    | <span
+                      class="text-success">   {{
+                        (choice.correctAnswer! | choiceContent: question.answers!)
+                          ?.content
+                      }}</span>
+                  }
+                } @else {
+                  <input class="mt-1" disabled [value]="mapAnswerById[choice.correctAnswer!].content">
+                }
+              </div>
+            } @else {
+              <div
+                class="choice-content"
+                [ngClass]="{'edit': isEditing}">
+                {{ content }}
+              </div>
+            }
+          </div>
+        }
+
+      </div>
+    }
+  </div>
+}

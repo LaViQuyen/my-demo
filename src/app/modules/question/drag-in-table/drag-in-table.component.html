@@ -1,0 +1,25 @@
+@if (isEditing) {
+  <app-drag-in-table-editing
+    [question]="question"
+    [isEditing]="isEditing"
+    (onSave)="onSaveQuestion()"
+  ></app-drag-in-table-editing>
+}
+
+@if (isTesting) {
+  <app-drag-in-table-testing
+    [question]="question"
+    [isTesting]="isTesting"
+    [(selectedId)]="selectedId"
+    (onAnswer)="onAnswer.emit($event)"
+    (onAnswerChoice)="onAnswerChoice.emit($event)"
+  >
+  </app-drag-in-table-testing>
+}
+
+@if (isReadOnly || (!isEditing && !isTesting)) {
+  <app-drag-in-table-readonly
+    [question]="question"
+    [isReadOnly]="isReadOnly"
+  ></app-drag-in-table-readonly>
+}

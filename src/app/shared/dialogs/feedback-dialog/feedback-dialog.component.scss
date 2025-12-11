@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.rating-stars {
+  display: flex;
+  font-size: x-large;
+}
+.rating-stars mat-icon {
+  cursor: pointer;
+  color: #ccc;
+  margin: 0 1rem 1rem 1rem;
+  width: 50px;
+  height: 50px;
+  font-size: 50px;
+}
+.rating-stars mat-icon.active {
+  color: #ffc107;
+}
+.rating-stars mat-icon.hovered {
+  color: #ffc107;
+  text-shadow: 0 0 10px rgba(255, 193, 7, 0.8);
+}
+.feedback {
+  width: 100%;
+}
+.submit-button {
+  width: 100%;
+  margin-top: 20px;
+}

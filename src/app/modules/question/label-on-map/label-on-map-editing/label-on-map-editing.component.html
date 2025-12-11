@@ -1,0 +1,68 @@
+<div class="d-flex">
+  <div class="col-6">
+    <angular-editor
+      class="editor"
+      name="questionContent"
+      [id]="question.id"
+      [(ngModel)]="question.content"
+      (ngModelChange)="onPaste($event)"
+      [config]="config"
+    ></angular-editor>
+  </div>
+
+  <div class="ms-2">
+    @let subQuestions = question.subQuestions;
+    @if (subQuestions && subQuestions[0]) {
+      <div class="d-flex">
+        <table>
+          <tr>
+            <th></th>
+            @for (choice of subQuestions[0].choices; track $index) {
+              <th>{{ choiceIndex[$index] }}</th>
+            }
+          </tr>
+          @for (question of question.subQuestions; track $index; ) {
+            @let questionIndex = $index;
+            <tr>
+              <td class="d-flex align-items-center">
+                <input matInput type="text" [(ngModel)]="question.content" />
+                <mat-icon class="icon" color="warn" (click)="onRemoveRow(questionIndex)">delete</mat-icon>
+              </td>
+              @for (choice of question.choices; track $index; ) {
+                @let choiceIndex = $index;
+                <td
+                  (click)="onSelectCorrectAnswer(questionIndex, choiceIndex)"
+                >
+                  @if (question.correctAnswer.includes(choice.id)) {
+                    <mat-icon class="icon" color="primary">check</mat-icon>
+                  }
+                </td>
+              }
+            </tr>
+          }
+        </table>
+        <div>
+          <mat-icon class="icon" color="warn" (click)="onRemoveColumn()">clear</mat-icon>
+        </div>
+        @if (question.subQuestions &&
+        question.subQuestions.length > 0) {
+          <div>
+            <mat-icon class="icon" color="primary" (click)="onAddColumn()">add</mat-icon>
+          </div>
+        }
+      </div>
+    }
+
+    @if (isEditing) {
+      <button
+        mat-button
+        color="primary"
+        type="button"
+        (click)="addQuestion(1)"
+      >
+        <mat-icon class="icon">add</mat-icon>
+        option
+      </button>
+    }
+  </div>
+</div>

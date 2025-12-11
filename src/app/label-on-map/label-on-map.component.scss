@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+}
+
+.question {
+  width: calc(100vw / 2 - 100px);
+  margin-right: 10px;
+}
+
+table,
+tr,
+td {
+  border: 1px solid black;
+  height: 30px;
+  text-align: center;
+}
+
+.choice-item {
+  width: 25px;
+}

@@ -1,0 +1,116 @@
+<mat-tab-group animationDuration="0ms">
+  <mat-tab label="Writings">
+    <ng-template matTabContent>
+      <div class="actions">
+        <button
+          mat-raised-button
+          color="primary"
+          style="height: 56px"
+          (click)="addNewQuiz()"
+        >
+          Add New Writing
+        </button>
+        <mat-form-field>
+          <input
+            autocomplete="off"
+            placeholder="Search"
+            matInput
+            name="searchQuiz"
+            type="search"
+            class="form-control"
+            id="searchQuiz"
+            [(ngModel)]="searchString"
+            (ngModelChange)="onSearch()"
+          />
+          <mat-icon matPrefix class="my-icon">search</mat-icon>
+        </mat-form-field>
+      </div>
+      <div class="container">
+        @for (writing of writings; track $index) {
+          <mat-card class="card">
+            <mat-card-content class="card-content">
+              <h2 class="mat-display-2 card-content-text">
+                {{ writing.name }}
+              </h2></mat-card-content
+            >
+            <mat-card-actions>
+              <button mat-icon-button [matMenuTriggerFor]="menu">
+                <mat-icon>more_vert</mat-icon>
+              </button>
+              <mat-menu #menu="matMenu">
+                <button mat-menu-item (click)="test(writing.id)">Test</button>
+                <button mat-menu-item (click)="edit(writing.id)">Edit</button>
+                <button mat-menu-item (click)="duplicate(writing)">
+                  Duplicate
+                </button>
+                <button mat-menu-item (click)="onDeleteClick(writing)">
+                  Delete
+                </button>
+              </mat-menu>
+            </mat-card-actions>
+          </mat-card>
+        }
+      </div>
+    </ng-template>
+  </mat-tab>
+  <mat-tab label="Results">
+    <ng-template matTabContent>
+      <div class="searchInput">
+        <mat-form-field>
+          <input
+            autocomplete="off"
+            placeholder="Search"
+            matInput
+            name="searchResult"
+            type="search"
+            class="form-control"
+            id="searchResult"
+            [(ngModel)]="searchString"
+            (ngModelChange)="onSearchResult($event)"
+          />
+          <mat-icon matPrefix class="my-icon">search</mat-icon>
+        </mat-form-field>
+      </div>
+      <div class="result-container">
+        @for (result of writingResults; track $index) {
+          <mat-card class="result-card">
+            <mat-card-title class="card-title"
+              ><h1 class="mat-display-2" (click)="view(result.id)">
+                &nbsp;{{ result.studentName }}
+                @if (!result.isSubmit) {
+                  🔸
+                }
+              </h1>
+              <mat-card-actions>
+                <button mat-icon-button [matMenuTriggerFor]="menu">
+                  <mat-icon>more_vert</mat-icon>
+                </button>
+                <mat-menu #menu="matMenu">
+                  @if (result.isSubmit) {
+                    <button mat-menu-item (click)="view(result.id)">
+                      View
+                    </button>
+                  } @else {
+                    <button mat-menu-item (click)="continue(result.id)">
+                      Continue
+                    </button>
+                  }
+                  <button
+                    mat-menu-item
+                    (click)="onDeleteClick(result)"
+                  >
+                    Delete
+                  </button>
+                </mat-menu>
+              </mat-card-actions>
+            </mat-card-title>
+            <mat-card-content class="card-content" (click)="view(result.id)">
+              <br />
+              <b>Test date:</b> {{ result.testDate }}
+            </mat-card-content>
+          </mat-card>
+        }
+      </div>
+    </ng-template>
+  </mat-tab>
+</mat-tab-group>

@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 25rem;
+  height: 25rem;
+  line-height: 25rem;
+  text-align: center;
+  margin: 30px;
+  font-weight: bold;
+  font-size: larger;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 15rem;
+  height: 15rem;
+  line-height: 15rem;
+  }
+}

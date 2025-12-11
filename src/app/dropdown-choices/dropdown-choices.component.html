@@ -1,0 +1,109 @@
+<form>
+  <div class="question-group">
+    <div class="form-group">
+      @if (isEditing) {
+        <angular-editor
+          name="questionContent"
+          [id]="question.id"
+          [config]="config"
+          [(ngModel)]="question.content"
+          (ngModelChange)="onPaste($event)"
+        ></angular-editor>
+      } @else {
+        <span textSelection [innerHTML]="question.content"> </span>
+      }
+      @if (isReadOnly && question.answer.length === 0) {
+        ❌
+      }
+    </div>
+
+    <div class="choice-group">
+      @if (isReadOnly) {
+        <div class="choice">
+          @if (question | isCorrectDropdown) {
+            <span class="answer">
+              {{ question | answerChoice }}
+            </span>
+          } @else {
+            <span class="answer incorrect">
+              {{ question | answerChoice }}
+            </span>
+            <span class="answer correct">
+              {{ question | correctAnswerChoice }}
+            </span>
+          }
+        </div>
+      } @else {
+        @if (isEditing) {
+          @for (choice of question.choices; track $index) {
+            <div class="choice">
+              <div class="form-group">
+                <mat-radio-group
+                  [(ngModel)]="question.correctAnswer"
+                  name="correctAnswer"
+                >
+                  <mat-radio-button color="primary" [value]="choice.id">
+                  </mat-radio-button>
+                </mat-radio-group>
+                <mat-form-field class="choice-input">
+                  <textarea
+                    autocomplete="off"
+                    [disabled]="isReadOnly"
+                    matInput
+                    [name]="choice.id"
+                    type="text"
+                    class="form-control"
+                    [(ngModel)]="choice.content"
+                  ></textarea>
+                </mat-form-field>
+                <button
+                  mat-button
+                  color="warn"
+                  type="button"
+                  class="btn btn-danger"
+                  (click)="removeChoice($index)"
+                >
+                  <mat-icon>delete</mat-icon>
+                </button>
+              </div>
+            </div>
+          }
+        } @else {
+          @if (isTesting) {
+            <mat-form-field class="choice-input">
+              <mat-select [(value)]="question.answer">
+                @for (choice of question.choices; track $index) {
+                  <mat-option [value]="choice.id">{{
+                    choice.content
+                  }}</mat-option>
+                }
+              </mat-select>
+            </mat-form-field>
+          } @else {
+            <mat-form-field class="choice-input">
+              <mat-select [(value)]="question.correctAnswer">
+                @for (choice of question.choices; track $index) {
+                  <mat-option [value]="choice.id">{{
+                    choice.content
+                  }}</mat-option>
+                }
+              </mat-select>
+            </mat-form-field>
+          }
+        }
+      }
+    </div>
+    @if (isEditing) {
+      <button
+        mat-button
+        color="primary"
+        type="button"
+        class="btn btn-primary"
+        (click)="addChoice()"
+      >
+        <mat-icon>add</mat-icon>
+        More option
+      </button>
+    }
+  </div>
+</form>

@@ -1,0 +1,18 @@
+#question-group {
+  height: calc(100vh - 12rem);
+  overflow-y: hidden;
+}
+.timer {
+  height: 3rem;
+  width: 5rem;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: calc(100vw / 2);
+  z-index: 100;
+}
+
+.start-part-button {
+  display: flex;
+}

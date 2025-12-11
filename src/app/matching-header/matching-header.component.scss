@@ -1,0 +1,85 @@
+.container {
+  display: flex;
+  gap: 20px;
+}
+
+.container--left {
+  flex-direction: column;
+  gap: 16px;
+  overflow-y: scroll;
+}
+
+.container--left,
+.container--right {
+  max-height: calc(100vh - 450px);
+  width: calc(100vw / 2 - 60px);
+
+  padding-right: 17px;
+  box-sizing: content-box;
+}
+
+.heading-container {
+  overflow-y: scroll;
+}
+
+.paragraph {
+  margin: 0 0 10px 0;
+}
+
+.add-answer-button {
+  margin: 10px 0 0 0;
+}
+
+.answer {
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.answer-content {
+  width: 25rem;
+}
+
+.input-reading {
+  display: flex;
+  flex-direction: column;
+}
+
+.heading-input {
+  min-width: 50rem;
+}
+
+.question-actions {
+  margin: 0 0 20px 0;
+  flex-direction: row;
+}
+
+.answer-drop-container {
+  height: 2rem;
+  line-height: 2rem;
+  padding: 10px;
+  margin: 0 0 10px 0;
+  border: 1px solid black;
+  font-weight: bold;
+}
+
+.container--right.drop-over,
+.answer-drop-container.drop-over {
+  border: 1px dashed black;
+}
+
+.correct {
+  color: var(--success-color);
+}
+
+.incorrect {
+  color: var(--danger-color);
+}
+
+.answer-card-container {
+  position: fixed;
+  top: 200;
+}
+
+.description {
+  margin: 0 0 10px 0;
+}

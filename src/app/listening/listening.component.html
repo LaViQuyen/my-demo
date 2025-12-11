@@ -1,0 +1,143 @@
+@if (data) {
+  <div class="container">
+    <div class="form-group">
+      @if (isSaved || isTesting || isReadOnly) {
+        <h2 textSelection>{{ data.name }}</h2>
+      } @else {
+        <mat-form-field>
+          <mat-label>Part</mat-label>
+          <input
+            autocomplete="off"
+            matInput
+            name="part"
+            type="text"
+            class="form-control"
+            id="part"
+            [(ngModel)]="data.name"
+            required
+          />
+        </mat-form-field>
+      }
+    </div>
+
+    <div
+      class="question-group"
+      [ngClass]="{ unclickable: isTesting && !isStart }"
+    >
+      @for (question of data.questions; track question.id) {
+        <div class="question">
+          <app-question
+            [question]="question"
+            [isSaved]="isSaved"
+            [isEditing]="mapQuestionEditting[question.id]"
+            [isReadOnly]="isReadOnly"
+            [isTesting]="isTesting"
+            (onSave)="onSaveClick()"
+          ></app-question>
+          <div class="actions">
+            @if (!isSaved && !isTesting && !isReadOnly) {
+              @if (mapQuestionEditting[question.id]) {
+                <button
+                  mat-button
+                  color="primary"
+                  type="button"
+                  class="btn btn-danger"
+                  (click)="onSaveQuestion(question.id)"
+                >
+                  <mat-icon>save</mat-icon>
+                </button>
+              } @else {
+                <button
+                  mat-button
+                  color="primary"
+                  type="button"
+                  class="btn btn-danger"
+                  (click)="onEditQuestion(question.id)"
+                >
+                  <mat-icon>edit</mat-icon>
+                </button>
+              }
+              <button
+                mat-button
+                type="button"
+                class="btn btn-danger"
+                (click)="duplicateQuestion(question)"
+              >
+                <mat-icon>content_copy</mat-icon>
+              </button>
+              <button
+                mat-button
+                color="warn"
+                type="button"
+                class="btn btn-danger"
+                (click)="removeQuestion($index)"
+              >
+                <mat-icon>delete</mat-icon>
+              </button>
+              @if ($index !== 0) {
+                <button
+                  mat-button
+                  type="button"
+                  class="btn btn-danger"
+                  (click)="moveQuestionUp($index)"
+                >
+                  <mat-icon>arrow_upward</mat-icon>
+                </button>
+              }
+              @if ($index !== data.questions.length - 1) {
+                <button
+                  mat-button
+                  type="button"
+                  class="btn btn-danger"
+                  (click)="moveQuestionDown($index)"
+                >
+                  <mat-icon>arrow_downward</mat-icon>
+                </button>
+              }
+            }
+          </div>
+        </div>
+      }
+    </div>
+
+    @if (!isSaved && !isTesting && !isReadOnly) {
+      <div class="question-type-container">
+        <button
+          class="add-question-button"
+          mat-raised-button
+          (click)="addQuestion(0)"
+        >
+          <mat-icon>add</mat-icon> Multiple Choices
+        </button>
+        <button
+          class="add-question-button"
+          mat-raised-button
+          (click)="addQuestion(1)"
+        >
+          <mat-icon>add</mat-icon> Short Answer
+        </button>
+        <button
+          class="add-question-button"
+          mat-raised-button
+          (click)="addQuestion(3)"
+        >
+          <mat-icon>add</mat-icon> Dropdown Choices
+        </button>
+        <button
+          class="add-question-button"
+          mat-raised-button
+          (click)="addQuestion(4)"
+        >
+          <mat-icon>add</mat-icon> Label On Map
+        </button>
+        <button
+          class="add-question-button"
+          mat-raised-button
+          (click)="addQuestion(5)"
+        >
+          <mat-icon>add</mat-icon> Fill In The Gap
+        </button>
+      </div>
+    }
+  </div>
+}

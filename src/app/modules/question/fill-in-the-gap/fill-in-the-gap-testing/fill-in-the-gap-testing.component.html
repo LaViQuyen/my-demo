@@ -1,0 +1,31 @@
+@if (question.arrayContent) {
+  <div class="d-flex flex-column">
+    <b><span textSelection [innerHTML]="question.content"></span></b>
+    <div class="d-flex flex-column mt-2 ms-2">
+      @for (line of question.arrayContent; track $index; ) {
+        <div class="d-flex flex-row flex-wrap align-items-center mb-4">
+          @for (content of line; track $index) {
+            <div class="d-flex align-items-center">
+              @if (content | isInput) {
+                @let choiceId = content | extractId;
+                @if (mapChoiceById[choiceId]) {
+                  <input
+                    [id]="choiceId"
+                    [ngClass]="{'bg-white': selectedId() === choiceId}"
+                    [autofocus]="true"
+                    class="mx-1 mt-1"
+                    (click)="onAnswerChoice.emit(mapChoiceById[choiceId])"
+                    (ngModelChange)="onInputAnswer($event, choiceId)"
+                    [(ngModel)]="mapChoiceById[choiceId].answer"
+                  />
+                }
+              } @else {
+                <div>{{ content }}</div>
+              }
+            </div>
+          }
+        </div>
+      }
+    </div>
+  </div>
+}

@@ -1,0 +1,32 @@
+<b><span [innerHTML]="question.content"></span></b>
+@if (isReadOnly && question.answer.length === 0) {
+  <span>❌</span>
+}
+
+<div class="d-flex align-items-center mt-2">
+  @let isCorrectAnswer = question | isCorrectDropdown;
+  @let correctAnswer = question | correctDropdownAnswer;
+  @let answeredChoice = question | answerChoice;
+  @if (isReadOnly) {
+    @if (isReadOnly && isCorrectAnswer) {
+      <span>{{ answeredChoice }} ✅</span>
+    }
+    @if (isReadOnly && !isCorrectAnswer && !(question.answer.length === 0)) {
+      <span>{{ answeredChoice }} ❌</span>
+    }
+
+    @if (question.answer.length === 0) {
+      <span>{{ correctAnswer.content }} ✅</span>
+    }
+  } @else {
+    <div class="d-flex flex-column">
+      <select disabled>
+        <option>
+          {{ correctAnswer.content }}
+        </option>
+      </select>
+    </div>
+  }
+
+
+</div>

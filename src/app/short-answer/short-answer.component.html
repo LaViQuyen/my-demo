@@ -1,0 +1,121 @@
+<form>
+  @if (isReadOnly) {
+    <div class="choice-group">
+      @for (choice of question.choices; track $index) {
+        @if (choice | isCorrectAnswer) {
+          <div class="result">
+            <div>
+              <b>{{ choice.index }}</b>
+            </div>
+            <div class="correct-answer">
+              {{ choice.answer }}
+            </div>
+          </div>
+        } @else {
+          <div class="answer">
+            <span class="answer-input">
+              <b>{{ choice.index }}</b>
+              <span class="incorrect-answer">{{
+                !choice.answer || choice.answer === "" ? "❌" : choice.answer
+              }}</span>
+              <span class="correct-answer">
+                {{ choice.correctAnswer }}
+              </span>
+            </span>
+          </div>
+        }
+      }
+    </div>
+  } @else {
+    <div class="question-group">
+      <div class="form-group">
+        @if (isEditing) {
+          <angular-editor
+            [name]="question.id"
+            [config]="config"
+            [(ngModel)]="question.content"
+            (ngModelChange)="onPaste($event)"
+          ></angular-editor>
+        } @else {
+          <span textSelection [innerHTML]="question.content"></span>
+        }
+      </div>
+
+      <div class="choice-group">
+        @for (choice of question.choices; track $index) {
+          @if (isEditing) {
+            <mat-form-field class="choice-index">
+              <mat-label>Question</mat-label>
+              <textarea
+                autocomplete="off"
+                matInput
+                [name]="$index.toString()"
+                type="text"
+                class="form-control"
+                [(ngModel)]="choice.index"
+              ></textarea>
+            </mat-form-field>
+            <mat-form-field class="choice-answer">
+              <mat-label>Answer</mat-label>
+              <textarea
+                autocomplete="off"
+                matInput
+                [name]="choice.id"
+                type="text"
+                class="form-control"
+                [(ngModel)]="choice.correctAnswer"
+              ></textarea>
+            </mat-form-field>
+          } @else {
+            @if (isTesting) {
+              <p class="answer-input">
+                <b>{{ choice.index }}&nbsp;</b>
+              </p>
+              <mat-form-field>
+                <mat-label>Answer</mat-label>
+                <input
+                  autocomplete="off"
+                  matInput
+                  [name]="choice.id"
+                  type="text"
+                  class="form-control"
+                  [(ngModel)]="choice.answer"
+                />
+              </mat-form-field>
+            } @else {
+              <p class="answer-input">
+                <b>{{ choice.index }}&nbsp;</b>
+                <span class="correct-answer">
+                  {{ choice.correctAnswer }}
+                </span>
+              </p>
+            }
+          }
+          <button
+            *ngIf="isEditing"
+            mat-button
+            color="warn"
+            type="button"
+            class="btn btn-danger"
+            (click)="removeChoice($index)"
+          >
+            <mat-icon>delete</mat-icon>
+          </button>
+        }
+      </div>
+
+      <button
+        *ngIf="isEditing"
+        mat-button
+        color="primary"
+        type="button"
+        class="btn btn-primary"
+        style="margin-top: 16px"
+        (click)="addChoice()"
+      >
+        <mat-icon>add</mat-icon>
+        More option
+      </button>
+    </div>
+  }
+</form>

@@ -1,0 +1,14 @@
+.timer {
+  position: fixed;
+  top: 0;
+  left: calc(100vw / 2);
+  z-index: 100;
+}
+
+.start-part-button {
+  display: flex;
+}
+
+.submit-button {
+  margin: 16px 0 16px 16px;
+}

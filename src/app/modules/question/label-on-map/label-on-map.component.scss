@@ -1,0 +1,21 @@
+table,
+tr,
+td,
+th {
+  border: 1px solid black;
+  min-height: 2rem;
+  min-width: 4rem;
+  text-align: center;
+  background: var(--primary-color);
+}
+
+.choice-item {
+  width: fit-content;
+  height: fit-content;
+}
+
+.icon {
+  height: fit-content;
+  width: fit-content;
+  background: var(--primary-color);
+}

@@ -1,0 +1,16 @@
+.dropdown-container {
+  background: var(--primary-color);
+}
+
+.answer {
+  color: var(--success-color);
+}
+
+.answer.correct {
+  color: var(--success-color);
+  margin-left: 16px;
+}
+
+.answer.incorrect {
+  color: var(--danger-color);
+}

@@ -1,0 +1,91 @@
+<div class="main-layout">
+  
+  <div class="top-bar">
+    
+    <div class="left-section">
+      @if (state["isTesting"]) {
+        <div class="timer-display">
+          Time: <span>{{ minutes }}:{{ seconds | number: "2.0" }}</span>
+        </div>
+      }
+    </div>
+
+    <div class="center-section">
+      @if (state["isEditing"]) {
+        <mat-form-field appearance="outline" class="dense-form">
+          <mat-label>Name</mat-label>
+          <input matInput [(ngModel)]="data.name" />
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="dense-form">
+          <mat-label>Mins</mat-label>
+          <input matInput type="number" [(ngModel)]="data.timeout" />
+        </mat-form-field>
+      }
+
+      @if ((state["isTesting"] && isReady) || state["isReadOnly"]) {
+        <span class="student-name">
+          Candidate: <b>{{ data.studentName }}</b>
+        </span>
+      }
+    </div>
+
+    <div class="right-section">
+      @if (state["isTesting"] && !isReady) {
+        <div class="start-controls">
+          <mat-form-field appearance="outline" class="name-input">
+            <mat-label>Enter Your Name</mat-label>
+            <input matInput [(ngModel)]="data.studentName" required />
+          </mat-form-field>
+
+          <button mat-raised-button color="primary" class="start-btn"
+            [disabled]="!data.studentName || data.studentName === ''" 
+            (click)="onStart()">
+            START TEST
+          </button>
+        </div>
+      }
+    </div>
+
+  </div>
+
+  @if (isReady || state["isReadOnly"] || state["isEditing"]) {
+    <div class="content-body">
+      @if (data.parts && data.parts.length > 0) {
+        <app-writing
+          class="writing-part-instance"
+          [data]="data.parts[selectedPartIndex]" 
+          [isSaved]="mapSavedPart[selectedPartIndex]!"
+          [isEditing]="state['isEditing']"
+          [isTesting]="state['isTesting']"
+          [isReadOnly]="state['isReadOnly']">
+        </app-writing>
+      }
+    </div>
+  }
+
+  @if (isReady || state["isReadOnly"] || state["isEditing"]) {
+    <div class="bottom-bar">
+      <div class="part-tabs">
+        @for (part of data.parts; track $index) {
+          <button class="tab-btn" 
+                  [class.active]="selectedPartIndex === $index"
+                  (click)="selectedPartIndex = $index">
+            Part {{ $index + 1 }}
+          </button>
+        }
+        @if (state["isEditing"]) {
+          <button class="add-part-btn" (click)="onAddPart()"><mat-icon>add</mat-icon></button>
+        }
+      </div>
+
+      <div class="action-buttons">
+        @if (state["isEditing"]) {
+          <button mat-raised-button color="accent" (click)="onSaveClick()">Save & Exit</button>
+        }
+        @if (state["isTesting"]) {
+          <button mat-raised-button color="warn" (click)="onSubmit()">Submit Test</button>
+        }
+      </div>
+    </div>
+  }
+</div>

@@ -1,0 +1,54 @@
+@if (question.tableContent) {
+  <div class="d-flex flex-column" [id]="question.id">
+    <b><span textSelection [innerHTML]="question.content"></span></b>
+    <div class="d-flex flex-column mt-3">
+      <table>
+        <th [colSpan]="headerColSpan">
+          <p class="my-2">
+            {{ question.name }}
+          </p>
+        </th>
+        @for (row of question.tableContent | keyvalue; track $index; ) {
+          <tr>
+            @for (column of row.value | keyvalue; track $index; ) {
+              <td class="m-1" [ngClass]="{'text-center' : row.key === 'tr0' || column.key === 'td0'}">
+                <div class="d-flex flex-column m-2"
+                     [ngClass]="{'justify-content-center': row.key === 'tr0' || column.key === 'td0'}">
+                  @for (line of column.value; track $index; ) {
+                    <div class="d-flex flex-row flex-wrap">
+                      @for (content of line; track $index; ) {
+                        <div class="mx-1">
+                          @if ((content | isInput)) {
+                            @let choiceId = content | extractId;
+                            @if (mapChoiceById[choiceId]) {
+                              <input
+                                class="mt-1"
+                                [id]="choiceId"
+                                [(ngModel)]="mapChoiceById[choiceId].answer"
+                                [ngClass]="{'bg-white': selectedId() === choiceId}"
+                                (click)="onAnswerChoice.emit(mapChoiceById[choiceId])"
+                                (ngModelChange)="onInputAnswer($event, choiceId)"
+                                [(ngModel)]="mapChoiceById[choiceId].answer" />
+                            }
+                          } @else {
+                            @if (row.key === 'tr0' || column.key === 'td0') {
+                              <b>
+                                <p class="my-2">{{ content }}</p>
+                              </b>
+                            } @else {
+                              <p class="my-2">{{ content }}</p>
+                            }
+                          }
+                        </div>
+                      }
+                    </div>
+                  }
+                </div>
+              </td>
+            }
+          </tr>
+        }
+      </table>
+    </div>
+  </div>
+}

@@ -1,0 +1,125 @@
+/* Container chính bao trùm, sử dụng Flexbox */
+.writing-test-layout {
+  display: flex;
+  flex-direction: row; /* Xếp ngang */
+  height: calc(100vh - 64px); /* Trừ đi chiều cao Header/Toolbar chung của app */
+  width: 100%;
+  overflow: hidden; /* Ẩn thanh cuộn của body chính */
+  background-color: #f5f5f5;
+}
+
+/* --- CỘT TRÁI (ĐỀ BÀI) --- */
+.left-pane {
+  flex: 1; /* Chiếm 50% chiều rộng (hoặc tuỳ chỉnh) */
+  width: 50%;
+  padding: 20px;
+  background-color: #ffffff;
+  border-right: 1px solid #e0e0e0;
+  overflow-y: auto; /* Cho phép cuộn dọc nội dung đề bài */
+  box-sizing: border-box;
+
+  .question-content {
+    max-width: 800px; /* Giới hạn chiều rộng để dễ đọc */
+    margin: 0 auto;
+    
+    /* Style cho nội dung đề bài */
+    .prompt-display {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #333;
+      
+      img {
+        max-width: 100%;
+        height: auto;
+        margin: 15px 0;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+      }
+    }
+  }
+}
+
+/* --- CỘT PHẢI (KHUNG SOẠN THẢO) --- */
+.right-pane {
+  flex: 1; /* Chiếm 50% chiều rộng còn lại */
+  width: 50%;
+  padding: 20px;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  position: relative; /* Để định vị bộ đếm từ */
+  box-sizing: border-box;
+
+  .answer-area {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    /* Tùy chỉnh angular-editor để full chiều cao */
+    ::ng-deep .angular-editor-wrapper {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+
+      .angular-editor-textarea {
+        flex-grow: 1;
+        height: 100% !important;
+        resize: none; /* Tắt kéo giãn thủ công */
+        min-height: 0; /* Fix lỗi flexbox trên Firefox */
+        font-family: 'Arial', sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        padding-bottom: 40px; /* Chừa chỗ cho bộ đếm từ */
+      }
+    }
+  }
+
+  /* Bộ đếm từ nổi (Floating Badge) */
+  .word-count-badge {
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 16px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    pointer-events: none; /* Để chuột có thể click xuyên qua */
+    z-index: 10;
+  }
+
+  .placeholder-msg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: #888;
+    
+    mat-icon {
+      font-size: 48px;
+      width: 48px;
+      height: 48px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+/* Responsive: Trên mobile thì xếp dọc */
+@media (max-width: 768px) {
+  .writing-test-layout {
+    flex-direction: column;
+    height: auto;
+    overflow: auto;
+  }
+
+  .left-pane, .right-pane {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #e0e0e0;
+    height: auto;
+    min-height: 300px;
+  }
+}

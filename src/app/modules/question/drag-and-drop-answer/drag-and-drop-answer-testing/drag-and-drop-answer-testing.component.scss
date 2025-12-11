@@ -1,0 +1,15 @@
+.drop-container {
+  min-width: 15rem;
+  margin-left: 10px;
+  height: 1.5rem;
+  border: 1px solid black;
+}
+
+#container-right.drop-over,
+.drop-container.drop-over {
+  border: 1px dashed black;
+}
+
+.drop-container.active {
+  background-color: #fff;
+}

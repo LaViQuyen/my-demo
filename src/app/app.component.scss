@@ -1,0 +1,32 @@
+.container {
+  margin: 30px 16px;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  margin: 16px 50px;
+  aspect-ratio: 1920 / 1080;
+}
+
+.author {
+  display: flex;
+  flex-direction: column-reverse;
+  color: rgb(150, 150, 150);
+  font-size: small;
+}
+
+@media (max-width: 768px) {
+  .author {
+    font-size: xx-small;
+  }
+
+  .container {
+    margin: 30px 10px;
+  }
+}

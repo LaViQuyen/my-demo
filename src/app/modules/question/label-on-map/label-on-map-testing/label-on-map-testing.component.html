@@ -1,0 +1,36 @@
+<div class="d-flex" [id]="question.id">
+  <div class="col-6">
+    <span class="reading-content" textSelection [innerHTML]="question.content"></span>
+  </div>
+  <div class="ms-2">
+    @let subQuestions = question.subQuestions;
+    @if (subQuestions && subQuestions[0]) {
+      <table>
+        <tr>
+          <th></th>
+          @for (choice of subQuestions[0].choices; track $index) {
+            <th>{{ choiceIndex[$index] }}</th>
+          }
+        </tr>
+        @for (question of subQuestions; track $index; ) {
+          @let questionIndex = $index;
+          <tr>
+            <td class="p-2">
+              <span textSelection [innerHTML]="question.content"></span>
+            </td>
+            @for (choice of question.choices; track $index; ) {
+              @let choiceIndex = $index;
+              <td class="align-items-center"
+                  (click)="onSelectAnswer(questionIndex, choiceIndex)"
+              >
+                @if (question.answer.includes(choice.id)) {
+                  <mat-icon class="icon" color="primary">check</mat-icon>
+                }
+              </td>
+            }
+          </tr>
+        }
+      </table>
+    }
+  </div>
+</div>

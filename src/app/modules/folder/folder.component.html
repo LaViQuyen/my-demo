@@ -1,0 +1,16 @@
+<mat-card class="card">
+  <mat-card-content class="card-content" (click)="goToFolder(folder.id!)">
+    <h2 class="mat-display-2 card-content-text">
+      <mat-icon class="folder-icon">folder</mat-icon>{{ folder.name }}
+    </h2>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="onEditClick(folder)">Edit</button>
+      <button mat-menu-item (click)="onDeleteClick(folder)">Delete</button>
+    </mat-menu>
+  </mat-card-actions>
+</mat-card>

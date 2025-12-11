@@ -1,0 +1,21 @@
+@if (isEditing) {
+  <app-short-answer-editing
+    [question]="question"
+    [isEditing]="isEditing"
+  ></app-short-answer-editing>
+}
+@if (isTesting) {
+  <app-short-answer-testing
+    [question]="question"
+    [isTesting]="isTesting"
+    (onAnswerChoice)="onAnswerChoice.emit($event)"
+  ></app-short-answer-testing>
+}
+
+@if (isReadOnly || (!isEditing && !isTesting)) {
+  <app-short-answer-readonly
+    [question]="question"
+    [isReadOnly]="isReadOnly"
+  ></app-short-answer-readonly>
+}
+

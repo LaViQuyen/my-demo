@@ -1,0 +1,13 @@
+.container--right,
+.container--left {
+  max-height: calc(100vh - 18rem);
+  overflow-y: auto;
+}
+
+.correct {
+  color: var(--success-color);
+}
+
+.incorrect {
+  color: var(--danger-color);
+}

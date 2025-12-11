@@ -1,0 +1,56 @@
+@switch (question.type) {
+  @case (0) {
+    <div class="question">
+      <app-multiple-choices
+        [question]="question"
+        [isReadOnly]="isReadOnly"
+        [isEditing]="isEditing"
+        [isTesting]="isTesting"
+        (onSave)="onSaveQuestion()"
+      ></app-multiple-choices>
+    </div>
+  }
+  @case (1) {
+    <div class="question">
+      <app-short-answer
+        [question]="question"
+        [isReadOnly]="isReadOnly"
+        [isEditing]="isEditing"
+        [isTesting]="isTesting"
+        (onSave)="onSaveQuestion()"
+      ></app-short-answer>
+    </div>
+  }
+  @case (3) {
+    <div class="question">
+      <app-dropdown-choices
+        [question]="question"
+        [isReadOnly]="isReadOnly"
+        [isEditing]="isEditing"
+        [isTesting]="isTesting"
+        (onSave)="onSaveQuestion()"
+      ></app-dropdown-choices>
+    </div>
+  }
+  @case (4) {
+    <div class="question">
+      <app-label-on-map
+        [question]="question"
+        [isReadOnly]="isReadOnly"
+        [isEditing]="isEditing"
+        [isTesting]="isTesting"
+        (onSave)="onSaveQuestion()"
+      ></app-label-on-map>
+    </div>
+  }
+  @case (5) {
+    <app-fill-in-the-gap
+      [question]="question"
+      [isReadOnly]="isReadOnly"
+      [isEditing]="isEditing"
+      [isTesting]="isTesting"
+      (onSave)="onSaveQuestion()"
+    >
+    </app-fill-in-the-gap>
+  }
+}

@@ -1,0 +1,28 @@
+.answer {
+  width: fit-content;
+  font-weight: bold;
+}
+
+.incorrect-answer {
+  margin-left: 16px;
+  color: var(--danger-color);
+  width: 100%;
+}
+
+.correct-answer {
+  color: var(--success-color);
+  font-weight: bold;
+  margin-left: 16px;
+}
+
+.choice-index {
+  margin-right: 16px;
+}
+
+.choice-answer {
+  width: 50%;
+}
+
+.result {
+  display: flex;
+}

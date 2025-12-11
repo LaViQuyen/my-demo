@@ -1,0 +1,13 @@
+.container--left,
+.container--right {
+  max-height: calc(100vh - 18rem);
+  overflow-y: auto;
+}
+
+.answer-drop-container {
+  border: 1px solid black
+}
+
+.answer-drop-container.drop-over {
+  border: 1px dashed black;
+}

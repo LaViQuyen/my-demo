@@ -1,0 +1,1 @@
+ng build --output-path=server/dist

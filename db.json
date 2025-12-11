@@ -1,0 +1,183 @@
+{
+  "quizzes": [
+    {
+      "id": "693aa024fd7ce2e4791a",
+      "name": "Q",
+      "listeningParts": [],
+      "readingParts": [],
+      "writingParts": [
+        {
+          "id": "693aa01a9c22c9433e06",
+          "content": "LA VI QUYEN",
+          "questions": [],
+          "answer": "",
+          "wordCount": 0,
+          "testDate": ""
+        },
+        {
+          "id": "693aa027b7f26a67298",
+          "content": "&#272;&#7862;NG TR&#7846;N THANH XU&#194;N",
+          "questions": [],
+          "answer": "",
+          "wordCount": 0,
+          "testDate": ""
+        }
+      ],
+      "listeningTimeout": 60,
+      "readingTimeout": 60,
+      "writingTimeout": 60
+    }
+  ],
+  "results": [
+    {
+      "id": "693aa601244effb5a2ad",
+      "name": "Q",
+      "listeningParts": [],
+      "readingParts": [],
+      "writingParts": [
+        {
+          "id": "693aa01a9c22c9433e06",
+          "content": "LA VI QUYEN",
+          "questions": [],
+          "answer": "",
+          "wordCount": 0,
+          "testDate": ""
+        },
+        {
+          "id": "693aa027b7f26a67298",
+          "content": "&#272;&#7862;NG TR&#7846;N THANH XU&#194;N",
+          "questions": [],
+          "answer": "",
+          "wordCount": 0,
+          "testDate": ""
+        }
+      ],
+      "listeningTimeout": 60,
+      "readingTimeout": 60,
+      "writingTimeout": 60,
+      "audioTime": 1,
+      "studentName": "Q",
+      "currentTab": 2
+    }
+  ],
+  "writings": [
+    {
+      "id": "69396c71cff11bc7530a",
+      "name": "Q",
+      "content": "",
+      "answer": "",
+      "timeout": "60",
+      "wordCount": 0,
+      "questions": [],
+      "parts": [
+        {
+          "id": "69396c59f0ecb0d6e5ac",
+          "content": "LA VI QUYEN",
+          "questions": [],
+          "answer": "",
+          "wordCount": 0,
+          "testDate": ""
+        },
+        {
+          "id": "69396c65400dce10577d",
+          "content": "DANG TRAN THANH XUAN",
+          "questions": [],
+          "answer": "",
+          "wordCount": 0,
+          "testDate": ""
+        }
+      ],
+      "testDate": ""
+    }
+  ],
+  "writings-result": [
+    {
+      "id": "69396c764ac2ec9fdbdc",
+      "name": "Q",
+      "content": "",
+      "answer": "",
+      "timeout": 54.11666666666667,
+      "wordCount": 0,
+      "questions": [],
+      "parts": [
+        {
+          "id": "69396c59f0ecb0d6e5ac",
+          "content": "LA VI QUYEN",
+          "questions": [],
+          "answer": "",
+          "wordCount": 0,
+          "testDate": ""
+        },
+        {
+          "id": "69396c65400dce10577d",
+          "content": "DANG TRAN THANH XUAN",
+          "questions": [],
+          "answer": "",
+          "wordCount": 0,
+          "testDate": ""
+        }
+      ],
+      "testDate": "",
+      "studentName": "Q"
+    },
+    {
+      "id": "69397ea29389171396c7",
+      "name": "Q",
+      "content": "",
+      "answer": "",
+      "timeout": 59.65,
+      "wordCount": 0,
+      "questions": [],
+      "parts": [
+        {
+          "id": "69396c59f0ecb0d6e5ac",
+          "content": "LA VI QUYEN",
+          "questions": [],
+          "answer": "",
+          "wordCount": 0,
+          "testDate": ""
+        },
+        {
+          "id": "69396c65400dce10577d",
+          "content": "DANG TRAN THANH XUAN",
+          "questions": [],
+          "answer": "",
+          "wordCount": 0,
+          "testDate": ""
+        }
+      ],
+      "testDate": "10/12/2025",
+      "studentName": "Q",
+      "isSubmit": true
+    },
+    {
+      "id": "693aba2b8ba8e5298072",
+      "name": "Q",
+      "content": "",
+      "answer": "",
+      "timeout": "60",
+      "wordCount": 0,
+      "questions": [],
+      "parts": [
+        {
+          "id": "69396c59f0ecb0d6e5ac",
+          "content": "LA VI QUYEN",
+          "questions": [],
+          "answer": "",
+          "wordCount": 0,
+          "testDate": ""
+        },
+        {
+          "id": "69396c65400dce10577d",
+          "content": "DANG TRAN THANH XUAN",
+          "questions": [],
+          "answer": "",
+          "wordCount": 0,
+          "testDate": ""
+        }
+      ],
+      "testDate": "",
+      "studentName": "Q"
+    }
+  ]
+}

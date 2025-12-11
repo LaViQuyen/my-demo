@@ -1,0 +1,24 @@
+@if (isEditing) {
+  <app-multiple-choices-editing
+    [question]="question"
+    [isEditing]="isEditing"
+  ></app-multiple-choices-editing>
+}
+
+@if (isTesting) {
+  <app-multiple-choices-testing
+    [question]="question"
+    [isTesting]="isTesting"
+    [(selectedId)]="selectedId"
+    (onAnswer)="onAnswer.emit($event)"
+  ></app-multiple-choices-testing>
+}
+
+@if (isReadOnly || (!isEditing && !isTesting)) {
+  <app-multiple-choices-readonly
+    [question]="question"
+    [isReadOnly]="isReadOnly"
+  ></app-multiple-choices-readonly>
+}
+
+

@@ -1,0 +1,11 @@
+<div class="part-container">
+  @for (part of parts; track $index) {
+    <div
+      class="part-item"
+      [ngClass]="{ active: selectedPart === $index }"
+      (click)="onPartClick($index)"
+    >
+      {{ $index + 1 }}
+    </div>
+  }
+</div>

@@ -1,0 +1,61 @@
+<div class="question-group">
+  <div class="form-group">
+    <b><span [innerHTML]="question.content"> </span></b>
+    @if (isReadOnly && question.answer.length === 0) {
+      ❌
+    }
+  </div>
+  <div class="choice-group">
+    @for (choice of question.choices; track $index) {
+      <div class="mt-2 d-flex align-baseline">
+        @if (question.numberOfChoices! > 1) {
+          @if (isTesting || isReadOnly) {
+            <input disabled [checked]="question.answer.includes(choice.id)" type="checkbox"
+            />
+          } @else {
+            <input disabled [checked]="question.correctAnswer.includes(choice.id)" type="checkbox"
+            />
+          }
+        } @else {
+          <input disabled [checked]="selectedOption === choice.id" type="radio"
+          />
+        }
+        <div class="ms-2">{{ choice.content }}</div>
+        @if (isReadOnly) {
+          <div class="ms-2">
+            @if (question.numberOfChoices! > 1) {
+              <!-- Correct answer -->
+              @if (question.correctAnswer.includes(choice.id)) {
+                ✅
+              }
+
+              <!-- Incorrect answer -->
+              @if (question.answer.includes(choice.id) && !question.correctAnswer.includes(choice.id)) {
+                ❌
+              }
+            } @else {
+              @if (question.answer.length === 0 && question.correctAnswer.includes(choice.id)) {
+                ✅
+              } @else {
+                <!-- Correct answer -->
+                @if (!question.answer.includes(choice.id) && question.correctAnswer.includes(choice.id)) {
+                  ✅
+                }
+
+                <!-- Student correct answer -->
+                @if (question.answer.includes(choice.id) && question.correctAnswer.includes(choice.id)) {
+                  ✅
+                }
+
+                <!-- Student incorrect answer -->
+                @if (question.answer.includes(choice.id) && !question.correctAnswer.includes(choice.id)) {
+                  ❌
+                }
+              }
+            }
+          </div>
+        }
+      </div>
+    }
+  </div>
+</div>
