@@ -63,6 +63,29 @@
                   [data]="result.writingParts[selectedWritingPart]"
                   [isReadOnly]="true"
                 ></app-writing>
+                <mat-tab label="Writing">
+          <ng-template matTabContent>
+            @if (result.writingParts[selectedWritingPart]) {
+              <div class="question-group">
+                <app-writing
+                  [data]="result.writingParts[selectedWritingPart]"
+                  [isReadOnly]="true"
+                ></app-writing>
+
+                <div style="margin-top: 15px; padding: 10px; background: #e3f2fd; border-radius: 8px; border: 1px solid #bbdefb; display: inline-flex; align-items: center; gap: 8px;">
+                   <span class="material-icons" style="color: #1976d2;">description</span>
+                   <span style="font-size: 16px; color: #0d47a1;">
+                     Word Count: <b>{{ result.writingParts[selectedWritingPart].wordCount || 0 }}</b>
+                   </span>
+                </div>
+                </div>
+            }
+            <app-part-navigation
+              [(selectedPart)]="selectedWritingPart"
+              [parts]="result.writingParts"
+            ></app-part-navigation>
+          </ng-template>
+        </mat-tab>
               </div>
             }
             <app-part-navigation

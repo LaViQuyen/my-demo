@@ -1,4 +1,4 @@
-import { LayoutService } from '../../layout.service'; // Đường dẫn import chính xác
+import { LayoutService } from '../../layout.service'; // Chỉnh lại đường dẫn import cho đúng
 import { CommonModule } from '@angular/common';
 import { HttpResponse } from '@angular/common/http';
 import { Component, HostListener, OnDestroy } from '@angular/core';
@@ -158,9 +158,11 @@ export class AddOrEditWritingComponent implements OnDestroy {
     if (!this.result) {
       this.result = { ...this.data, id: CommonUtils.generateRandomId() };
       this.writingService.submit(this.result).subscribe();
+      
       this.layoutService.isExamMode.set(true);
       this.layoutService.studentName.set(this.data.studentName || '');
     }
+    
     this.isReady = true;
     this.getTimeout();
     
@@ -241,17 +243,13 @@ export class AddOrEditWritingComponent implements OnDestroy {
     });
   }
 
-  // --- HÀM ĐẾM TỪ (Đã cập nhật logic loại bỏ HTML) ---
   onWritingChange(htmlContent: any) {
     if (!htmlContent || typeof htmlContent !== 'string') {
       this.data.wordCount = 0;
       return;
     }
-    // Xóa thẻ HTML và chuẩn hóa chuỗi
     const plainText = htmlContent.replace(/<[^>]*>/g, ' ');
     const cleanText = plainText.replace(/\s+/g, ' ').trim();
-    
-    // Đếm
     this.data.wordCount = cleanText === '' ? 0 : cleanText.split(' ').length;
   }
 

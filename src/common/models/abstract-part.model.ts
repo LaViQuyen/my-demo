@@ -5,6 +5,6 @@ export interface AbstractPart {
   content: string;
   timeout: number | undefined;
   questions: Question[];
-  wordCount: number;
+  wordCount?: number; // <--- THÊM DẤU ? ĐỂ KHÔNG BẮT BUỘC
   testDate: string;
 }
