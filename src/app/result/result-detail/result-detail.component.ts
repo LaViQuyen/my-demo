@@ -2,48 +2,53 @@ import { Component, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatIconModule } from '@angular/material/icon'; // Đã import Icon
 import { ActivatedRoute, Router } from '@angular/router';
-import { Result } from '../../../common/models/result.model';
-import { ListeningComponent } from '../../listening/listening.component';
-import { MultipleChoicesComponent } from '../../multiple-choices/multiple-choices.component';
-import { PartNavigationComponent } from '../../part-navigation/part-navigation.component';
-import { ReadingComponent } from '../../reading/reading.component';
-import { ShortAnswerComponent } from '../../short-answer/short-answer.component';
-import { WritingComponent } from '../../writing/writing.component';
+import { MatDialog, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
+import { forkJoin } from 'rxjs';
+import { CommonModule } from '@angular/common'; // Thêm CommonModule
+
+// --- SỬA ĐƯỜNG DẪN IMPORT (GIẢM 1 CẤP ../) ---
+import { Result } from '../../shared/models/result.model';
+import { ListeningComponent } from '../../tabs/listening/listening.component';
+import { ReadingComponent } from '../../tabs/reading/reading.component';
+import { WritingComponent } from '../../tabs/writing/writing.component';
+import { PartNavigationComponent } from '../../shared/components/part-navigation/part-navigation.component';
 import { BandScorePipe } from '../band-score.pipe';
 import { ResultService } from '../result.service';
-import { FeedbackComponent } from '../../feedback/feedback.component';
-import {
-  MatDialog,
-  MatDialogModule,
-  MatDialogRef,
-} from '@angular/material/dialog';
-import { ExportUtils } from '../../../utils/export.utils';
+import { ExportUtils } from '../../utils/export.utils';
+import { FeedbackDialog } from '../../shared/dialogs/feedback-dialog/feedback-dialog.component';
 import { FileService } from '../../file.service';
-import { forkJoin } from 'rxjs';
-import { ConfirmDialogComponent } from '../../dialog/confirm-dialog/confirm-dialog.component';
-import { error } from 'winston';
+import { ConfirmDialogComponent } from '../../shared/dialogs/confirm-dialog/confirm-dialog.component';
+
+// Nếu bạn dùng các component question độc lập, hãy trỏ đúng đường dẫn (thường là trong shared hoặc root app)
+import { MultipleChoicesComponent } from '../../multiple-choices/multiple-choices.component';
+import { ShortAnswerComponent } from '../../short-answer/short-answer.component';
 
 @Component({
   selector: 'app-result-detail',
   standalone: true,
   imports: [
-    MultipleChoicesComponent,
-    ShortAnswerComponent,
+    CommonModule,
     MatCardModule,
     MatButtonModule,
     MatTabsModule,
+    MatIconModule,
+    MatDialogModule,
+    // Các component con
+    MultipleChoicesComponent,
+    ShortAnswerComponent,
     ReadingComponent,
     ListeningComponent,
     WritingComponent,
-    BandScorePipe,
     PartNavigationComponent,
-    FeedbackComponent,
-    MatDialogModule,
+    // Pipes & Dialogs
+    BandScorePipe,
+    FeedbackDialog,
   ],
   providers: [{ provide: MatDialogRef, useValue: {} }],
   templateUrl: './result-detail.component.html',
-  styleUrl: './result-detail.component.scss',
+  styleUrl: './result-detail.component.scss' // Thêm styleUrl nếu cần
 })
 export class ResultDetailComponent {
   result: Result = {
@@ -66,8 +71,9 @@ export class ResultDetailComponent {
   selectedListeningPart = 0;
   selectedReadingPart = 0;
   selectedWritingPart = 0;
-  fileService = inject(FileService);
-  dialog = inject(MatDialog);
+  
+  fileService: FileService = inject(FileService);
+  dialog: MatDialog = inject(MatDialog);
 
   constructor(
     private route: ActivatedRoute,
@@ -111,9 +117,14 @@ export class ResultDetailComponent {
         this.result.name,
       ),
     ]).subscribe(() => {
-      const dialogRef = this.dialog.open(ConfirmDialogComponent);
-      dialogRef.componentInstance.title = 'Information';
-      dialogRef.componentInstance.message = 'Download successfully';
+      // SỬA LỖI TYPESCRIPT Ở ĐÂY: Thêm <ConfirmDialogComponent> để định rõ kiểu
+      const dialogRef = this.dialog.open<ConfirmDialogComponent>(ConfirmDialogComponent);
+      
+      // Kiểm tra componentInstance tồn tại trước khi gán
+      if (dialogRef.componentInstance) {
+        dialogRef.componentInstance.title = 'Information';
+        dialogRef.componentInstance.message = 'Download successfully';
+      }
     });
   }
 

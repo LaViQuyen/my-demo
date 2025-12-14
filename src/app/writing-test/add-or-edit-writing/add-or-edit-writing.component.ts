@@ -244,15 +244,21 @@ export class AddOrEditWritingComponent implements OnDestroy {
   }
 
   onWritingChange(htmlContent: any) {
+    // Nếu không có nội dung
     if (!htmlContent || typeof htmlContent !== 'string') {
       this.data.wordCount = 0;
       return;
     }
+
+    // 1. Loại bỏ toàn bộ thẻ HTML (<p>, <br>...)
     const plainText = htmlContent.replace(/<[^>]*>/g, ' ');
+
+    // 2. Xóa ký tự xuống dòng và khoảng trắng thừa
     const cleanText = plainText.replace(/\s+/g, ' ').trim();
+
+    // 3. Đếm số từ
     this.data.wordCount = cleanText === '' ? 0 : cleanText.split(' ').length;
   }
-
   onAddPart() {
     const id = CommonUtils.generateRandomId();
     const newWritingParagraph: Writing = {

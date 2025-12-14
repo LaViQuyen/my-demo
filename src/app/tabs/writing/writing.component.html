@@ -37,5 +37,11 @@
       ></angular-editor>
       <div>Word count: {{ data.wordCount }}</div>
     </div>
-  }
+  }<angular-editor
+  class="student-editor"
+  [config]="testEditorConfig"
+  [(ngModel)]="data.answer"
+  (ngModelChange)="onContentChange($event)" 
+  [disabled]="isReadOnly"
+></angular-editor>
 </div>

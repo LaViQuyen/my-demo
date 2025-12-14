@@ -1,5 +1,5 @@
 <section>
-  <div class="container">
+  <div>
     <div class="form-group">
       <h1>
         <b>{{ result.name }}</b>
@@ -23,6 +23,7 @@
 
     <div class="question-container">
       <mat-tab-group animationDuration="0ms">
+        
         <mat-tab label="Listening" style="margin-top: 16px">
           <ng-template matTabContent>
             @if (result.listeningParts[selectedListeningPart]) {
@@ -39,6 +40,7 @@
             ></app-part-navigation>
           </ng-template>
         </mat-tab>
+
         <mat-tab label="Reading">
           <ng-template matTabContent>
             @if (result.readingParts[selectedReadingPart]) {
@@ -55,6 +57,7 @@
             ></app-part-navigation>
           </ng-template>
         </mat-tab>
+
         <mat-tab label="Writing">
           <ng-template matTabContent>
             @if (result.writingParts[selectedWritingPart]) {
@@ -63,29 +66,15 @@
                   [data]="result.writingParts[selectedWritingPart]"
                   [isReadOnly]="true"
                 ></app-writing>
-                <mat-tab label="Writing">
-          <ng-template matTabContent>
-            @if (result.writingParts[selectedWritingPart]) {
-              <div class="question-group">
-                <app-writing
-                  [data]="result.writingParts[selectedWritingPart]"
-                  [isReadOnly]="true"
-                ></app-writing>
 
-                <div style="margin-top: 15px; padding: 10px; background: #e3f2fd; border-radius: 8px; border: 1px solid #bbdefb; display: inline-flex; align-items: center; gap: 8px;">
-                   <span class="material-icons" style="color: #1976d2;">description</span>
-                   <span style="font-size: 16px; color: #0d47a1;">
+                <div class="mt-3 p-3 d-flex align-items-center" 
+                     style="background-color: #e3f2fd; border: 1px solid #90caf9; border-radius: 8px; padding: 10px; margin-top: 15px;">
+                   <mat-icon style="color: #1565c0; margin-right: 8px;">analytics</mat-icon>
+                   <span style="font-size: 16px; color: #0d47a1; font-weight: 500;">
                      Word Count: <b>{{ result.writingParts[selectedWritingPart].wordCount || 0 }}</b>
                    </span>
                 </div>
-                </div>
-            }
-            <app-part-navigation
-              [(selectedPart)]="selectedWritingPart"
-              [parts]="result.writingParts"
-            ></app-part-navigation>
-          </ng-template>
-        </mat-tab>
+
               </div>
             }
             <app-part-navigation
@@ -94,38 +83,40 @@
             ></app-part-navigation>
           </ng-template>
         </mat-tab>
+
       </mat-tab-group>
     </div>
-
-    @if (result.feedback) {
-      <mat-card class="feedback-container">
-        <mat-card-title style="padding-left: 10rem">
-          <h2>Student Feedback</h2>
-        </mat-card-title>
-        <mat-card-content>
-          <app-feedback
-            [rating]="result.feedback.rating"
-            [content]="result.feedback.content"
-            [isReadonly]="true"
-          ></app-feedback>
-        </mat-card-content>
-      </mat-card>
-    }
   </div>
 </section>
-<button
-  mat-raised-button
-  color="primary"
-  (click)="back()"
-  style="margin-top: 16px"
->
-  Back
-</button>
-<button
 
-  mat-raised-button
-  (click)="export()"
-  style="margin: 16px 0 0 16px"
->
-  Download
-</button>
+@if (result.feedback) {
+  <mat-card class="container justify-content-center p-2">
+    <mat-card-title class="text-center">
+      <h2>Student Feedback</h2>
+    </mat-card-title>
+    <mat-card-content class="justify-content-center">
+      <app-feedback
+        [rating]="result.feedback.rating"
+        [content]="result.feedback.content"
+        [isReadonly]="true"
+      ></app-feedback>
+    </mat-card-content>
+  </mat-card>
+}
+
+<div class="d-flex align-items-center mt-2">
+  <button
+    mat-raised-button
+    color="primary"
+    (click)="back()"
+  >
+    Back
+  </button>
+  <button
+    class="ms-2"
+    mat-raised-button
+    (click)="export()"
+  >
+    Download
+  </button>
+</div>
