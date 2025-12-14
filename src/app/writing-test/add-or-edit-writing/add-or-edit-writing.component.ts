@@ -1,6 +1,4 @@
-// SỬA DÒNG NÀY: Giảm bớt một dấu ../
-import { LayoutService } from '../../layout.service'; 
-
+import { LayoutService } from '../../layout.service'; // Đường dẫn import chính xác
 import { CommonModule } from '@angular/common';
 import { HttpResponse } from '@angular/common/http';
 import { Component, HostListener, OnDestroy } from '@angular/core';
@@ -160,12 +158,9 @@ export class AddOrEditWritingComponent implements OnDestroy {
     if (!this.result) {
       this.result = { ...this.data, id: CommonUtils.generateRandomId() };
       this.writingService.submit(this.result).subscribe();
-      
-      // Bật chế độ thi trên Header chung
       this.layoutService.isExamMode.set(true);
       this.layoutService.studentName.set(this.data.studentName || '');
     }
-    
     this.isReady = true;
     this.getTimeout();
     
@@ -177,7 +172,6 @@ export class AddOrEditWritingComponent implements OnDestroy {
         this.seconds--;
       }
 
-      // Cập nhật giờ lên Header
       this.layoutService.timerDisplay.set(
         `${this.minutes}:${this.seconds < 10 ? '0' + this.seconds : this.seconds}`
       );
@@ -247,8 +241,18 @@ export class AddOrEditWritingComponent implements OnDestroy {
     });
   }
 
-  onWritingChange(value: string) {
-    this.data.wordCount = value.trim().split(/\s+/).length;
+  // --- HÀM ĐẾM TỪ (Đã cập nhật logic loại bỏ HTML) ---
+  onWritingChange(htmlContent: any) {
+    if (!htmlContent || typeof htmlContent !== 'string') {
+      this.data.wordCount = 0;
+      return;
+    }
+    // Xóa thẻ HTML và chuẩn hóa chuỗi
+    const plainText = htmlContent.replace(/<[^>]*>/g, ' ');
+    const cleanText = plainText.replace(/\s+/g, ' ').trim();
+    
+    // Đếm
+    this.data.wordCount = cleanText === '' ? 0 : cleanText.split(' ').length;
   }
 
   onAddPart() {

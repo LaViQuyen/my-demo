@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -11,11 +11,13 @@ import { AbstractQuizPartComponent } from '../../common/abstract-quiz-part.compo
 import { Writing } from '../../common/models/writing.model';
 import { MultipleChoicesComponent } from '../multiple-choices/multiple-choices.component';
 import { ShortAnswerComponent } from '../short-answer/short-answer.component';
+import { CommonModule } from '@angular/common'; 
 
 @Component({
   selector: 'app-writing',
   standalone: true,
   imports: [
+    CommonModule,
     FormsModule,
     MatCardModule,
     MatButtonModule,
@@ -31,16 +33,25 @@ export class WritingComponent
   extends AbstractQuizPartComponent<Writing>
   implements OnInit
 {
+  // Output gửi dữ liệu ra cha
+  @Output() writingChange = new EventEmitter<string>();
+
   testEditorConfig: AngularEditorConfig = {};
+
   ngOnInit(): void {
-    // Trong ngOnInit
     this.testEditorConfig = {
       ...this.config,
       editable: !this.isReadOnly,
-      showToolbar: false, // Ẩn toolbar giống thi thật
-      height: '100%',     // Cho editor chiếm hết chiều cao khung chứa
-      minHeight: '100%',  // Đảm bảo không bị co lại
+      showToolbar: false,
+      height: '100%',
+      minHeight: '100%',
       placeholder: 'Type your answer here...'
     };
+  }
+
+  // Hàm xử lý khi gõ nội dung
+  onContentChange(htmlVal: string) {
+    this.data.answer = htmlVal;
+    this.writingChange.emit(htmlVal);
   }
 }
