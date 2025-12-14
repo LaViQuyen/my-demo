@@ -1,31 +1,17 @@
-import { Component, inject } from '@angular/core';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { RouterModule, RouterOutlet } from '@angular/router';
-import { QuizService } from './quizzes/quizzes.service';
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterOutlet, RouterLink } from '@angular/router';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { LayoutService } from './layout.service'; // Nhớ đường dẫn file service bạn vừa tạo
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, MatToolbarModule, RouterModule, NgxSpinnerModule],
-  providers: [QuizService],
+  imports: [CommonModule, RouterOutlet, RouterLink, NgxSpinnerModule],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'listening-simulator';
-
-  quizService: QuizService = inject(QuizService);
-
-  constructor() {
-    window.addEventListener('keydown', function (e) {
-      if (e.key === 'F3' || (e.ctrlKey && e.key === 'f')) {
-        e.preventDefault();
-      }
-      if (e.ctrlKey && e.key === 's') {
-        e.preventDefault();
-      }
-    });
-    this.quizService.getAll().subscribe();
-  }
+  // Inject Service vào biến public để HTML dùng được
+  constructor(public layoutService: LayoutService) {}
 }

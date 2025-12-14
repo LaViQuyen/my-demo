@@ -1,3 +1,4 @@
+import { LayoutService } from '../../../layout.service';
 import { CommonModule } from '@angular/common';
 import { HttpResponse } from '@angular/common/http';
 import { Component, HostListener, OnDestroy } from '@angular/core';
@@ -106,6 +107,7 @@ export class AddOrEditWritingComponent implements OnDestroy {
     protected route: ActivatedRoute,
     protected router: Router,
     protected dialog: MatDialog,
+    protected layoutService: LayoutService
   ) {
     const currentState = this.router.getCurrentNavigation()?.extras.state;
     if (currentState) {
@@ -160,6 +162,8 @@ export class AddOrEditWritingComponent implements OnDestroy {
     if (!this.result) {
       this.result = { ...this.data, id: CommonUtils.generateRandomId() };
       this.writingService.submit(this.result).subscribe();
+      this.layoutService.isExamMode.set(true);
+      this.layoutService.studentName.set(this.data.studentName || '');
     }
     this.isReady = true;
     this.getTimeout();
@@ -174,6 +178,9 @@ export class AddOrEditWritingComponent implements OnDestroy {
         const dialogRef = this.dialog.open(ConfirmDialogComponent, {
           hasBackdrop: true,
           disableClose: true,
+          this.layoutService.timerDisplay.set(
+          `${this.minutes}:${this.seconds < 10 ? '0' + this.seconds : this.seconds}`
+  );
         });
         dialogRef.componentInstance.title = 'Information';
         dialogRef.componentInstance.message = "Time's up";
@@ -292,6 +299,7 @@ export class AddOrEditWritingComponent implements OnDestroy {
   }
 
   ngOnDestroy(): void {
+    this.layoutService.reset(); // Trả lại header sạch cho trang khác
     if (this.state['isTesting']) {
       this.onCtrlSave();
     }

@@ -1,71 +1,74 @@
-<div class="main-layout">
+<div class="writing-layout">
   
-  <div class="top-bar">
+  <!-- <div class="test-toolbar">
     
-    <div class="left-section">
+    <div class="left-tools">
       @if (state["isTesting"]) {
-        <div class="timer-display">
-          Time: <span>{{ minutes }}:{{ seconds | number: "2.0" }}</span>
+        <div class="timer-box">
+          <span class="icon">⏳</span> 
+          <span class="time">{{ minutes }}:{{ seconds | number: "2.0" }}</span>
         </div>
       }
     </div>
 
-    <div class="center-section">
+    <div class="center-tools">
       @if (state["isEditing"]) {
-        <mat-form-field appearance="outline" class="dense-form">
-          <mat-label>Name</mat-label>
-          <input matInput [(ngModel)]="data.name" />
-        </mat-form-field>
-        <mat-form-field appearance="outline" class="dense-form">
-          <mat-label>Mins</mat-label>
-          <input matInput type="number" [(ngModel)]="data.timeout" />
-        </mat-form-field>
-      }
-
-      @if ((state["isTesting"] && isReady) || state["isReadOnly"]) {
-        <span class="student-name">
-          Candidate: <b>{{ data.studentName }}</b>
-        </span>
+        <input class="tool-input" placeholder="Test Name" [(ngModel)]="data.name">
+        <input class="tool-input small" type="number" placeholder="Min" [(ngModel)]="data.timeout">
       }
     </div>
 
-    <div class="right-section">
+    <div class="right-tools">
       @if (state["isTesting"] && !isReady) {
-        <div class="start-controls">
-          <mat-form-field appearance="outline" class="name-input">
-            <mat-label>Enter Your Name</mat-label>
-            <input matInput [(ngModel)]="data.studentName" required />
-          </mat-form-field>
-
-          <button mat-raised-button color="primary" class="start-btn"
+        <div class="start-group">
+          <input class="name-input" placeholder="Enter Your Name" [(ngModel)]="data.studentName" />
+          <button mat-flat-button color="primary" class="start-btn"
             [disabled]="!data.studentName || data.studentName === ''" 
             (click)="onStart()">
-            START TEST
+            START
           </button>
         </div>
       }
+
+      @if ((state["isTesting"] && isReady) || state["isReadOnly"]) {
+        <div class="candidate-badge">
+          Candidate: <b>{{ data.studentName }}</b>
+        </div>
+      }
     </div>
 
+  </div> -->
+
+  <div class="test-body">
+    
+    @if (state["isTesting"] && !isReady) {
+      <div class="welcome-screen">
+        <div class="welcome-content">
+          <h3>Welcome to Writing Test</h3>
+          <p>Please enter your name in the top right corner to begin.</p>
+        </div>
+      </div>
+    }
+
+    @if (isReady || state["isReadOnly"] || state["isEditing"]) {
+      <div class="active-test-area">
+        @if (data.parts && data.parts.length > 0) {
+          <app-writing
+            class="writing-instance"
+            [data]="data.parts[selectedPartIndex]" 
+            [isSaved]="mapSavedPart[selectedPartIndex]!"
+            [isEditing]="state['isEditing']"
+            [isTesting]="state['isTesting']"
+            [isReadOnly]="state['isReadOnly']">
+          </app-writing>
+        }
+      </div>
+    }
   </div>
 
   @if (isReady || state["isReadOnly"] || state["isEditing"]) {
-    <div class="content-body">
-      @if (data.parts && data.parts.length > 0) {
-        <app-writing
-          class="writing-part-instance"
-          [data]="data.parts[selectedPartIndex]" 
-          [isSaved]="mapSavedPart[selectedPartIndex]!"
-          [isEditing]="state['isEditing']"
-          [isTesting]="state['isTesting']"
-          [isReadOnly]="state['isReadOnly']">
-        </app-writing>
-      }
-    </div>
-  }
-
-  @if (isReady || state["isReadOnly"] || state["isEditing"]) {
-    <div class="bottom-bar">
-      <div class="part-tabs">
+    <div class="test-footer">
+      <div class="tabs-area">
         @for (part of data.parts; track $index) {
           <button class="tab-btn" 
                   [class.active]="selectedPartIndex === $index"
@@ -74,16 +77,16 @@
           </button>
         }
         @if (state["isEditing"]) {
-          <button class="add-part-btn" (click)="onAddPart()"><mat-icon>add</mat-icon></button>
+          <button class="add-btn" (click)="onAddPart()">+</button>
         }
       </div>
 
-      <div class="action-buttons">
+      <div class="actions-area">
         @if (state["isEditing"]) {
-          <button mat-raised-button color="accent" (click)="onSaveClick()">Save & Exit</button>
+          <button mat-raised-button color="accent" (click)="onSaveClick()">Save</button>
         }
         @if (state["isTesting"]) {
-          <button mat-raised-button color="warn" (click)="onSubmit()">Submit Test</button>
+          <button mat-raised-button color="warn" (click)="onSubmit()">Submit</button>
         }
       </div>
     </div>

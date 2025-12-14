@@ -1,13 +1,33 @@
 <div class="main-wrapper">
+  
   <header class="app-header">
+    
     <a [routerLink]="['/']" class="logo-container">
       <img class="logo" src="assets/BA LOGO.png" alt="Logo" 
            onerror="this.src='assets/logo.jpg'"> 
     </a>
+
+    @if (layoutService.isExamMode()) {
+      <div class="exam-info">
+        
+        @if (layoutService.timerDisplay()) {
+          <div class="timer-badge">
+            ⏱️ {{ layoutService.timerDisplay() }}
+          </div>
+        }
+
+        @if (layoutService.studentName()) {
+          <div class="student-badge">
+            Candidate: <b>{{ layoutService.studentName() }}</b>
+          </div>
+        }
+      </div>
+    }
   </header>
 
   <div class="page-content">
     <router-outlet></router-outlet>
   </div>
 </div>
+
 <ngx-spinner type="ball-clip-rotate"></ngx-spinner>
