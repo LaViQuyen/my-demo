@@ -1,177 +1,172 @@
-/* Layout chính chiếm toàn bộ màn hình */
-.main-layout {
+/* Layout chính: Chiếm phần còn lại của màn hình (trừ Header chung) */
+.writing-layout {
   display: flex;
   flex-direction: column;
-  height: 100vh; /* Full viewport height */
-  overflow: hidden; /* Không cho scroll ở body chính */
-  background-color: #f5f5f5;
+  height: 100%; /* Full chiều cao của vùng router-outlet */
+  background: #f5f5f5;
 }
 
-/* --- HEADER --- */
-.top-bar {
-  /* Tăng chiều cao lên auto và thêm padding để không bị che nội dung */
-  height: auto; 
-  min-height: 70px; 
-  flex-shrink: 0;
-  background: white;
+/* --- TOOLBAR (Thanh công cụ bài thi) --- */
+/* Thiết kế nhỏ gọn hơn Header chung để tạo phân cấp */
+.test-toolbar {
+  height: 50px; /* Nhỏ hơn header chung (thường 60-70px) */
+  background: #ffffff;
   border-bottom: 1px solid #ddd;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 20px; /* Thêm khoảng cách trên dưới */
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  z-index: 10;
-  gap: 15px; /* Khoảng cách giữa các phần tử con */
+  padding: 0 20px;
+  flex-shrink: 0;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.02); /* Bóng mờ rất nhẹ */
 
-  .timer-display {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #d32f2f;
-    white-space: nowrap; /* Không xuống dòng */
-    
-    span {
-      font-family: monospace;
-      padding: 4px 8px;
-      background: #eee;
-      border-radius: 4px;
+  /* TIMER (Bên trái) */
+  .left-tools {
+    .timer-box {
+      font-size: 1rem; /* Chữ nhỏ vừa phải */
+      font-weight: 600;
+      color: #d32f2f;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      
+      span {
+        font-family: 'Courier New', monospace; /* Font số điện tử */
+        background: #ffebee;
+        padding: 2px 8px;
+        border-radius: 4px;
+        border: 1px solid #ffcdd2;
+      }
     }
   }
 
-  .student-info {
+  /* CÔNG CỤ PHẢI (Tên, Nút bấm) */
+  .right-tools {
     display: flex;
     align-items: center;
     gap: 15px;
-    flex: 1; /* Cho phép giãn ra */
-    justify-content: center; /* Căn giữa nội dung */
 
-    .student-name {
-      font-size: 16px;
-      color: #333;
-    }
-
-    /* Style cho ô nhập tên để không bị che */
-    .name-input {
-      width: 300px;
-      font-size: 14px;
-      margin-bottom: 0;
-
-      /* Ẩn phần thông báo lỗi bên dưới để ô input gọn hơn */
-      ::ng-deep .mat-mdc-form-field-subscript-wrapper {
-        display: none !important;
-      }
-
-      /* Căn chỉnh lại padding bên trong input */
-      ::ng-deep .mat-mdc-text-field-wrapper {
-        padding-bottom: 0;
-      }
-    }
-
-    .dense-form {
-      width: 150px;
-      font-size: 14px;
+    /* Nhập tên & Start */
+    .start-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
       
-      ::ng-deep .mat-mdc-form-field-subscript-wrapper {
-        display: none;
+      .name-input {
+        padding: 5px 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 13px;
+        width: 180px;
+        outline: none;
+        &:focus { border-color: #3f51b5; }
       }
+
+      .start-btn {
+        height: 32px; /* Nút nhỏ gọn */
+        line-height: 32px;
+        font-size: 13px;
+        padding: 0 15px;
+      }
+    }
+
+    /* Hiển thị tên thí sinh */
+    .candidate-info {
+      font-size: 14px;
+      color: #333;
+      background: #f0f0f0;
+      padding: 4px 10px;
+      border-radius: 15px; /* Bo tròn như cái thẻ */
+      border: 1px solid #e0e0e0;
+      
+      b { color: #3f51b5; }
+    }
+    
+    /* Input chế độ Edit */
+    .tool-input {
+      padding: 4px 8px; 
+      border: 1px solid #ccc; 
+      border-radius: 4px;
+      font-size: 13px;
+      &.small { width: 50px; text-align: center; }
     }
   }
 }
 
-/* --- BODY (Split Screen Container) --- */
-.content-body {
-  flex: 1;
-  overflow: hidden;
+/* --- BODY (Đề & Bài làm) --- */
+.test-body {
+  flex: 1; /* Chiếm hết khoảng trống còn lại */
   position: relative;
-  
-  .writing-part-instance {
+  overflow: hidden; /* App-writing con sẽ tự cuộn */
+
+  .welcome-screen {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #777;
+    background-color: #fafafa;
+    
+    h3 { margin-bottom: 10px; font-size: 1.5rem; color: #333; }
+  }
+
+  .active-test-area {
     height: 100%;
     width: 100%;
-    display: block;
+    
+    .writing-instance {
+      height: 100%;
+      display: block;
+    }
   }
 }
 
-/* --- FOOTER --- */
-.bottom-bar {
-  height: 70px;
-  flex-shrink: 0;
-  background: #333;
+/* --- FOOTER (Tabs & Submit) --- */
+.test-footer {
+  height: 55px;
+  background: #2c3e50; /* Màu xanh đen chuyên nghiệp */
   color: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 20px;
-  z-index: 10;
+  flex-shrink: 0;
 
-  .part-tabs {
-    display: flex;
-    gap: 10px;
-    overflow-x: auto; /* Cho phép cuộn ngang nếu có quá nhiều part */
-
+  .tabs-area {
+    display: flex; 
+    gap: 8px;
+    overflow-x: auto;
+    
     .tab-btn {
-      background: #555;
+      padding: 6px 15px;
+      background: rgba(255,255,255,0.1);
       color: #ccc;
-      border: none;
-      padding: 10px 20px;
-      font-size: 14px;
-      font-weight: bold;
+      border: 1px solid rgba(255,255,255,0.2);
       border-radius: 4px;
       cursor: pointer;
+      font-weight: 600;
+      font-size: 13px;
       transition: all 0.2s;
-      white-space: nowrap;
-
-      &:hover {
-        background: #666;
-        color: white;
-      }
-
-      &.active {
-        background: #3f51b5;
-        color: white;
-        box-shadow: 0 0 10px rgba(63, 81, 181, 0.5);
-      }
-    }
-
-    .add-part-btn {
-      background: #4caf50;
-      color: white;
-      border: none;
-      border-radius: 50%;
-      min-width: 40px;
-      height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-    }
-  }
-
-  .action-buttons {
-    display: flex;
-    gap: 15px;
-
-    button {
-      font-size: 15px;
-      padding: 5px 20px;
-      white-space: nowrap;
-    }
-  }
-}
-
-/* Responsive cho màn hình nhỏ */
-@media (max-width: 768px) {
-  .top-bar {
-    flex-wrap: wrap; /* Cho phép xuống dòng nếu màn hình quá bé */
-    height: auto;
-    padding: 15px;
-    
-    .student-info {
-      order: 3; /* Đẩy ô nhập tên xuống dòng dưới cùng trên mobile */
-      width: 100%;
-      margin-top: 10px;
       
-      .name-input {
-        width: 100%;
+      &:hover { background: rgba(255,255,255,0.2); color: white; }
+      &.active { 
+        background: #3498db; 
+        color: white; 
+        border-color: #3498db;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
       }
     }
+    
+    .add-btn {
+      background: #27ae60; color: white; border: none;
+      width: 30px; height: 30px; border-radius: 50%; cursor: pointer;
+      display: flex; align-items: center; justify-content: center; font-size: 18px;
+      &:hover { background: #2ecc71; }
+    }
+  }
+
+  .actions-area {
+    display: flex; gap: 10px;
+    button { font-size: 13px; font-weight: bold; letter-spacing: 0.5px; }
   }
 }

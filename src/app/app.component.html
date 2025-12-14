@@ -1,8 +1,13 @@
-<div class="header">
-  <a [routerLink]="['/']"
-    ><img class="logo" src="/assets/logo.jpg" alt="Logo"/></a>
-</div>
-<div class="container">
-  <router-outlet />
+<div class="main-wrapper">
+  <header class="app-header">
+    <a [routerLink]="['/']" class="logo-container">
+      <img class="logo" src="assets/BA LOGO.png" alt="Logo" 
+           onerror="this.src='assets/logo.jpg'"> 
+    </a>
+  </header>
+
+  <div class="page-content">
+    <router-outlet></router-outlet>
+  </div>
 </div>
 <ngx-spinner type="ball-clip-rotate"></ngx-spinner>
