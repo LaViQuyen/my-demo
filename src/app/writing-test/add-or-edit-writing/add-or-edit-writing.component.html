@@ -1,74 +1,55 @@
-<div class="writing-layout">
+<div class="writing-container">
   
-  <!-- <div class="test-toolbar">
-    
-    <div class="left-tools">
-      @if (state["isTesting"]) {
-        <div class="timer-box">
-          <span class="icon">⏳</span> 
-          <span class="time">{{ minutes }}:{{ seconds | number: "2.0" }}</span>
-        </div>
-      }
-    </div>
+  @if (state["isTesting"] && !isReady) {
+    <div class="welcome-screen">
+      <mat-card class="welcome-card">
+        <div class="card-content">
+          <mat-icon class="icon">edit_note</mat-icon>
+          <h2>Writing Test Simulation</h2>
+          <p>Please enter your name to begin the test.</p>
+          
+          <div class="input-group">
+            <mat-form-field appearance="outline" class="full-width">
+              <mat-label>Full Name</mat-label>
+              <input matInput [(ngModel)]="data.studentName" placeholder="Ex: Nguyen Van A" required>
+            </mat-form-field>
+          </div>
 
-    <div class="center-tools">
-      @if (state["isEditing"]) {
-        <input class="tool-input" placeholder="Test Name" [(ngModel)]="data.name">
-        <input class="tool-input small" type="number" placeholder="Min" [(ngModel)]="data.timeout">
-      }
-    </div>
-
-    <div class="right-tools">
-      @if (state["isTesting"] && !isReady) {
-        <div class="start-group">
-          <input class="name-input" placeholder="Enter Your Name" [(ngModel)]="data.studentName" />
           <button mat-flat-button color="primary" class="start-btn"
-            [disabled]="!data.studentName || data.studentName === ''" 
+            [disabled]="!data.studentName" 
             (click)="onStart()">
-            START
+            START TEST
           </button>
         </div>
-      }
-
-      @if ((state["isTesting"] && isReady) || state["isReadOnly"]) {
-        <div class="candidate-badge">
-          Candidate: <b>{{ data.studentName }}</b>
-        </div>
-      }
+      </mat-card>
     </div>
-
-  </div> -->
-
-  <div class="test-body">
-    
-    @if (state["isTesting"] && !isReady) {
-      <div class="welcome-screen">
-        <div class="welcome-content">
-          <h3>Welcome to Writing Test</h3>
-          <p>Please enter your name in the top right corner to begin.</p>
-        </div>
-      </div>
-    }
-
-    @if (isReady || state["isReadOnly"] || state["isEditing"]) {
-      <div class="active-test-area">
-        @if (data.parts && data.parts.length > 0) {
-          <app-writing
-            class="writing-instance"
-            [data]="data.parts[selectedPartIndex]" 
-            [isSaved]="mapSavedPart[selectedPartIndex]!"
-            [isEditing]="state['isEditing']"
-            [isTesting]="state['isTesting']"
-            [isReadOnly]="state['isReadOnly']">
-          </app-writing>
-        }
-      </div>
-    }
-  </div>
+  }
 
   @if (isReady || state["isReadOnly"] || state["isEditing"]) {
-    <div class="test-footer">
-      <div class="tabs-area">
+    <div class="test-content">
+      @if (state["isEditing"]) {
+        <div class="edit-toolbar">
+          <input class="simple-input" placeholder="Test Name" [(ngModel)]="data.name">
+          <input class="simple-input small" type="number" placeholder="Mins" [(ngModel)]="data.timeout">
+        </div>
+      }
+
+      @if (data.parts && data.parts.length > 0) {
+        <app-writing
+          class="writing-instance"
+          [data]="data.parts[selectedPartIndex]" 
+          [isSaved]="mapSavedPart[selectedPartIndex]!"
+          [isEditing]="state['isEditing']"
+          [isTesting]="state['isTesting']"
+          [isReadOnly]="state['isReadOnly']"
+          (writingChange)="onWritingChange($any($event))"> </app-writing>
+      }
+    </div>
+  }
+
+  @if (isReady || state["isReadOnly"] || state["isEditing"]) {
+    <div class="footer-bar">
+      <div class="tabs-list">
         @for (part of data.parts; track $index) {
           <button class="tab-btn" 
                   [class.active]="selectedPartIndex === $index"
@@ -81,9 +62,13 @@
         }
       </div>
 
-      <div class="actions-area">
+      <div class="word-count-info">
+        Word Count: <b>{{ data.wordCount || 0 }}</b>
+      </div>
+
+      <div class="action-btns">
         @if (state["isEditing"]) {
-          <button mat-raised-button color="accent" (click)="onSaveClick()">Save</button>
+          <button mat-raised-button color="accent" (click)="onSaveClick()">Save & Exit</button>
         }
         @if (state["isTesting"]) {
           <button mat-raised-button color="warn" (click)="onSubmit()">Submit</button>
@@ -91,4 +76,5 @@
       </div>
     </div>
   }
+
 </div>

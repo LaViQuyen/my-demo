@@ -1,4 +1,6 @@
-import { LayoutService } from '../../../layout.service';
+// SỬA DÒNG NÀY: Giảm bớt một dấu ../
+import { LayoutService } from '../../layout.service'; 
+
 import { CommonModule } from '@angular/common';
 import { HttpResponse } from '@angular/common/http';
 import { Component, HostListener, OnDestroy } from '@angular/core';
@@ -9,7 +11,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatTabsModule } from '@angular/material/tabs';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import {
   AngularEditorConfig,
   AngularEditorModule,
@@ -40,6 +42,7 @@ import { environment } from '../../../environments/environment';
     MatTabsModule,
     AngularEditorModule,
     WritingComponent,
+    RouterModule,
   ],
   providers: [WritingService, FileService],
   templateUrl: './add-or-edit-writing.component.html',
@@ -68,10 +71,7 @@ export class AddOrEditWritingComponent implements OnDestroy {
   };
 
   result!: Writing;
-  
-  // Biến quan trọng để quản lý Tab (Split screen)
   selectedPartIndex: number = 0; 
-  
   isReady: boolean = false;
   mapSavedPart: Record<number, boolean> = {};
   minutes: number = 0;
@@ -107,7 +107,7 @@ export class AddOrEditWritingComponent implements OnDestroy {
     protected route: ActivatedRoute,
     protected router: Router,
     protected dialog: MatDialog,
-    protected layoutService: LayoutService
+    protected layoutService: LayoutService 
   ) {
     const currentState = this.router.getCurrentNavigation()?.extras.state;
     if (currentState) {
@@ -130,7 +130,7 @@ export class AddOrEditWritingComponent implements OnDestroy {
         if (this.state['isEditing'] || this.state['isTesting']) {
           const sub = this.writingService.getById(id).subscribe((writing: any) => {
             this.data = writing;
-            this.selectedPartIndex = 0; // Reset về part 1
+            this.selectedPartIndex = 0;
             each(this.data.parts, (part, index) => {
               this.mapSavedPart[index] = true;
             });
@@ -148,8 +148,6 @@ export class AddOrEditWritingComponent implements OnDestroy {
     });
   }
 
-  // --- METHODS ---
-
   getTimeout() {
     if (this.result && this.result.timeout) {
         this.totalSeconds = this.result.timeout * 60;
@@ -162,11 +160,15 @@ export class AddOrEditWritingComponent implements OnDestroy {
     if (!this.result) {
       this.result = { ...this.data, id: CommonUtils.generateRandomId() };
       this.writingService.submit(this.result).subscribe();
+      
+      // Bật chế độ thi trên Header chung
       this.layoutService.isExamMode.set(true);
       this.layoutService.studentName.set(this.data.studentName || '');
     }
+    
     this.isReady = true;
     this.getTimeout();
+    
     const sub = interval(1000).subscribe(() => {
       if (this.seconds < 1) {
         this.minutes--;
@@ -174,13 +176,16 @@ export class AddOrEditWritingComponent implements OnDestroy {
       } else {
         this.seconds--;
       }
+
+      // Cập nhật giờ lên Header
+      this.layoutService.timerDisplay.set(
+        `${this.minutes}:${this.seconds < 10 ? '0' + this.seconds : this.seconds}`
+      );
+
       if (this.minutes === 0 && this.seconds === 0) {
         const dialogRef = this.dialog.open(ConfirmDialogComponent, {
           hasBackdrop: true,
           disableClose: true,
-          this.layoutService.timerDisplay.set(
-          `${this.minutes}:${this.seconds < 10 ? '0' + this.seconds : this.seconds}`
-  );
         });
         dialogRef.componentInstance.title = 'Information';
         dialogRef.componentInstance.message = "Time's up";
@@ -246,7 +251,6 @@ export class AddOrEditWritingComponent implements OnDestroy {
     this.data.wordCount = value.trim().split(/\s+/).length;
   }
 
-  // Hàm thêm Part mới
   onAddPart() {
     const id = CommonUtils.generateRandomId();
     const newWritingParagraph: Writing = {
@@ -265,7 +269,6 @@ export class AddOrEditWritingComponent implements OnDestroy {
     }
     this.data.parts.push(newWritingParagraph);
     
-    // Tự động chuyển đến tab mới
     this.selectedPartIndex = this.data.parts.length - 1;
     this.mapSavedPart[this.selectedPartIndex] = false;
   }
@@ -281,7 +284,6 @@ export class AddOrEditWritingComponent implements OnDestroy {
   remove(index: number) {
     if (this.data.parts) {
       this.data.parts.splice(index, 1);
-      // Xử lý lại index khi xóa
       if (this.selectedPartIndex >= index && this.selectedPartIndex > 0) {
         this.selectedPartIndex--;
       }
@@ -299,7 +301,7 @@ export class AddOrEditWritingComponent implements OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.layoutService.reset(); // Trả lại header sạch cho trang khác
+    this.layoutService.reset();
     if (this.state['isTesting']) {
       this.onCtrlSave();
     }
