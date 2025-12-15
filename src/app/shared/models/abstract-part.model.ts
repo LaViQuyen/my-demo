@@ -5,6 +5,7 @@ export interface AbstractPart {
   content: string;
   timeout: number | undefined;
   questions: Question[];
-  wordCount?: number; // <--- THÊM DẤU ? VÀO ĐÂY
+  wordCount?: number;     // Giữ nguyên cái này đã sửa
   testDate: string;
+  isMatchHeader?: boolean; // <--- THÊM DÒNG NÀY (Để sửa lỗi TS2339)
 }
