@@ -1,23 +1,43 @@
 @if (data) {
-  <div class="container">
-    @if (data.isMatchHeader) {
-      <app-matching-header
-        [data]="data"
-        [answers]="answers()"
-        [isSaved]="isSaved"
-        [isReadOnly]="isReadOnly"
-        [isTesting]="isTesting"
-        [isEditing]="isEditing"
-      ></app-matching-header>
-    } @else {
-      <div class="question-group">
+<div class="cdi-reading-layout">
+  <div class="passage-pane">
+    <div class="pane-header">
+      <h3>Reading Passage</h3>
+    </div>
+    <div class="passage-scroll-area">
+      @if (!isSaved && !isReadOnly && !isTesting) {
+        <angular-editor
+          class="editor"
+          name="questionContent"
+          [id]="data.id"
+          [(ngModel)]="data.content"
+          (ngModelChange)="onPaste($event)"
+          [config]="config"
+        ></angular-editor>
+      } @else {
+        <div textSelection class="reading-content-display" [innerHTML]="data.content"></div>
+      }
+    </div>
+  </div>
+
+  <div class="questions-pane">
+    <div class="pane-header">
+      <h3>Questions</h3>
+    </div>
+    <div class="questions-scroll-area">
+      @if (data.isMatchHeader) {
+        <app-matching-header
+          [data]="data"
+          [answers]="answers()"
+          [isSaved]="isSaved"
+          [isReadOnly]="isReadOnly"
+          [isTesting]="isTesting"
+          [isEditing]="isEditing"
+        ></app-matching-header>
+      } @else {
         <mat-accordion>
-          @if (data) {
-            @for (
-              question of data.questions;
-              track question.id;
-              let questionIndex = $index
-            ) {
+          @for (question of data.questions; track question.id; let questionIndex = $index) {
+            <div class="question-wrapper">
               <app-multiple-question
                 [question]="question"
                 [isEditing]="mapQuestionEditting[question.id]"
@@ -27,100 +47,49 @@
                 (onSave)="onSaveQuestion(question.id)"
                 (onEdit)="onEditQuestion(question.id)"
               ></app-multiple-question>
+
               @if (!isSaved && !isTesting && !isReadOnly) {
-                <div class="actions">
+                <div class="question-admin-actions">
                   @if (mapQuestionEditting[question.id]) {
-                    <button
-                      mat-button
-                      color="primary"
-                      type="button"
-                      class="btn btn-danger"
-                      (click)="onSaveQuestion(question.id)"
-                    >
+                    <button mat-icon-button color="primary" (click)="onSaveQuestion(question.id)">
                       <mat-icon>save</mat-icon>
                     </button>
                   } @else {
-                    <button
-                      mat-button
-                      color="primary"
-                      type="button"
-                      class="btn btn-danger"
-                      (click)="onEditQuestion(question.id)"
-                    >
+                    <button mat-icon-button color="primary" (click)="onEditQuestion(question.id)">
                       <mat-icon>edit</mat-icon>
                     </button>
                   }
-                  <button
-                    mat-button
-                    type="button"
-                    class="btn btn-danger"
-                    (click)="duplicateQuestion(question)"
-                  >
+                  <button mat-icon-button (click)="duplicateQuestion(question)">
                     <mat-icon>content_copy</mat-icon>
                   </button>
-                  <button
-                    mat-button
-                    color="warn"
-                    type="button"
-                    class="btn btn-danger"
-                    (click)="removeQuestion(questionIndex)"
-                  >
+                  <button mat-icon-button color="warn" (click)="removeQuestion(questionIndex)">
                     <mat-icon>delete</mat-icon>
                   </button>
                   @if (questionIndex !== 0) {
-                    <button
-                      mat-button
-                      type="button"
-                      class="btn btn-danger"
-                      (click)="moveQuestionUp(questionIndex)"
-                    >
+                    <button mat-icon-button (click)="moveQuestionUp(questionIndex)">
                       <mat-icon>arrow_upward</mat-icon>
                     </button>
                   }
                   @if (questionIndex !== data.questions.length - 1) {
-                    <button
-                      mat-button
-                      type="button"
-                      class="btn btn-danger"
-                      (click)="moveQuestionDown(questionIndex)"
-                    >
+                    <button mat-icon-button (click)="moveQuestionDown(questionIndex)">
                       <mat-icon>arrow_downward</mat-icon>
                     </button>
                   }
                 </div>
               }
-            }
+            </div>
           }
         </mat-accordion>
+
         @if (!isSaved && !isTesting && !isReadOnly) {
-          <div class="add-question">
-            <button
-              mat-button
-              type="button"
-              class="btn btn-danger"
-              (click)="addQuestion(2)"
-            >
-              <mat-icon>add</mat-icon> Add question
+          <div class="add-question-section">
+            <button mat-flat-button color="primary" (click)="addQuestion(2)">
+              <mat-icon>add</mat-icon> Add New Question
             </button>
           </div>
         }
-      </div>
-      <div class="input-reading">
-        @if (!isSaved && !isReadOnly && !isTesting) {
-          <angular-editor
-            class="editor"
-            name="questionContent"
-            [id]="data.id"
-            [(ngModel)]="data.content"
-            (ngModelChange)="onPaste($event)"
-            [config]="config"
-          ></angular-editor>
-        } @else {
-          @if (data) {
-            <p textSelection class="reading-content" [innerHTML]="data.content"></p>
-          }
-        }
-      </div>
-    }
+      }
+    </div>
   </div>
+</div>
 }

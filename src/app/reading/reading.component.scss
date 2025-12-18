@@ -1,110 +1,75 @@
-.container {
-  display: flex;
-  margin-top: 16px;
-  width: 100%;
-}
-
-.question-group {
-  width: 100%;
+:host {
+  display: block;
   height: 100%;
-  max-width: calc(100vw / 2 - 100px);
 }
 
-.question {
-  display: flex;
-  justify-content: space-between;
-}
-
-.actions {
-  display: flex;
-}
-
-.input-reading {
-  display: flex;
-  justify-content: space-evenly;
-  width: 100%;
-  min-height: fit-content;
-  max-width: calc(100vw / 2 - 100px);
-  margin-left: 16px;
-}
-
-.question-name {
-  display: flex;
-  justify-content: space-between;
-}
-
-.dropdown-answer {
-  margin: 10px 0 0 0;
-}
-
-.add-question {
-  margin-top: 20px;
-}
-
-.question-type-container {
-  display: flex;
-}
-
-.card {
-  margin: 0 16px 16px 0;
-  cursor: pointer;
-}
-
-.answer-container {
+.cdi-reading-layout {
   display: flex;
   width: 100%;
-  line-height: 64px;
-  margin-left: 40px;
+  height: calc(100vh - 120px); // Đảm bảo khớp với khung màn hình thi
+  overflow: hidden;
+  background-color: #ffffff;
 }
 
-.answer {
+.passage-pane, .questions-pane {
+  flex: 1;
   display: flex;
-  width: max-content;
-  font-weight: bold;
+  flex-direction: column;
+  height: 100%;
 }
 
-.answer.correct {
-  color: var(--success-color);
+.passage-pane {
+  border-right: 2px solid #ddd;
 }
 
-.answer.incorrect {
-  color: var(--danger-color);
+.pane-header {
+  padding: 8px 16px;
+  background-color: #f0f2f5;
+  border-bottom: 1px solid #ddd;
+  h3 { margin: 0; font-size: 16px; font-weight: bold; color: #444; }
 }
 
-.correct-answer {
-  color: var(--success-color);
-  font-weight: bold;
-  margin-left: 16px;
-  text-decoration: none;
+.passage-scroll-area, .questions-scroll-area {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
 }
 
-.start-button {
-  margin-bottom: 16px;
+.reading-content-display {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #1a1a1a;
+  font-family: Arial, sans-serif;
 }
 
+/* Question Styling */
+.question-wrapper {
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px dashed #eee;
+}
+
+.question-admin-actions {
+  display: flex;
+  justify-content: flex-end;
+  background: #f9f9f9;
+  border-radius: 4px;
+  margin-top: 8px;
+}
+
+.add-question-section {
+  padding: 20px 0;
+  text-align: center;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-  .container {
-    flex-direction: column-reverse;
+  .cdi-reading-layout {
+    flex-direction: column;
+    height: auto;
+    overflow: visible;
   }
-
-  .question-group {
-    max-width: 100%;
-  }
-
-  .input-reading {
-    width: 100%;
-    margin-bottom: 16px;
-    margin-left: 0;
-    max-width: 100%;
-    max-height: 400px;
-  }
-
-  .answer-container {
-    margin-left: 0;
-  }
-
-  .reading-content {
-    max-height: 300px;
-    overflow: scroll;
+  .passage-pane, .questions-pane {
+    height: 400px;
   }
 }
