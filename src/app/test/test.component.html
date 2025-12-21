@@ -1,173 +1,122 @@
-<div class="container">
-  <h1>{{ quiz.name }}</h1>
+<div class="test-wrapper">
+  <div hidden>
+    <audio #audioPlayer controls>
+      <source [src]="result.audioUrl" type="audio/mp3" />
+    </audio>
+  </div>
 
-  <div class="form-group">
-    <div hidden class="audio">
-      <audio #audioPlayer controls>
-        <source [src]="result.audioUrl" type="audio/mp3" />
-      </audio>
+  <header class="test-header">
+    <div class="header-left">
+      <span class="quiz-name">{{ quiz.name }}</span>
+      @if (isReady) {
+        <span class="student-name">| Candidate: {{ result.studentName }}</span>
+      }
     </div>
-    <div class="backdrop"></div>
-  </div>
-  <div class="form-group">
-    @if (!this.isReady) {
-      <mat-form-field>
-        <mat-label>Name</mat-label>
-        <input
-          autocomplete="off"
-          matInput
-          name="quizName"
-          type="text"
-          class="form-control"
-          id="quizName"
-          [(ngModel)]="result.studentName"
-          required
-        />
-      </mat-form-field>
-    } @else {
-      <h1>Name: {{ result.studentName }}</h1>
-    }
-  </div>
-
-  <mat-card class="timer">
-    <mat-card-content>
-      <h2>
+    
+    <div class="header-center">
+      <div class="timer-box">
+        <mat-icon>timer</mat-icon>
         <app-timer
           [(time)]="testTime"
           [interval]="testTimeoutInterval!"
           (onTimeout)="onTestTimeout()"
         ></app-timer>
-      </h2
-      >
-    </mat-card-content>
-  </mat-card>
-  @if (isReady &&
-  result.studentName && true &&
-  result.studentName !== "") {
-    <button
-      mat-raised-button
-      (click)="onStartPart()"
-      class="start-button"
-      [disabled]="isStart"
-    >
-      Start
-    </button>
-    @if (!isStart && currentTab !== 0) {
-      &nbsp;
-      <app-timer
-        [(time)]="startTime"
-        [interval]="startTimeoutInterval!"
-        (onTimeout)="onStartTimeOut()"
-      ></app-timer>
-    }
-    <mat-tab-group
-      (selectedIndexChange)="onChangeTab($event)"
-      [(selectedIndex)]="currentTab"
-      animationDuration="0ms"
-    >
-      <mat-tab label="Listening" [disabled]="mapDisablePart[0]">
-        <ng-template matTabContent>
-          @if (isStart) {
-            <div class="question-group">
-              <app-listening
-                [data]="result.listeningParts[selectedListeningPart]"
-                [isTesting]="true"
-                [isStart]="isStart"
-                (onStartChange)="onStartPart()"
-              ></app-listening>
-            </div>
-          }
-          <app-part-navigation
-            [(selectedPart)]="selectedListeningPart"
-            [parts]="result.listeningParts"
-            (onPartChange)="onTabChange('listening', $event)"
-          ></app-part-navigation>
-          <button
-            mat-raised-button
-            type="button"
-            color="primary"
-            class="btn submit-button"
-            (click)="onSubmitPartClick()"
-            [disabled]="!isStart"
-          >
-            Submit
-          </button>
-        </ng-template>
-      </mat-tab>
+      </div>
+    </div>
 
-      <mat-tab label="Reading" [disabled]="mapDisablePart[1]">
-        <ng-template matTabContent>
-          @if (isStart) {
-            <div class="question-group">
-              <app-reading
-                [data]="result.readingParts[selectedReadingPart]"
-                [isTesting]="true"
-                [isStart]="isStart"
-                (onStartChange)="onStartPart()"
-              ></app-reading>
-            </div>
-          }
-          <app-part-navigation
-            [(selectedPart)]="selectedReadingPart"
-            [parts]="result.readingParts"
-            (onPartChange)="onTabChange('reading', $event)"
-          ></app-part-navigation>
-          <button
-            mat-raised-button
-            type="button"
-            color="primary"
-            class="btn submit-button"
-            (click)="onSubmitPartClick()"
-            [disabled]="!isStart"
-          >
-            Submit
-          </button>
-        </ng-template>
-      </mat-tab>
-
-      <mat-tab label="Writing" [disabled]="mapDisablePart[2]">
-        <ng-template matTabContent>
-          @if (isStart && result.writingParts[selectedWritingPart]) {
-            <div class="question-group">
-              <app-writing
-                [data]="result.writingParts[selectedWritingPart]"
-                [isTesting]="true"
-                [isStart]="isStart"
-                (onStartChange)="onStartPart()"
-              ></app-writing>
-            </div>
-          }
-          <app-part-navigation
-            [(selectedPart)]="selectedWritingPart"
-            [parts]="result.writingParts"
-            (onPartChange)="onTabChange('writing', $event)"
-          ></app-part-navigation>
-        </ng-template>
-      </mat-tab>
-    </mat-tab-group>
-    @if (currentTab === 2) {
-      <button
-        class="submit-button"
-        mat-raised-button
-        color="primary"
-        (click)="onSubmitPartClick()"
-        [disabled]="!isStart"
-      >
-        Submit
+    <div class="header-right">
+      @if (!isReady) {
+        <mat-form-field appearance="outline" class="name-input">
+          <mat-label>Enter Your Name</mat-label>
+          <input matInput [(ngModel)]="result.studentName" autocomplete="off" />
+        </mat-form-field>
+      }
+      <button mat-flat-button color="warn" (click)="onSubmitPartClick()" [disabled]="!isStart">
+        Finish Test
       </button>
+    </div>
+  </header>
+
+  <main class="test-main-content">
+    @if (!isStart && isReady) {
+      <div class="start-overlay">
+        <button mat-fab extended color="primary" (click)="onStartPart()">
+          <mat-icon>play_arrow</mat-icon> START THIS PART
+        </button>
+        @if (currentTab !== 0) {
+          <p>Waiting for automatic start in: 
+            <app-timer [(time)]="startTime" [interval]="startTimeoutInterval!" (onTimeout)="onStartTimeOut()"></app-timer>
+          </p>
+        }
+      </div>
     }
-  } @else {
-    <button
-      class="submit-button"
-      [disabled]="
-        !result.studentName || false ||
-        result.studentName === ''
-      "
-      mat-raised-button
-      color="primary"
-      (click)="onStartTest()"
-    >
-      Test
-    </button>
+
+    @if (!isReady) {
+      <div class="ready-screen">
+        <button mat-raised-button color="primary" (click)="onStartTest()" [disabled]="!result.studentName">
+          I AM READY
+        </button>
+      </div>
+    } @else {
+      <mat-tab-group 
+        class="test-tabs-group"
+        (selectedIndexChange)="onChangeTab($event)" 
+        [(selectedIndex)]="currentTab" 
+        animationDuration="0ms">
+        
+        <mat-tab label="Listening" [disabled]="mapDisablePart[0]">
+          <ng-template matTabContent>
+            <div class="part-container">
+              <app-listening 
+                [data]="result.listeningParts[selectedListeningPart]" 
+                [isTesting]="true" 
+                [isStart]="isStart" 
+                (onStartChange)="onStartPart()">
+              </app-listening>
+            </div>
+          </ng-template>
+        </mat-tab>
+
+        <mat-tab label="Reading" [disabled]="mapDisablePart[1]">
+          <ng-template matTabContent>
+            <div class="part-container">
+              <app-reading 
+                [data]="result.readingParts[selectedReadingPart]" 
+                [isTesting]="true" 
+                [isStart]="isStart" 
+                (onStartChange)="onStartPart()">
+              </app-reading>
+            </div>
+          </ng-template>
+        </mat-tab>
+
+        <mat-tab label="Writing" [disabled]="mapDisablePart[2]">
+          <ng-template matTabContent>
+            <div class="part-container">
+              <app-writing 
+                [data]="result.writingParts[selectedWritingPart]" 
+                [isTesting]="true" 
+                [isStart]="isStart" 
+                (onStartChange)="onStartPart()">
+              </app-writing>
+            </div>
+          </ng-template>
+        </mat-tab>
+      </mat-tab-group>
+    }
+  </main>
+
+  @if (isReady) {
+    <footer class="test-footer">
+      @if (currentTab === 0) {
+        <app-part-navigation [(selectedPart)]="selectedListeningPart" [parts]="result.listeningParts" (onPartChange)="onTabChange('listening', $event)"></app-part-navigation>
+      }
+      @if (currentTab === 1) {
+        <app-part-navigation [(selectedPart)]="selectedReadingPart" [parts]="result.readingParts" (onPartChange)="onTabChange('reading', $event)"></app-part-navigation>
+      }
+      @if (currentTab === 2) {
+        <app-part-navigation [(selectedPart)]="selectedWritingPart" [parts]="result.writingParts" (onTabChange)="onTabChange('writing', $event)"></app-part-navigation>
+      }
+    </footer>
   }
 </div>

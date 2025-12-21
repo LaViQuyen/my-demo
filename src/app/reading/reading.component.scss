@@ -6,7 +6,7 @@
 .cdi-reading-layout {
   display: flex;
   width: 100%;
-  height: calc(100vh - 120px); // Đảm bảo khớp với khung màn hình thi
+  height: 100%; // Đổi từ calc(...) sang 100% để nó lấp đầy vùng Main Content
   overflow: hidden;
   background-color: #ffffff;
 }
