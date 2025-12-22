@@ -58534,6 +58534,1893 @@
       "correctReadingPoint": 11,
       "totalReadingPoint": 40,
       "isSubmit": true
+    },
+    {
+      "id": "69497ce1c56a641435bd",
+      "name": "PR1",
+      "listeningParts": [
+        {
+          "id": "660bb45256fdc2e8c175",
+          "name": "SECTION 1",
+          "content": "",
+          "questions": [
+            {
+              "id": "660bb4706defa615aab9",
+              "content": "<span><p dir=\"ltr\"><span><b>Question 1 - 10</b></span></p><p dir=\"ltr\"><span>Complete the notes below.</span></p><p dir=\"ltr\"><span>Write </span><span><b>ONE WORD AND/OR A NUMBER</b></span><span> for each answer.</span></p><p dir=\"ltr\"><img src=\"http://localhost:3000/upload/660bb4706defa615aab9.png\" width=\"100%\" alt=\"\"><span><br></span></p></span>",
+              "type": 1,
+              "choices": [
+                {
+                  "id": "660bb494bc7e9132b589",
+                  "content": "",
+                  "index": "1.",
+                  "correctAnswer": "Jamieson/jamieson"
+                }
+              ],
+              "answer": "",
+              "correctAnswer": ""
+            },
+            {
+              "id": "660bbc62dea9ce191f8a",
+              "content": "<span><p dir=\"ltr\"><span><b>Question 1 - 10</b></span></p><p dir=\"ltr\"><span>Complete the notes below.</span></p><p dir=\"ltr\"><span>Write </span><span><b>ONE WORD AND/OR A NUMBER</b></span><span> for each answer.</span></p><p dir=\"ltr\"><img src=\"http://localhost:3000/upload/660bb4706defa615aab9.png\" width=\"100%\" alt=\"\"><span><br></span></p></span>",
+              "type": 1,
+              "choices": [
+                {
+                  "id": "660bb494bc7e9132b589",
+                  "content": "",
+                  "index": "2.",
+                  "correctAnswer": "afternoon"
+                }
+              ],
+              "answer": "",
+              "correctAnswer": "",
+              "name": "Copy of undefined"
+            },
+            {
+              "id": "660bbc80c27600bb8efc",
+              "content": "<span><p dir=\"ltr\"><span><b>Question 1 - 10</b></span></p><p dir=\"ltr\"><span>Complete the notes below.</span></p><p dir=\"ltr\"><span>Write </span><span><b>ONE WORD AND/OR A NUMBER</b></span><span> for each answer.</span></p><p dir=\"ltr\"><img src=\"http://localhost:3000/upload/660bb4706defa615aab9.png\" width=\"100%\" alt=\"\"><span><br></span></p></span>",
+              "type": 1,
+              "choices": [
+                {
+                  "id": "660bb494bc7e9132b589",
+                  "content": "",
+                  "index": "3.",
+                  "correctAnswer": "communication"
+                }
+              ],
+              "answer": "",
+              "correctAnswer": "",
+              "name": "Copy of Copy of undefined"
+            },
+            {
+              "id": "660bbc8b2f63f2e8ebf6",
+              "content": "<span><p dir=\"ltr\"><span><b>Question 1 - 10</b></span></p><p dir=\"ltr\"><span>Complete the notes below.</span></p><p dir=\"ltr\"><span>Write </span><span><b>ONE WORD AND/OR A NUMBER</b></span><span> for each answer.</span></p><p dir=\"ltr\"><img src=\"http://localhost:3000/upload/660bb4706defa615aab9.png\" width=\"100%\" alt=\"\"><span><br></span></p></span>",
+              "type": 1,
+              "choices": [
+                {
+                  "id": "660bb494bc7e9132b589",
+                  "content": "",
+                  "index": "4.",
+                  "correctAnswer": " week"
+                }
+              ],
+              "answer": "",
+              "correctAnswer": "",
+              "name": "Copy of Copy of Copy of undefined"
+            },
+            {
+              "id": "660bbc91e8ef683ba61a",
+              "content": "<span><p dir=\"ltr\"><span><b>Question 1 - 10</b></span></p><p dir=\"ltr\"><span>Complete the notes below.</span></p><p dir=\"ltr\"><span>Write </span><span><b>ONE WORD AND/OR A NUMBER</b></span><span> for each answer.</span></p><p dir=\"ltr\"><img src=\"http://localhost:3000/upload/660bb4706defa615aab9.png\" width=\"100%\" alt=\"\"><span><br></span></p></span>",
+              "type": 1,
+              "choices": [
+                {
+                  "id": "660bb494bc7e9132b589",
+                  "content": "",
+                  "index": "5.",
+                  "correctAnswer": "10/ten"
+                }
+              ],
+              "answer": "",
+              "correctAnswer": "",
+              "name": "Copy of Copy of Copy of Copy of undefined"
+            },
+            {
+              "id": "660bbc9971ceb3590d30",
+              "content": "<span><p dir=\"ltr\"><span><b>Question 1 - 10</b></span></p><p dir=\"ltr\"><span>Complete the notes below.</span></p><p dir=\"ltr\"><span>Write </span><span><b>ONE WORD AND/OR A NUMBER</b></span><span> for each answer.</span></p><p dir=\"ltr\"><img src=\"http://localhost:3000/upload/660bb4706defa615aab9.png\" width=\"100%\" alt=\"\"><span><br></span></p></span>",
+              "type": 1,
+              "choices": [
+                {
+                  "id": "660bb494bc7e9132b589",
+                  "content": "",
+                  "index": "6.",
+                  "correctAnswer": "suit"
+                }
+              ],
+              "answer": "",
+              "correctAnswer": "",
+              "name": "Copy of Copy of Copy of Copy of Copy of undefined"
+            },
+            {
+              "id": "660bbca0543ee0b96755",
+              "content": "<span><p dir=\"ltr\"><span><b>Question 1 - 10</b></span></p><p dir=\"ltr\"><span>Complete the notes below.</span></p><p dir=\"ltr\"><span>Write </span><span><b>ONE WORD AND/OR A NUMBER</b></span><span> for each answer.</span></p><p dir=\"ltr\"><img src=\"http://localhost:3000/upload/660bb4706defa615aab9.png\" width=\"100%\" alt=\"\"><span><br></span></p></span>",
+              "type": 1,
+              "choices": [
+                {
+                  "id": "660bb494bc7e9132b589",
+                  "content": "",
+                  "index": "7.",
+                  "correctAnswer": "passport"
+                }
+              ],
+              "answer": "",
+              "correctAnswer": "",
+              "name": "Copy of Copy of Copy of Copy of Copy of Copy of undefined"
+            },
+            {
+              "id": "660bbca4243519bbfdee",
+              "content": "<span><p dir=\"ltr\"><span><b>Question 1 - 10</b></span></p><p dir=\"ltr\"><span>Complete the notes below.</span></p><p dir=\"ltr\"><span>Write </span><span><b>ONE WORD AND/OR A NUMBER</b></span><span> for each answer.</span></p><p dir=\"ltr\"><img src=\"http://localhost:3000/upload/660bb4706defa615aab9.png\" width=\"100%\" alt=\"\"><span><br></span></p></span>",
+              "type": 1,
+              "choices": [
+                {
+                  "id": "660bb494bc7e9132b589",
+                  "content": "",
+                  "index": "8.",
+                  "correctAnswer": " personality"
+                }
+              ],
+              "answer": "",
+              "correctAnswer": "",
+              "name": "Copy of Copy of Copy of Copy of Copy of Copy of Copy of undefined"
+            },
+            {
+              "id": "660bbcad9e24f6b6a917",
+              "content": "<span><p dir=\"ltr\"><span><b>Question 1 - 10</b></span></p><p dir=\"ltr\"><span>Complete the notes below.</span></p><p dir=\"ltr\"><span>Write </span><span><b>ONE WORD AND/OR A NUMBER</b></span><span> for each answer.</span></p><p dir=\"ltr\"><img src=\"http://localhost:3000/upload/660bb4706defa615aab9.png\" width=\"100%\" alt=\"\"><span><br></span></p></span>",
+              "type": 1,
+              "choices": [
+                {
+                  "id": "660bb494bc7e9132b589",
+                  "content": "",
+                  "index": "9.",
+                  "correctAnswer": " feedback"
+                }
+              ],
+              "answer": "",
+              "correctAnswer": "",
+              "name": "Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of undefined"
+            },
+            {
+              "id": "660bbcb2ea1417b25a2",
+              "content": "<span><p dir=\"ltr\"><span><b>Question 1 - 10</b></span></p><p dir=\"ltr\"><span>Complete the notes below.</span></p><p dir=\"ltr\"><span>Write </span><span><b>ONE WORD AND/OR A NUMBER</b></span><span> for each answer.</span></p><p dir=\"ltr\"><img src=\"http://localhost:3000/upload/660bb4706defa615aab9.png\" width=\"100%\" alt=\"\"><span><br></span></p></span>",
+              "type": 1,
+              "choices": [
+                {
+                  "id": "660bb494bc7e9132b589",
+                  "content": "",
+                  "index": "10.",
+                  "correctAnswer": " time"
+                }
+              ],
+              "answer": "",
+              "correctAnswer": "",
+              "name": "Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of undefined"
+            }
+          ],
+          "audioName": "",
+          "wordCount": 0
+        },
+        {
+          "id": "660bb4593018f14974ab",
+          "name": "SECTION 2",
+          "content": "",
+          "questions": [
+            {
+              "id": "660bbd16472e732ee63e",
+              "content": "<span><p dir=\"ltr\"><span><font face=\"Arial\" size=\"2\"><b>Questions 11 - 14</b></font></span></p><p dir=\"ltr\"><font face=\"Arial\" size=\"2\"><span>Choose the correct letter, </span><b><span>A</span><span>, </span><span>B </span><span>or </span><span>C</span><span>.</span></b></font></p><p dir=\"ltr\"><span><font face=\"Arial\" size=\"2\">MATTHEWS ISLAND HOLIDAYS</font></span></p><p dir=\"ltr\"><font face=\"Arial\" size=\"2\"><b>11</b><b>.</b> According to the speaker, the company</font></p><div><span><br></span></div></span>",
+              "type": 0,
+              "choices": [
+                {
+                  "id": "660bbd16cd977bddf4d4",
+                  "content": "has been in business for longer than most of its competitors. "
+                },
+                {
+                  "id": "660bbd16634fb8b4801c",
+                  "content": "arranges holidays to more destinations than its competitors. "
+                },
+                {
+                  "id": "660bbd45ba0deafe94a8",
+                  "content": "as more customers than its competitors.",
+                  "index": ""
+                }
+              ],
+              "answer": [],
+              "correctAnswer": [
+                "660bbd16cd977bddf4d4"
+              ]
+            },
+            {
+              "id": "660bbd5bb9d411de860f",
+              "content": "<span><p dir=\"ltr\"><span><font face=\"Arial\" size=\"2\"><b>Questions 11 - 14</b></font></span></p><p dir=\"ltr\"><font face=\"Arial\" size=\"2\"><span>Choose the correct letter, </span><b><span>A</span><span>, </span><span>B </span><span>or </span><span>C</span><span>.</span></b></font></p><p dir=\"ltr\"><span><font face=\"Arial\" size=\"2\">MATTHEWS ISLAND HOLIDAYS</font></span></p><p dir=\"ltr\"><font face=\"Arial\"><span><font size=\"2\"><span><b>12</b></span><span>. Where can customers meet the tour manager before travelling to the Isle of Man?</span></font></span></font></p></span>",
+              "type": 0,
+              "choices": [
+                {
+                  "id": "660bbd16cd977bddf4d4",
+                  "content": "Liverpool"
+                },
+                {
+                  "id": "660bbd16634fb8b4801c",
+                  "content": "Heysham"
+                },
+                {
+                  "id": "660bbd45ba0deafe94a8",
+                  "content": "Luton",
+                  "index": ""
+                }
+              ],
+              "answer": [],
+              "correctAnswer": [
+                "660bbd16634fb8b4801c"
+              ],
+              "name": "Copy of undefined"
+            },
+            {
+              "id": "660bbd84ca029d626328",
+              "content": "<span><p dir=\"ltr\"><span><font face=\"Arial\" size=\"2\"><b>Questions 11 - 14</b></font></span></p><p dir=\"ltr\"><font face=\"Arial\" size=\"2\"><span>Choose the correct letter, </span><b><span>A</span><span>, </span><span>B </span><span>or </span><span>C</span><span>.</span></b></font></p><p dir=\"ltr\"><span><font face=\"Arial\" size=\"2\">MATTHEWS ISLAND HOLIDAYS</font></span></p><p dir=\"ltr\"><span></span></p><p dir=\"ltr\"><font face=\"Arial\" size=\"2\"><span><b>13</b></span><span>. How many lunches are included in the price of the holiday?</span></font></p></span>",
+              "type": 0,
+              "choices": [
+                {
+                  "id": "660bbd16cd977bddf4d4",
+                  "content": "three"
+                },
+                {
+                  "id": "660bbd16634fb8b4801c",
+                  "content": "four"
+                },
+                {
+                  "id": "660bbd45ba0deafe94a8",
+                  "content": "five",
+                  "index": ""
+                }
+              ],
+              "answer": [],
+              "correctAnswer": [
+                "660bbd16cd977bddf4d4"
+              ],
+              "name": "Copy of Copy of undefined"
+            },
+            {
+              "id": "660bbda37569a3db68b5",
+              "content": "<span><p dir=\"ltr\"><span><font face=\"Arial\" size=\"2\"><b>Questions 11 - 14</b></font></span></p><p dir=\"ltr\"><font face=\"Arial\" size=\"2\"><span>Choose the correct letter, </span><b><span>A</span><span>, </span><span>B </span><span>or </span><span>C</span><span>.</span></b></font></p><p dir=\"ltr\"><span><font face=\"Arial\" size=\"2\">MATTHEWS ISLAND HOLIDAYS</font></span></p><p dir=\"ltr\"><span></span></p><p dir=\"ltr\"><font face=\"Arial\" size=\"2\"><span><b>14</b></span><span>.&#160;</span></font><span><font face=\"Arial\" size=\"2\">Customers have to pay extra for</font></span></p></span>",
+              "type": 0,
+              "choices": [
+                {
+                  "id": "660bbd16cd977bddf4d4",
+                  "content": "guaranteeing themselves a larger room."
+                },
+                {
+                  "id": "660bbd16634fb8b4801c",
+                  "content": "booking at short notice."
+                },
+                {
+                  "id": "660bbd45ba0deafe94a8",
+                  "content": "transferring to another date.",
+                  "index": ""
+                }
+              ],
+              "answer": [],
+              "correctAnswer": [
+                "660bbd45ba0deafe94a8"
+              ],
+              "name": "Copy of Copy of Copy of undefined"
+            },
+            {
+              "id": "660bbdd55118a5fd7502",
+              "content": "<span><p dir=\"ltr\"><span><b>Questions 15 - 20</b></span></p><p dir=\"ltr\"><span>Complete the table below.</span></p><p dir=\"ltr\"><span>Write </span><span><b>ONE WORD AND/OR A NUMBER</b></span><span> for each answer.<br></span></p><div><img src=\"http://localhost:3000/upload/660bbdd55118a5fd7502.png\" width=\"100%\" alt=\"\"></div></span>",
+              "type": 1,
+              "choices": [
+                {
+                  "id": "660bbe099ad0641f1a86",
+                  "content": "",
+                  "index": "15.",
+                  "correctAnswer": " river"
+                }
+              ],
+              "answer": "",
+              "correctAnswer": ""
+            },
+            {
+              "id": "660bbe0e7eada96a90c0",
+              "content": "<span><p dir=\"ltr\"><span><b>Questions 15 - 20</b></span></p><p dir=\"ltr\"><span>Complete the table below.</span></p><p dir=\"ltr\"><span>Write </span><span><b>ONE WORD AND/OR A NUMBER</b></span><span> for each answer.<br></span></p><div><img src=\"http://localhost:3000/upload/660bbdd55118a5fd7502.png\" width=\"100%\" alt=\"\"></div></span>",
+              "type": 1,
+              "choices": [
+                {
+                  "id": "660bbe099ad0641f1a86",
+                  "content": "",
+                  "index": "16.",
+                  "correctAnswer": "  1422"
+                }
+              ],
+              "answer": "",
+              "correctAnswer": "",
+              "name": "Copy of undefined"
+            },
+            {
+              "id": "660bbe155b5d1447cd8",
+              "content": "<span><p dir=\"ltr\"><span><b>Questions 15 - 20</b></span></p><p dir=\"ltr\"><span>Complete the table below.</span></p><p dir=\"ltr\"><span>Write </span><span><b>ONE WORD AND/OR A NUMBER</b></span><span> for each answer.<br></span></p><div><img src=\"http://localhost:3000/upload/660bbdd55118a5fd7502.png\" width=\"100%\" alt=\"\"></div></span>",
+              "type": 1,
+              "choices": [
+                {
+                  "id": "660bbe099ad0641f1a86",
+                  "content": "",
+                  "index": "17.",
+                  "correctAnswer": "top"
+                }
+              ],
+              "answer": "",
+              "correctAnswer": "",
+              "name": "Copy of Copy of undefined"
+            },
+            {
+              "id": "660bbe19e17de1196994",
+              "content": "<span><p dir=\"ltr\"><span><b>Questions 15 - 20</b></span></p><p dir=\"ltr\"><span>Complete the table below.</span></p><p dir=\"ltr\"><span>Write </span><span><b>ONE WORD AND/OR A NUMBER</b></span><span> for each answer.<br></span></p><div><img src=\"http://localhost:3000/upload/660bbdd55118a5fd7502.png\" width=\"100%\" alt=\"\"></div></span>",
+              "type": 1,
+              "choices": [
+                {
+                  "id": "660bbe099ad0641f1a86",
+                  "content": "",
+                  "index": "18.",
+                  "correctAnswer": " pass"
+                }
+              ],
+              "answer": "",
+              "correctAnswer": "",
+              "name": "Copy of Copy of Copy of undefined"
+            },
+            {
+              "id": "660bbe217c19db4ac1",
+              "content": "<span><p dir=\"ltr\"><span><b>Questions 15 - 20</b></span></p><p dir=\"ltr\"><span>Complete the table below.</span></p><p dir=\"ltr\"><span>Write </span><span><b>ONE WORD AND/OR A NUMBER</b></span><span> for each answer.<br></span></p><div><img src=\"http://localhost:3000/upload/660bbdd55118a5fd7502.png\" width=\"100%\" alt=\"\"></div></span>",
+              "type": 1,
+              "choices": [
+                {
+                  "id": "660bbe099ad0641f1a86",
+                  "content": "",
+                  "index": "19.",
+                  "correctAnswer": "steam"
+                }
+              ],
+              "answer": "",
+              "correctAnswer": "",
+              "name": "Copy of Copy of Copy of Copy of undefined"
+            },
+            {
+              "id": "660bbe2569fe8bac6294",
+              "content": "<span><p dir=\"ltr\"><span><b>Questions 15 - 20</b></span></p><p dir=\"ltr\"><span>Complete the table below.</span></p><p dir=\"ltr\"><span>Write </span><span><b>ONE WORD AND/OR A NUMBER</b></span><span> for each answer.<br></span></p><div><img src=\"http://localhost:3000/upload/660bbdd55118a5fd7502.png\" width=\"100%\" alt=\"\"></div></span>",
+              "type": 1,
+              "choices": [
+                {
+                  "id": "660bbe099ad0641f1a86",
+                  "content": "",
+                  "index": "20.",
+                  "correctAnswer": "capital"
+                }
+              ],
+              "answer": "",
+              "correctAnswer": "",
+              "name": "Copy of Copy of Copy of Copy of Copy of undefined"
+            }
+          ],
+          "audioName": "",
+          "wordCount": 0
+        },
+        {
+          "id": "660bb45cd3578ffdf466",
+          "name": "SECTION 3",
+          "content": "",
+          "questions": [
+            {
+              "id": "660bbe446bebb950ae55",
+              "content": "<p dir=\"ltr\"><span><b>Questions 21 - 26</b></span></p><p dir=\"ltr\"><span>What did findings of previous research claim about the personality traits a child is likely to have because of their position in the family?</span></p><p dir=\"ltr\">Choose <b>SIX</b> answers from the box and write the correct letter, <b>A&#8211;H</b>, next to <b>Questions 21&#8211;26.<br></b></p><div><img src=\"http://localhost:3000/upload/660bbe446bebb950ae55.png\" width=\"100%\" alt=\"\"></div><p></p><div><span><b>21</b>.<span class=\"Apple-tab-span\">&#9;</span>the eldest child<span class=\"Apple-tab-span\">&#9;</span></span><span><br></span></div>",
+              "type": 1,
+              "choices": [
+                {
+                  "id": "660bbe71bd939513241f",
+                  "content": "",
+                  "index": "21.",
+                  "correctAnswer": "G"
+                }
+              ],
+              "answer": "",
+              "correctAnswer": ""
+            },
+            {
+              "id": "660bbea182f9b8b1ca0e",
+              "content": "<p dir=\"ltr\"><span><b>Questions 21 - 26</b></span></p><p dir=\"ltr\"><span>What did findings of previous research claim about the personality traits a child is likely to have because of their position in the family?</span></p><p dir=\"ltr\">Choose <b>SIX</b> answers from the box and write the correct letter, <b>A&#8211;H</b>, next to <b>Questions 21&#8211;26.<br></b></p><div><img src=\"http://localhost:3000/upload/660bbe446bebb950ae55.png\" width=\"100%\" alt=\"\"></div><p></p><div><span><font face=\"Arial\" size=\"2\"><span><b>22</b></span><span>.</span><span><span class=\"Apple-tab-span\">&#9;</span></span><span>a middle child</span></font></span><span><br></span></div>",
+              "type": 1,
+              "choices": [
+                {
+                  "id": "660bbe71bd939513241f",
+                  "content": "",
+                  "index": "22.",
+                  "correctAnswer": "F"
+                }
+              ],
+              "answer": "",
+              "correctAnswer": "",
+              "name": "Copy of undefined"
+            },
+            {
+              "id": "660bbec4cd07411de82c",
+              "content": "<p dir=\"ltr\"><span><b>Questions 21 - 26</b></span></p><p dir=\"ltr\"><span>What did findings of previous research claim about the personality traits a child is likely to have because of their position in the family?</span></p><p dir=\"ltr\">Choose <b>SIX</b> answers from the box and write the correct letter, <b>A&#8211;H</b>, next to <b>Questions 21&#8211;26.<br></b></p><div><img src=\"http://localhost:3000/upload/660bbe446bebb950ae55.png\" width=\"100%\" alt=\"\"></div><p></p><div><span><font face=\"Arial\" size=\"2\"><b>23</b>.<span class=\"Apple-tab-span\">&#9;</span>the youngest child</font></span><span><br></span></div>",
+              "type": 1,
+              "choices": [
+                {
+                  "id": "660bbe71bd939513241f",
+                  "content": "",
+                  "index": "23.",
+                  "correctAnswer": "A"
+                }
+              ],
+              "answer": "",
+              "correctAnswer": "",
+              "name": "Copy of Copy of undefined"
+            },
+            {
+              "id": "660bbee2dd9a204b44a5",
+              "content": "<p dir=\"ltr\"><span><b>Questions 21 - 26</b></span></p><p dir=\"ltr\"><span>What did findings of previous research claim about the personality traits a child is likely to have because of their position in the family?</span></p><p dir=\"ltr\">Choose <b>SIX</b> answers from the box and write the correct letter, <b>A&#8211;H</b>, next to <b>Questions 21&#8211;26.<br></b></p><div><img src=\"http://localhost:3000/upload/660bbe446bebb950ae55.png\" width=\"100%\" alt=\"\"></div><p></p><div><span><font face=\"Arial\" size=\"2\"><b>24</b>.&#160;<span class=\"Apple-tab-span\"></span></font></span><span><font face=\"Arial\" size=\"2\">a twin</font></span><span><span class=\"Apple-tab-span\">&#9;</span></span><span><br></span></div>",
+              "type": 1,
+              "choices": [
+                {
+                  "id": "660bbe71bd939513241f",
+                  "content": "",
+                  "index": "24.",
+                  "correctAnswer": "E"
+                }
+              ],
+              "answer": "",
+              "correctAnswer": "",
+              "name": "Copy of Copy of Copy of undefined"
+            },
+            {
+              "id": "660bbf0f934feaba4f3c",
+              "content": "<p dir=\"ltr\"><span><b>Questions 21 - 26</b></span></p><p dir=\"ltr\"><span>What did findings of previous research claim about the personality traits a child is likely to have because of their position in the family?</span></p><p dir=\"ltr\">Choose <b>SIX</b> answers from the box and write the correct letter, <b>A&#8211;H</b>, next to <b>Questions 21&#8211;26.<br></b></p><div><img src=\"http://localhost:3000/upload/660bbe446bebb950ae55.png\" width=\"100%\" alt=\"\"></div><p></p><div><span><font face=\"Arial\" size=\"2\"><b>25</b>.&#160;</font></span><span>an only child</span><span><br></span></div>",
+              "type": 1,
+              "choices": [
+                {
+                  "id": "660bbe71bd939513241f",
+                  "content": "",
+                  "index": "25.",
+                  "correctAnswer": "B"
+                }
+              ],
+              "answer": "",
+              "correctAnswer": "",
+              "name": "Copy of Copy of Copy of Copy of undefined"
+            },
+            {
+              "id": "660bbf283fbe06e6e2e4",
+              "content": "<p dir=\"ltr\"><span><b>Questions 21 - 26</b></span></p><p dir=\"ltr\"><span>What did findings of previous research claim about the personality traits a child is likely to have because of their position in the family?</span></p><p dir=\"ltr\">Choose <b>SIX</b> answers from the box and write the correct letter, <b>A&#8211;H</b>, next to <b>Questions 21&#8211;26.<br></b></p><div><img src=\"http://localhost:3000/upload/660bbe446bebb950ae55.png\" width=\"100%\" alt=\"\"></div><p></p><div><span><font face=\"Arial\" size=\"2\"><b>26</b>.&#160;</font></span><span>a child with much older siblings</span><span><br></span></div>",
+              "type": 1,
+              "choices": [
+                {
+                  "id": "660bbe71bd939513241f",
+                  "content": "",
+                  "index": "26.",
+                  "correctAnswer": "C"
+                }
+              ],
+              "answer": "",
+              "correctAnswer": "",
+              "name": "Copy of Copy of Copy of Copy of Copy of undefined"
+            },
+            {
+              "id": "660bbf60df729617dbd8",
+              "content": "<span><p dir=\"ltr\"><span><b>Questions 27 - 28</b></span></p><p dir=\"ltr\">Choose the correct letter,<b> </b><b><span>A</span><span>, </span><span>B </span><span>or </span><span>C</span><span>.</span></b></p><p dir=\"ltr\"><span><b>27</b></span><span>. What do the speakers say about the evidence relating to birth order and academic success?</span></p></span>",
+              "type": 0,
+              "choices": [
+                {
+                  "id": "660bbf60bf916c610b15",
+                  "content": "There is conflicting evidence about whether oldest children perform best in intelligence tests."
+                },
+                {
+                  "id": "660bbf6037114d553ee4",
+                  "content": "There is little doubt that birth order has less influence on academic achievement than socio-economic status."
+                },
+                {
+                  "id": "660bbf60eceabd94af12",
+                  "content": "Some studies have neglected to include important factors such as family size."
+                }
+              ],
+              "answer": [],
+              "correctAnswer": [
+                "660bbf60eceabd94af12"
+              ]
+            },
+            {
+              "id": "660bbf8ccf7966db487a",
+              "content": "<span><p dir=\"ltr\"><span><b>Questions 27 - 28</b></span></p><p dir=\"ltr\">Choose the correct letter,<b> </b><b><span>A</span><span>, </span><span>B </span><span>or </span><span>C</span><span>.</span></b></p><p dir=\"ltr\"><span><b>28</b></span><span>.&#160;</span><span>What does Ruth think is surprising about the difference in oldest children&#8217;s academic performance?</span></p><div><span><br></span></div></span>",
+              "type": 0,
+              "choices": [
+                {
+                  "id": "660bbf60bf916c610b15",
+                  "content": "It is mainly thanks to their roles as teachers for their younger siblings."
+                },
+                {
+                  "id": "660bbf6037114d553ee4",
+                  "content": "The advantages they have only lead to a slightly higher level of achievement."
+                },
+                {
+                  "id": "660bbf60eceabd94af12",
+                  "content": "The extra parental attention they receive at a young age makes little difference."
+                }
+              ],
+              "answer": [],
+              "correctAnswer": [
+                "660bbf60bf916c610b15"
+              ],
+              "name": "Copy of undefined"
+            },
+            {
+              "id": "660bbfbffd73713ff950",
+              "content": "<p dir=\"ltr\"><span><b>Questions 29 - 30</b></span></p><p dir=\"ltr\">Choose <b>TWO</b> letters, <b><span>A</span><span> </span><span>- E.</span></b></p><p dir=\"ltr\"><span>Which </span><span><b>TWO </b></span><span>experiences of sibling rivalry do the speakers agree has been valuable for them?</span></p><span><b>A</b>. learning to share</span><br><span><b>B</b>. learning to stand up for oneself</span><br><span><b>C</b>.learning to be a good loser</span><br><span><b>D</b>. learning to be tolerant</span><br><span><b>E</b>. learning to say sorry</span><br>",
+              "type": 1,
+              "choices": [
+                {
+                  "id": "660bbfec497f6f859993",
+                  "content": "",
+                  "index": "29.",
+                  "correctAnswer": "B/D"
+                }
+              ],
+              "answer": "",
+              "correctAnswer": ""
+            },
+            {
+              "id": "660bbff2cb2ef89dc86",
+              "content": "<p dir=\"ltr\"><span><b>Questions 29 - 30</b></span></p><p dir=\"ltr\">Choose <b>TWO</b> letters, <b><span>A</span><span> </span><span>- E.</span></b></p><p dir=\"ltr\"><span>Which </span><span><b>TWO </b></span><span>experiences of sibling rivalry do the speakers agree has been valuable for them?</span></p><span><b>A</b>. learning to share</span><br><span><b>B</b>. learning to stand up for oneself</span><br><span><b>C</b>.learning to be a good loser</span><br><span><b>D</b>. learning to be tolerant</span><br><span><b>E</b>. learning to say sorry</span><br>",
+              "type": 1,
+              "choices": [
+                {
+                  "id": "660bbfec497f6f859993",
+                  "content": "",
+                  "index": "30.",
+                  "correctAnswer": "B/D"
+                }
+              ],
+              "answer": "",
+              "correctAnswer": "",
+              "name": "Copy of undefined"
+            }
+          ],
+          "audioName": "",
+          "wordCount": 0
+        },
+        {
+          "id": "660bb45fbaf5a9f81a93",
+          "name": "SECTION 4",
+          "content": "",
+          "questions": [
+            {
+              "id": "660bc01641cc9971b080",
+              "content": "<span><p dir=\"ltr\"><span><b>Questions 31 - 40</b></span></p><p dir=\"ltr\"><span>Complete the notes below.</span></p><p dir=\"ltr\"><span>Write </span><span><b>ONE WORD ONLY</b></span><span> for each answer.</span></p><div><img src=\"http://localhost:3000/upload/660bc01641cc9971b080.png\" width=\"100%\" alt=\"\"><span><br></span></div></span>",
+              "type": 1,
+              "choices": [
+                {
+                  "id": "660bc05cf91db969426b",
+                  "content": "",
+                  "index": "31.",
+                  "correctAnswer": "shelter"
+                }
+              ],
+              "answer": "",
+              "correctAnswer": ""
+            },
+            {
+              "id": "660bc062c9a7a06c300f",
+              "content": "<span><p dir=\"ltr\"><span><b>Questions 31 - 40</b></span></p><p dir=\"ltr\"><span>Complete the notes below.</span></p><p dir=\"ltr\"><span>Write </span><span><b>ONE WORD ONLY</b></span><span> for each answer.</span></p><div><img src=\"http://localhost:3000/upload/660bc01641cc9971b080.png\" width=\"100%\" alt=\"\"><span><br></span></div></span>",
+              "type": 1,
+              "choices": [
+                {
+                  "id": "660bc05cf91db969426b",
+                  "content": "",
+                  "index": "32.",
+                  "correctAnswer": "oil"
+                }
+              ],
+              "answer": "",
+              "correctAnswer": "",
+              "name": "Copy of undefined"
+            },
+            {
+              "id": "660bc067cb452c477ea3",
+              "content": "<span><p dir=\"ltr\"><span><b>Questions 31 - 40</b></span></p><p dir=\"ltr\"><span>Complete the notes below.</span></p><p dir=\"ltr\"><span>Write </span><span><b>ONE WORD ONLY</b></span><span> for each answer.</span></p><div><img src=\"http://localhost:3000/upload/660bc01641cc9971b080.png\" width=\"100%\" alt=\"\"><span><br></span></div></span>",
+              "type": 1,
+              "choices": [
+                {
+                  "id": "660bc05cf91db969426b",
+                  "content": "",
+                  "index": "33.",
+                  "correctAnswer": "roads"
+                }
+              ],
+              "answer": "",
+              "correctAnswer": "",
+              "name": "Copy of Copy of undefined"
+            },
+            {
+              "id": "660bc06a1c649b95bd5d",
+              "content": "<span><p dir=\"ltr\"><span><b>Questions 31 - 40</b></span></p><p dir=\"ltr\"><span>Complete the notes below.</span></p><p dir=\"ltr\"><span>Write </span><span><b>ONE WORD ONLY</b></span><span> for each answer.</span></p><div><img src=\"http://localhost:3000/upload/660bc01641cc9971b080.png\" width=\"100%\" alt=\"\"><span><br></span></div></span>",
+              "type": 1,
+              "choices": [
+                {
+                  "id": "660bc05cf91db969426b",
+                  "content": "",
+                  "index": "34.",
+                  "correctAnswer": "insects"
+                }
+              ],
+              "answer": "",
+              "correctAnswer": "",
+              "name": "Copy of Copy of Copy of undefined"
+            },
+            {
+              "id": "660bc0858288ae925dc5",
+              "content": "<span><p dir=\"ltr\"><span><b>Questions 31 - 40</b></span></p><p dir=\"ltr\"><span>Complete the notes below.</span></p><p dir=\"ltr\"><span>Write </span><span><b>ONE WORD ONLY</b></span><span> for each answer.</span></p><div><img src=\"http://localhost:3000/upload/660bc0858288ae925dc5.png\" width=\"100%\" alt=\"\"><span><br></span></div></span>",
+              "type": 1,
+              "choices": [
+                {
+                  "id": "660bc05cf91db969426b",
+                  "content": "",
+                  "index": "35.",
+                  "correctAnswer": "grass/grasses"
+                }
+              ],
+              "answer": "",
+              "correctAnswer": "",
+              "name": "Copy of Copy of Copy of Copy of undefined"
+            },
+            {
+              "id": "660bc096f021eb7ca30",
+              "content": "<span><p dir=\"ltr\"><span><b>Questions 31 - 40</b></span></p><p dir=\"ltr\"><span>Complete the notes below.</span></p><p dir=\"ltr\"><span>Write </span><span><b>ONE WORD ONLY</b></span><span> for each answer.</span></p><div><img src=\"http://localhost:3000/upload/660bc0858288ae925dc5.png\" width=\"100%\" alt=\"\"><span><br></span></div></span>",
+              "type": 1,
+              "choices": [
+                {
+                  "id": "660bc05cf91db969426b",
+                  "content": "",
+                  "index": "36.",
+                  "correctAnswer": "water"
+                }
+              ],
+              "answer": "",
+              "correctAnswer": "",
+              "name": "Copy of Copy of Copy of Copy of Copy of undefined"
+            },
+            {
+              "id": "660bc099952aa46c19f4",
+              "content": "<span><p dir=\"ltr\"><span><b>Questions 31 - 40</b></span></p><p dir=\"ltr\"><span>Complete the notes below.</span></p><p dir=\"ltr\"><span>Write </span><span><b>ONE WORD ONLY</b></span><span> for each answer.</span></p><div><img src=\"http://localhost:3000/upload/660bc0858288ae925dc5.png\" width=\"100%\" alt=\"\"><span><br></span></div></span>",
+              "type": 1,
+              "choices": [
+                {
+                  "id": "660bc05cf91db969426b",
+                  "content": "",
+                  "index": "37.",
+                  "correctAnswer": "soil"
+                }
+              ],
+              "answer": "",
+              "correctAnswer": "",
+              "name": "Copy of Copy of Copy of Copy of Copy of Copy of undefined"
+            },
+            {
+              "id": "660bc09dd91264e54464",
+              "content": "<span><p dir=\"ltr\"><span><b>Questions 31 - 40</b></span></p><p dir=\"ltr\"><span>Complete the notes below.</span></p><p dir=\"ltr\"><span>Write </span><span><b>ONE WORD ONLY</b></span><span> for each answer.</span></p><div><img src=\"http://localhost:3000/upload/660bc0858288ae925dc5.png\" width=\"100%\" alt=\"\"><span><br></span></div></span>",
+              "type": 1,
+              "choices": [
+                {
+                  "id": "660bc05cf91db969426b",
+                  "content": "",
+                  "index": "38.",
+                  "correctAnswer": "dry"
+                }
+              ],
+              "answer": "",
+              "correctAnswer": "",
+              "name": "Copy of Copy of Copy of Copy of Copy of Copy of Copy of undefined"
+            },
+            {
+              "id": "660bc0a53a5e083375b1",
+              "content": "<span><p dir=\"ltr\"><span><b>Questions 31 - 40</b></span></p><p dir=\"ltr\"><span>Complete the notes below.</span></p><p dir=\"ltr\"><span>Write </span><span><b>ONE WORD ONLY</b></span><span> for each answer.</span></p><div><img src=\"http://localhost:3000/upload/660bc0858288ae925dc5.png\" width=\"100%\" alt=\"\"><span><br></span></div></span>",
+              "type": 1,
+              "choices": [
+                {
+                  "id": "660bc05cf91db969426b",
+                  "content": "",
+                  "index": "39..",
+                  "correctAnswer": "simple"
+                }
+              ],
+              "answer": "",
+              "correctAnswer": "",
+              "name": "Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of undefined"
+            },
+            {
+              "id": "660bc0a9f7abccac043",
+              "content": "<span><p dir=\"ltr\"><span><b>Questions 31 - 40</b></span></p><p dir=\"ltr\"><span>Complete the notes below.</span></p><p dir=\"ltr\"><span>Write </span><span><b>ONE WORD ONLY</b></span><span> for each answer.</span></p><div><img src=\"http://localhost:3000/upload/660bc0858288ae925dc5.png\" width=\"100%\" alt=\"\"><span><br></span></div></span>",
+              "type": 1,
+              "choices": [
+                {
+                  "id": "660bc05cf91db969426b",
+                  "content": "",
+                  "index": "40.",
+                  "correctAnswer": "  nest/nests"
+                }
+              ],
+              "answer": "",
+              "correctAnswer": "",
+              "name": "Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of undefined"
+            }
+          ],
+          "audioName": "",
+          "wordCount": 0
+        }
+      ],
+      "readingParts": [
+        {
+          "id": "660bc0f31a29c7e5df16",
+          "content": "<b>READING PASSAGE 1&#160;</b><div>You should spend about 20 minutes on Questions 1&#8211;13, which are based on Reading Passage 1 below.&#160;</div><div><br></div><div><b>NUTMEG &#8211; A VALUABLE SPICE&#160;</b></div><div>&#160; &#160; &#160;The nutmeg tree, Myristica fragrans, is a large evergreen tree native to Southeast Asia. Until the late 18th century, it only grew in one place in the world: a small group of islands in the Banda Sea, part of the Moluccas &#8211; or Spice Islands &#8211; in northeastern Indonesia. The tree is thickly branched with dense foliage of tough, dark green oval leaves, and produces small, yellow, bell-shaped flowers and pale yellow pear-shaped fruits. The fruit is encased in a fleshy husk. When the fruit is ripe, this husk splits into two halves along a ridge running the length of the fruit. Inside is a purple-brown shiny seed, 2&#8211;3 cm long by about 2 cm across, surrounded by a lacy red or crimson covering called an aril. These are the sources of the two spices nutmeg and mace, the former being produced from the dried seed and the latter from the rail.</div><div><span><br></span></div><div><span>&#160; &#160; &#160;Nutmeg was a highly prized and costly ingredient in European cuisine in the Middle Ages, and was used as a flavouring, medicinal, and preservative agent. Throughout this period, the Arabs were the exclusive importers of the spice to Europe. They sold nutmeg for high prices to merchants based in Venice, but they never revealed the exact location of the source of this extremely valuable commodity. The Arab-Venetian dominance of the trade finally ended in 1512, when the Portuguese reached the Banda Islands and began exploiting its precious resources.&#160;</span></div><div><span><br></span></div><div><span>&#160; &#160; &#160;Always in danger of competition from neighbouring Spain, the Portuguese began subcontracting their spice distribution to Dutch traders. Profits began to flow into the Netherlands, and the Dutch commercial fleet swiftly grew into one of the largest in the world. The Dutch quietly gained control of most of the shipping and trading of spices in Northern Europe. Then, in 1580, Portugal fell under Spanish rule, and by the end of the 16th century the Dutch found themselves locked out of the market. As prices for pepper, nutmeg, and other spices soared across Europe, they decided to fight back.prices for pepper, nutmeg, and other spices soared across Europe, they decided to fight back.</span></div><div><span><br></span></div><div><span>&#160; &#160; &#160; In 1602, Dutch merchants founded the VOC, a trading corporation better known as the Dutch East India Company. By 1617, the VOC was the richest commercial operation in the world. The company had 50,000 employees worldwide, with a private army of 30,000 men and a fleet of 200 ships. At the same time, thousands of people across Europe were dying of the plague, a highly contagious and deadly disease. Doctors were desperate for a way to stop the spread of this disease, and they decided nutmeg held the cure. Everybody wanted nutmeg, and many were willing to spare no expense to have it. Nutmeg bought for a few pennies in Indonesia could be sold for 68,000 times its original cost on the streets of London. The only problem was the short supply. And that&#8217;s where the Dutch found their opportunity.&#160;</span></div><div><span><br></span></div><div><span>&#160; &#160; &#160;The Banda Islands were ruled by local sultans who insisted on maintaining a neutral trading policy towards foreign powers. This allowed them to avoid the presence of Portuguese or Spanish troops on their soil, but it also left them unprotected from other invaders. In 1621, the Dutch arrived and took over. Once securely in control of the Bandas, the Dutch went to work protecting their new investment. They concentrated all nutmeg production into a few easily guarded areas, uprooting and destroying any trees outside the plantation zones. Anyone caught growing a nutmeg seedling or carrying seeds without the proper authority was severely punished. In addition, all exported nutmeg was covered with lime to make sure there was no chance a fertile seed which could be grown elsewhere would leave the islands. There was only one obstacle to Dutch domination. One of the Banda Islands, a sliver of land called Run, only 3 km long by less than 1 km wide, was under the control of the British. After decades of fighting for control of this tiny island, the Dutch and British arrived at a compromise settlement, the Treaty of Breda, in 1667. Intent on securing their hold over every nutmeg-producing island, the Dutch offered a trade: if the British would give them the island of Run, they would in turn give Britain a distant and much less valuable island in North America. The British agreed. That other island was Manhattan, which is how New Amsterdam became New York. The Dutch now had a monopoly over the nutmeg trade which would last for another century.&#160;</span></div><div><span><br></span></div><div><span>&#160; &#160; &#160;Then, in 1770, a Frenchman named Pierre Poivre successfully smuggled nutmeg plants to safety in Mauritius, an island off the coast of Africa. Some of these were later exported to the Caribbean where they thrived, especially on the island of Grenada. Next, in 1778, a volcanic eruption in the Banda region caused a tsunami that wiped out half the nutmeg groves. Finally, in 1809, the British returned to Indonesia and seized the Banda Islands by force. They returned the islands to the Dutch in 1817, but not before transplanting hundreds of nutmeg seedlings to plantations in several locations across southern Asia. The Dutch nutmeg monopoly was over.</span></div><div><span><br></span></div><div><span>&#160; &#160; &#160;Today, nutmeg is grown in Indonesia, the Caribbean, India, Malaysia, Papua New Guinea and Sri Lanka, and world nutmeg production is estimated to average between 10,000 and 12,000 tonnes per year.</span><br></div>",
+          "questions": [
+            {
+              "id": "660bc1cdccf9286af9a9",
+              "content": "",
+              "type": 2,
+              "choices": [],
+              "answer": "",
+              "correctAnswer": "",
+              "subQuestions": [
+                {
+                  "id": "660bc1fa8e556b64e4bb",
+                  "content": "<span><p dir=\"ltr\"><span>Complete the notes below.</span></p><p dir=\"ltr\">Choose<b> </b><b>ONE WORD ONLY</b> from the passage for each answer.&#160;</p><p dir=\"ltr\"><span>Write your answers in boxes </span><span><b>1&#8211;4</b></span><span> on your answer sheet.</span><span><br><br></span></p><p dir=\"ltr\"><span><b>THE NUTMEG TREE AND FRUIT&#160;</b></span></p></span>",
+                  "type": 1,
+                  "choices": [
+                    {
+                      "id": "660bc20357e20118846e",
+                      "content": "",
+                      "index": "1. the leaves of the tree are (1) ____________  in shape",
+                      "correctAnswer": "oval"
+                    }
+                  ],
+                  "answer": [],
+                  "correctAnswer": []
+                }
+              ],
+              "name": "Questions 1 - 4"
+            },
+            {
+              "id": "660bc313ca3c78501fd6",
+              "content": "",
+              "type": 2,
+              "choices": [],
+              "answer": "",
+              "correctAnswer": "",
+              "subQuestions": [
+                {
+                  "id": "660bc31f40c6bb354512",
+                  "content": "<span><p dir=\"ltr\"><span>Complete the notes below.</span></p><p dir=\"ltr\"><span>Choose </span><span><b>ONE WORD ONLY</b></span><span> from the passage for each answer.&#160;</span></p><p dir=\"ltr\"><span>Write your answers in boxes </span><span><b>1&#8211;4</b></span><span> on your answer sheet.</span><span><br><br></span></p><p dir=\"ltr\"><span><b>THE NUTMEG TREE AND FRUIT&#160;</b></span></p></span>",
+                  "type": 1,
+                  "choices": [
+                    {
+                      "id": "660bc344670123f7a20",
+                      "content": "",
+                      "index": "2. the (2) ____________  surrounds the fruit and breaks open when the fruit is ripe",
+                      "correctAnswer": "husk"
+                    }
+                  ],
+                  "answer": [],
+                  "correctAnswer": []
+                }
+              ],
+              "name": "Questions 1 - 4"
+            },
+            {
+              "id": "660bc360c92d8fbb805",
+              "content": "",
+              "type": 2,
+              "choices": [],
+              "answer": "",
+              "correctAnswer": "",
+              "subQuestions": [
+                {
+                  "id": "660bc37130d2bd75cc54",
+                  "content": "<span><p dir=\"ltr\"><span>Complete the notes below.</span></p><p dir=\"ltr\"><span>Choose </span><span><b>ONE WORD ONLY</b></span><span> from the passage for each answer.&#160;</span></p><p dir=\"ltr\">Write your answers in boxes<b> </b><b>1&#8211;4</b> on your answer sheet.<br><br></p><p dir=\"ltr\"><b>THE NUTMEG TREE AND FRUIT</b>&#160;</p></span>",
+                  "type": 1,
+                  "choices": [
+                    {
+                      "id": "660bc3ea4d0c62e9f44f",
+                      "content": "",
+                      "index": "3. the (3) ____________   is used to produce the spice nutmeg",
+                      "correctAnswer": "seed"
+                    }
+                  ],
+                  "answer": [],
+                  "correctAnswer": []
+                }
+              ],
+              "name": "Questions 1 - 4\n"
+            },
+            {
+              "id": "660bc3b12db08233a22a",
+              "content": "",
+              "type": 2,
+              "choices": [],
+              "answer": "",
+              "correctAnswer": "",
+              "subQuestions": [
+                {
+                  "id": "660bc3b4a9b4fb667de9",
+                  "content": "<span><p dir=\"ltr\"><span>Complete the notes below.</span></p><p dir=\"ltr\"><span>Choose </span><span><b>ONE WORD ONLY</b></span><span> from the passage for each answer.&#160;</span></p><p dir=\"ltr\"><span>Write your answers in boxes </span><span>1&#8211;4</span><span> on your answer sheet.</span><span><br><br></span></p><p dir=\"ltr\"><span><b>THE NUTMEG TREE AND FRUIT</b></span></p></span>",
+                  "type": 1,
+                  "choices": [
+                    {
+                      "id": "660bc3d834617bd186c",
+                      "content": "",
+                      "index": "4. the covering known as the aril is used to produce (4) ___________.     the tree has yellow flowers and fruit ",
+                      "correctAnswer": "mace"
+                    }
+                  ],
+                  "answer": [],
+                  "correctAnswer": []
+                }
+              ],
+              "name": "Question 1 - 4"
+            },
+            {
+              "id": "660bc46436c0184b4f0",
+              "content": "",
+              "type": 2,
+              "choices": [],
+              "answer": "",
+              "correctAnswer": "",
+              "subQuestions": [
+                {
+                  "id": "663ddb025db3cbab9c31",
+                  "content": "<p dir=\"ltr\">Do the following statements agree with the information given in&#160;Reading Passage 1?</p><p dir=\"ltr\">In boxes<b>&#160;</b><b>5&#8211;7</b><b>&#160;</b>on your answer sheet, write</p><p dir=\"ltr\"><br></p><p dir=\"ltr\"><b>TRUE</b><span class=\"Apple-tab-span\">&#160;</span><span class=\"Apple-tab-span\"></span><span class=\"Apple-tab-span\"></span>if the statement agrees with the information&#160;</p><p dir=\"ltr\"><b>False </b>if the statement contradicts the information&#160;</p><b>NOT GIVEN</b>&#160;&#160;<span class=\"Apple-tab-span\"></span><span class=\"Apple-tab-span\"></span>if there is no information on this<div><br></div><div><b>5.</b> In the Middle Ages, most Europeans knew where nutmeg was grown.<br></div>",
+                  "type": 3,
+                  "choices": [
+                    {
+                      "id": "663ddb0298c4fcb91e87",
+                      "content": "TRUE "
+                    },
+                    {
+                      "id": "663ddb02d307973b808a",
+                      "content": "FALSE "
+                    },
+                    {
+                      "id": "663ddb027e382967ba78",
+                      "content": "NOT GIVEN"
+                    }
+                  ],
+                  "answer": [],
+                  "correctAnswer": "663ddb02d307973b808a"
+                },
+                {
+                  "id": "663ddc0ee5eb07ad68d6",
+                  "content": "<b>6.&#160;</b>The VOC was the world&#8217;s first major trading company.",
+                  "type": 3,
+                  "choices": [
+                    {
+                      "id": "663ddc0e1646ae6601f",
+                      "content": "TRUE"
+                    },
+                    {
+                      "id": "663ddc0ea152e7ddd62",
+                      "content": "FALSE"
+                    },
+                    {
+                      "id": "663ddc0e7aa99271eb26",
+                      "content": "NOT GIVEN "
+                    }
+                  ],
+                  "answer": [],
+                  "correctAnswer": "663ddc0e7aa99271eb26"
+                },
+                {
+                  "id": "663ddc5dd85c37782e39",
+                  "content": "<b>7.</b> Following the Treaty of Breda, the Dutch had control of all the islands where nutmeg grew.",
+                  "type": 3,
+                  "choices": [
+                    {
+                      "id": "663ddc0e1646ae6601f",
+                      "content": "TRUE"
+                    },
+                    {
+                      "id": "663ddc0ea152e7ddd62",
+                      "content": "FALSE"
+                    },
+                    {
+                      "id": "663ddc0e7aa99271eb26",
+                      "content": "NOT GIVEN "
+                    }
+                  ],
+                  "answer": [],
+                  "correctAnswer": "663ddc0e1646ae6601f"
+                }
+              ],
+              "name": "Questions 5–7"
+            },
+            {
+              "id": "660bc635ab999379f3c3",
+              "content": "",
+              "type": 2,
+              "choices": [],
+              "answer": "",
+              "correctAnswer": "",
+              "subQuestions": [
+                {
+                  "id": "660bc63e963f266337c5",
+                  "content": "<span><p dir=\"ltr\"><span>Complete the table below.</span></p><p dir=\"ltr\">Choose<b> </b><b>ONE WORD ONLY</b> from the passage for each answer.</p><p dir=\"ltr\">Write your answers in boxes <b>8&#8211;13</b> on your answer sheet.<br><img src=\"http://localhost:3000/upload/660bc63e963f266337c5.png\" alt=\"\" width=\"100%\"><br></p></span>",
+                  "type": 1,
+                  "choices": [
+                    {
+                      "id": "660bc6509020aa8aedf8",
+                      "content": "",
+                      "index": "8. Nutmeg was brought to Europe by the (8) ___________",
+                      "correctAnswer": "Arabs/arabs"
+                    }
+                  ],
+                  "answer": [],
+                  "correctAnswer": []
+                }
+              ],
+              "name": "Questions 8–13\n"
+            },
+            {
+              "id": "660bc692392b22c7bde2",
+              "content": "",
+              "type": 2,
+              "choices": [],
+              "answer": "",
+              "correctAnswer": "",
+              "subQuestions": [
+                {
+                  "id": "660bc63e963f266337c5",
+                  "content": "<span><p dir=\"ltr\"><span>Complete the table below.</span></p><p dir=\"ltr\">Choose<b> </b><b>ONE WORD ONLY</b> from the passage for each answer.</p><p dir=\"ltr\">Write your answers in boxes <b>8&#8211;13</b> on your answer sheet.<br><img src=\"http://localhost:3000/upload/660bc63e963f266337c5.png\" alt=\"\" width=\"100%\"><br></p></span>",
+                  "type": 1,
+                  "choices": [
+                    {
+                      "id": "660bc6509020aa8aedf8",
+                      "content": "",
+                      "index": "9. Demand for nutmeg grew. as it was believed to be effective against the disease known as the (9) ___________",
+                      "correctAnswer": "plague"
+                    }
+                  ],
+                  "answer": [],
+                  "correctAnswer": []
+                }
+              ],
+              "name": "Questions 8–13\n"
+            },
+            {
+              "id": "660bc6dece556a5e0786",
+              "content": "",
+              "type": 2,
+              "choices": [],
+              "answer": "",
+              "correctAnswer": "",
+              "subQuestions": [
+                {
+                  "id": "660bc63e963f266337c5",
+                  "content": "<span><p dir=\"ltr\"><span>Complete the table below.</span></p><p dir=\"ltr\">Choose<b> </b><b>ONE WORD ONLY</b> from the passage for each answer.</p><p dir=\"ltr\">Write your answers in boxes <b>8&#8211;13</b> on your answer sheet.<br><img src=\"http://localhost:3000/upload/660bc63e963f266337c5.png\" alt=\"\" width=\"100%\"><br></p></span>",
+                  "type": 1,
+                  "choices": [
+                    {
+                      "id": "660bc6509020aa8aedf8",
+                      "content": "",
+                      "index": "10. put (10) ___________ on nutmeg to avoid it being cultivated outside the islands ",
+                      "correctAnswer": " lime"
+                    }
+                  ],
+                  "answer": [],
+                  "correctAnswer": []
+                }
+              ],
+              "name": "Questions 8–13"
+            },
+            {
+              "id": "660bc6f3391637f41f03",
+              "content": "",
+              "type": 2,
+              "choices": [],
+              "answer": "",
+              "correctAnswer": "",
+              "subQuestions": [
+                {
+                  "id": "660bc63e963f266337c5",
+                  "content": "<span><p dir=\"ltr\"><span>Complete the table below.</span></p><p dir=\"ltr\">Choose<b> </b><b>ONE WORD ONLY</b> from the passage for each answer.</p><p dir=\"ltr\">Write your answers in boxes <b>8&#8211;13</b> on your answer sheet.<br><img src=\"http://localhost:3000/upload/660bc63e963f266337c5.png\" alt=\"\" width=\"100%\"><br></p></span>",
+                  "type": 1,
+                  "choices": [
+                    {
+                      "id": "660bc6509020aa8aedf8",
+                      "content": "",
+                      "index": "11. finally obtained the island of (11)___________ from the British ",
+                      "correctAnswer": "Run/run"
+                    }
+                  ],
+                  "answer": [],
+                  "correctAnswer": []
+                }
+              ],
+              "name": "Questions 8–13"
+            },
+            {
+              "id": "660bc7124143539b1980",
+              "content": "",
+              "type": 2,
+              "choices": [],
+              "answer": "",
+              "correctAnswer": "",
+              "subQuestions": [
+                {
+                  "id": "660bc63e963f266337c5",
+                  "content": "<span><p dir=\"ltr\"><span>Complete the table below.</span></p><p dir=\"ltr\">Choose<b> </b><b>ONE WORD ONLY</b> from the passage for each answer.</p><p dir=\"ltr\">Write your answers in boxes <b>8&#8211;13</b> on your answer sheet.<br><img src=\"http://localhost:3000/upload/660bc63e963f266337c5.png\" alt=\"\" width=\"100%\"><br></p></span>",
+                  "type": 1,
+                  "choices": [
+                    {
+                      "id": "660bc6509020aa8aedf8",
+                      "content": "",
+                      "index": "12. 1770 — nutmeg plants were secretly taken to (12) ___________",
+                      "correctAnswer": "Mauritius/mauritius"
+                    }
+                  ],
+                  "answer": [],
+                  "correctAnswer": []
+                }
+              ],
+              "name": "Questions 8–13"
+            },
+            {
+              "id": "660bc7399e1ca424c53",
+              "content": "",
+              "type": 2,
+              "choices": [],
+              "answer": "",
+              "correctAnswer": "",
+              "subQuestions": [
+                {
+                  "id": "660bc63e963f266337c5",
+                  "content": "<span><p dir=\"ltr\"><span>Complete the table below.</span></p><p dir=\"ltr\">Choose<b> </b><b>ONE WORD ONLY</b> from the passage for each answer.</p><p dir=\"ltr\">Write your answers in boxes <b>8&#8211;13</b> on your answer sheet.<br><img src=\"http://localhost:3000/upload/660bc63e963f266337c5.png\" alt=\"\" width=\"100%\"><br></p></span>",
+                  "type": 1,
+                  "choices": [
+                    {
+                      "id": "660bc6509020aa8aedf8",
+                      "content": "",
+                      "index": "13. 1778 — half the Banda Islands' nutmeg plantations were destroyed by a (13) ___________",
+                      "correctAnswer": "tsunami"
+                    }
+                  ],
+                  "answer": [],
+                  "correctAnswer": []
+                }
+              ],
+              "name": "Question 8-13"
+            }
+          ],
+          "imageName": "",
+          "wordCount": 0
+        },
+        {
+          "id": "660bc128eae3e46391b4",
+          "content": "<span><p dir=\"ltr\"><span><b>READING PASSAGE 2</b></span></p><p dir=\"ltr\">You should spend about 20 minutes on Questions 14-26, which are based on Reading Passage 2 below.<br><br></p><div><span><font face=\"Arial\" size=\"2\"><b>DRIVERLESS CARS</b></font></span></div><font face=\"Arial\" size=\"2\"><b>A</b>. The automotive sector is well used to adapting to automation in manufacturing. The implementation of robotic car manufacture from the 1970s onwards led to significant cost savings and improvements in the reliability and flexibility of vehicle mass production. A new challenge to vehicle production is now on the horizon and, again, it comes from automation. However, this time it is not to do with the manufacturing process, but with the vehicles themselves.</font></span><div><span><font face=\"Arial\" size=\"2\"><br></font></span></div><div><span><font face=\"Arial\" size=\"2\">Research projects on vehicle automation are not new. Vehicles with limited self&#173; driving capabilities have been around for more than 50 years, resulting in significant contributions towards driver assistance systems. But since Google announced in 2010 that it had been trialling self-driving cars on the streets of California, progress in this field has quickly gathered pace.</font><br><p></p><div><span><br></span></div><div><font face=\"Arial\" size=\"2\"><b>B</b>.&#160;</font><span><font face=\"Arial\" size=\"2\">There are many reasons why technology is advancing so fast. One frequently cited motive is safety; indeed, research at the UK's Transport Research Laboratory has demonstrated that more than 90 percent of road collisions involve human error as a contributory factor, and it is the primary cause in the vast majority. Automation may help to reduce the incidence of this.</font></span></div><div><span><font face=\"Arial\" size=\"2\"><br></font></span></div><div><span><font face=\"Arial\" size=\"2\">Another aim is to free the time people spend driving for other purposes. If the vehicle can do some or all of the driving, it may be possible to be productive, to socialise or simply to relax while automation systems have responsibility for safe control of the vehicle. If the vehicle can do the driving, those who are challenged by existing mobility models - such as older or disabled travellers - may be able to enjoy significantly greater travel autonomy.</font></span></div><div><span><font face=\"Arial\" size=\"2\"><br></font></span></div><div><span><font face=\"Arial\" size=\"2\"><b>C</b>.&#160;</font></span><span><font face=\"Arial\" size=\"2\">Beyond these direct benefits, we can consider the wider implications for transport and society, and how manufacturing processes might need to respond as a result. At present, the average car spends more than 90 percent of its life parked. Automation means that initiatives for car-sharing become much more viable, particularly in urban areas with significant travel demand. If a significant proportion of the population chooses to use shared automated vehicles, mobility demand can be met by far fewer vehicles.</font></span></div><div><span><font face=\"Arial\" size=\"2\"><br></font></span></div><div><span><font face=\"Arial\" size=\"2\"><b>D</b>.&#160;</font></span><span><font face=\"Arial\" size=\"2\">The Massachusetts Institute of Technology investigated automated mobility in Singapore, finding that fewer than 30 percent of the vehicles currently used would be required if fully automated car sharing could be implemented. If this is the case, it might mean that we need to manufacture far fewer vehicles to meet demand.</font></span></div><div><span><br></span></div><div><span>However, the number of trips being taken would probably increase, partly because empty vehicles would have to be moved from one customer to the next.</span></div><div><span><br></span></div><div><span>Modelling work by the University of Michigan Transportation Research Institute suggests automated vehicles might reduce vehicle ownership by 43 percent, but that vehicles' average annual mileage would double as a result. As a consequence, each vehicle would be used more intensively, and might need replacing sooner. This faster rate of turnover may mean that vehicle production will not necessarily decrease.</span></div><div><span><font face=\"Arial\" size=\"2\"><br></font></span></div><div><span><font face=\"Arial\" size=\"2\"><b>E</b>.&#160;</font></span><span><font face=\"Arial\" size=\"2\">Automation may prompt other changes in vehicle manufacture. If we move to a model where consumers are tending not to own a single vehicle but to purchase access to a range of vehicles through a mobility provider, drivers will have the freedom to select one that best suits their needs for a particular journey, rather than making a compromise across all their requirements.</font></span></div><div><span><font face=\"Arial\" size=\"2\"><br></font></span></div><div><span><font face=\"Arial\" size=\"2\">Since, for most of the time, most of the seats in most cars are unoccupied, this may boost production of a smaller, more efficient range of vehicles that suit the needs of individuals. Specialised vehicles may then be available for exceptional journeys, such as going on a family camping trip or helping a son or daughter move to university.</font></span></div><div><span><font face=\"Arial\" size=\"2\"><br></font></span></div><div><span><font face=\"Arial\" size=\"2\"><b>F</b>.&#160;</font></span><span><font face=\"Arial\" size=\"2\">There are a number of hurdles to overcome in delivering automated vehicles to our roads. These include the technical difficulties in ensuring that the vehicle works reliably in the infinite range of traffic, weather and road situations it might encounter; the regulatory challenges in understanding how liability and enforcement might change when drivers are no longer essential for vehicle operation; and the societal changes that may be required for communities to trust and accept automated vehicles as being a valuable part of the mobility landscape.</font></span></div><div><span><font face=\"Arial\" size=\"2\"><br></font></span></div><div><span><font face=\"Arial\" size=\"2\"><b>G</b>.&#160;</font></span><span><font face=\"Arial\" size=\"2\">It's clear that there are many challenges that need to be addressed but, through robust and targeted research, these can most probably be conquered within the next 10 years. Mobility will change in such potentially significant ways and in association with so many other technological developments, such as telepresence and virtual reality, that it is hard to make concrete predictions about the future. However, one thing is certain: change is coming, and the need to be flexible in response to this will be vital for those involved in manufacturing the vehicles that will deliver future mobility.</font></span></div></span></div>",
+          "questions": [
+            {
+              "id": "660bc7ffa929321a52c5",
+              "content": "",
+              "type": 2,
+              "choices": [],
+              "answer": "",
+              "correctAnswer": "",
+              "subQuestions": [
+                {
+                  "id": "660bc8a8f4cfa0fc6efe",
+                  "content": "Reading Passage 2 has seven sections, <b>A-G</b>.&#160;<div>Which section contains the following information? Write the correct letter, <b>A-G</b>, in boxes <b>14- 18</b> on your answer sheet.</div>",
+                  "type": 1,
+                  "choices": [
+                    {
+                      "id": "660bc8c46cb656b8b5ec",
+                      "content": "",
+                      "index": "14. reference to the amount of time when a car is not in use",
+                      "correctAnswer": "C"
+                    }
+                  ],
+                  "answer": [],
+                  "correctAnswer": []
+                }
+              ],
+              "name": "Question 14 - 18"
+            },
+            {
+              "id": "660bc8e3cf1e408cb1a3",
+              "content": "",
+              "type": 2,
+              "choices": [],
+              "answer": "",
+              "correctAnswer": "",
+              "subQuestions": [
+                {
+                  "id": "660bc8a8f4cfa0fc6efe",
+                  "content": "Reading Passage 2 has seven sections, <b>A-G</b>.&#160;<div>Which section contains the following information? Write the correct letter, <b>A-G</b>, in boxes <b>14- 18</b> on your answer sheet.</div>",
+                  "type": 1,
+                  "choices": [
+                    {
+                      "id": "660bc8c46cb656b8b5ec",
+                      "content": "",
+                      "index": "15. mention of several advantages of driverless vehicles for individual road-users",
+                      "correctAnswer": "B"
+                    }
+                  ],
+                  "answer": [],
+                  "correctAnswer": []
+                }
+              ],
+              "name": "Question 14 - 18"
+            },
+            {
+              "id": "660bc8f385035f3d561a",
+              "content": "",
+              "type": 2,
+              "choices": [],
+              "answer": "",
+              "correctAnswer": "",
+              "subQuestions": [
+                {
+                  "id": "660bc8a8f4cfa0fc6efe",
+                  "content": "Reading Passage 2 has seven sections, <b>A-G</b>.&#160;<div>Which section contains the following information? Write the correct letter, <b>A-G</b>, in boxes <b>14- 18</b> on your answer sheet.</div>",
+                  "type": 1,
+                  "choices": [
+                    {
+                      "id": "660bc8c46cb656b8b5ec",
+                      "content": "",
+                      "index": "16. reference to the opportunity of choosing the most appropriate vehicle for each trip",
+                      "correctAnswer": "E"
+                    }
+                  ],
+                  "answer": [],
+                  "correctAnswer": []
+                }
+              ],
+              "name": "Question 14 - 18"
+            },
+            {
+              "id": "660bc9067edfd5a46235",
+              "content": "",
+              "type": 2,
+              "choices": [],
+              "answer": "",
+              "correctAnswer": "",
+              "subQuestions": [
+                {
+                  "id": "660bc8a8f4cfa0fc6efe",
+                  "content": "Reading Passage 2 has seven sections, <b>A-G</b>.&#160;<div>Which section contains the following information? Write the correct letter, <b>A-G</b>, in boxes <b>14- 18</b> on your answer sheet.</div>",
+                  "type": 1,
+                  "choices": [
+                    {
+                      "id": "660bc8c46cb656b8b5ec",
+                      "content": "",
+                      "index": "17. \tan estimate of of long it will take to overcome a number of problems",
+                      "correctAnswer": "G"
+                    }
+                  ],
+                  "answer": [],
+                  "correctAnswer": []
+                }
+              ],
+              "name": "Question 14 - 18"
+            },
+            {
+              "id": "660bc9226142511c4607",
+              "content": "",
+              "type": 2,
+              "choices": [],
+              "answer": "",
+              "correctAnswer": "",
+              "subQuestions": [
+                {
+                  "id": "660bc8a8f4cfa0fc6efe",
+                  "content": "Reading Passage 2 has seven sections, <b>A-G</b>.&#160;<div>Which section contains the following information? Write the correct letter, <b>A-G</b>, in boxes <b>14- 18</b> on your answer sheet.</div>",
+                  "type": 1,
+                  "choices": [
+                    {
+                      "id": "660bc8c46cb656b8b5ec",
+                      "content": "",
+                      "index": "18. a suggestion that the use of driverless cars may have no effect on the number of vehicles manufactured",
+                      "correctAnswer": "D"
+                    }
+                  ],
+                  "answer": [],
+                  "correctAnswer": []
+                }
+              ],
+              "name": "Question 14 - 18"
+            },
+            {
+              "id": "660bc93dc4cae548a633",
+              "content": "",
+              "type": 2,
+              "choices": [],
+              "answer": "",
+              "correctAnswer": "",
+              "subQuestions": [
+                {
+                  "id": "660bc941227abb5b993a",
+                  "content": "Complete the summary below. Choose<b> NO MORE THAN TWO WORDS </b>from the passage for each answer. Write your answers in boxes 19- 22 on your answer sheet.<br><br><div><b>The impact of driverless cars</b></div>&#160; &#160; &#160;Figures from the Transport Research Laboratory indicate that most motor accidents are partly due to (19) ___________ so the introduction of driverless vehicles will result in greater safety. In addition to the direct benefits of automation, it may bring other advantages. For example, schemes for (20) ___________ will be more workable, especially in towns and cities, resulting in fewer cars on the road.<br><div><br></div><div>&#160; &#160; &#160;According to the University of Michigan Transportation Research Institute, there could be a 43 percent drop in (21) ___________ of cars. However, this would mean that the yearly (22) ___________ of each car would, on average, be twice as high as it currently is. This would lead to a higher turnover of vehicles, and therefore no reduction in automotive manufacturing.<br></div>",
+                  "type": 1,
+                  "choices": [
+                    {
+                      "id": "660bc97e292040ee354",
+                      "content": "",
+                      "index": "19.",
+                      "correctAnswer": " human error"
+                    }
+                  ],
+                  "answer": [],
+                  "correctAnswer": []
+                }
+              ],
+              "name": "Questions 19 - 22\n"
+            },
+            {
+              "id": "660bc986de7329ef5b94",
+              "content": "",
+              "type": 2,
+              "choices": [],
+              "answer": "",
+              "correctAnswer": "",
+              "subQuestions": [
+                {
+                  "id": "660bc941227abb5b993a",
+                  "content": "Complete the summary below. Choose<b> NO MORE THAN TWO WORDS </b>from the passage for each answer. Write your answers in boxes 19- 22 on your answer sheet.<br><br><div><b>The impact of driverless cars</b></div>&#160; &#160; &#160;Figures from the Transport Research Laboratory indicate that most motor accidents are partly due to (19) ___________ so the introduction of driverless vehicles will result in greater safety. In addition to the direct benefits of automation, it may bring other advantages. For example, schemes for (20) ___________ will be more workable, especially in towns and cities, resulting in fewer cars on the road.<br><div><br></div><div>&#160; &#160; &#160;According to the University of Michigan Transportation Research Institute, there could be a 43 percent drop in (21) ___________ of cars. However, this would mean that the yearly (22) ___________ of each car would, on average, be twice as high as it currently is. This would lead to a higher turnover of vehicles, and therefore no reduction in automotive manufacturing.<br></div>",
+                  "type": 1,
+                  "choices": [
+                    {
+                      "id": "660bc97e292040ee354",
+                      "content": "",
+                      "index": "20.",
+                      "correctAnswer": "car sharing/car - sharing/car-sharing"
+                    }
+                  ],
+                  "answer": [],
+                  "correctAnswer": []
+                }
+              ],
+              "name": "Questions 19 - 22\n"
+            },
+            {
+              "id": "660bc99828d3f042e6cd",
+              "content": "",
+              "type": 2,
+              "choices": [],
+              "answer": "",
+              "correctAnswer": "",
+              "subQuestions": [
+                {
+                  "id": "660bc941227abb5b993a",
+                  "content": "Complete the summary below. Choose<b> NO MORE THAN TWO WORDS </b>from the passage for each answer. Write your answers in boxes 19- 22 on your answer sheet.<br><br><div><b>The impact of driverless cars</b></div>&#160; &#160; &#160;Figures from the Transport Research Laboratory indicate that most motor accidents are partly due to (19) ___________ so the introduction of driverless vehicles will result in greater safety. In addition to the direct benefits of automation, it may bring other advantages. For example, schemes for (20) ___________ will be more workable, especially in towns and cities, resulting in fewer cars on the road.<br><div><br></div><div>&#160; &#160; &#160;According to the University of Michigan Transportation Research Institute, there could be a 43 percent drop in (21) ___________ of cars. However, this would mean that the yearly (22) ___________ of each car would, on average, be twice as high as it currently is. This would lead to a higher turnover of vehicles, and therefore no reduction in automotive manufacturing.<br></div>",
+                  "type": 1,
+                  "choices": [
+                    {
+                      "id": "660bc97e292040ee354",
+                      "content": "",
+                      "index": "21.",
+                      "correctAnswer": "ownership"
+                    }
+                  ],
+                  "answer": [],
+                  "correctAnswer": []
+                }
+              ],
+              "name": "Questions 19 - 22\n"
+            },
+            {
+              "id": "660bc9a6ddaf483a22ce",
+              "content": "",
+              "type": 2,
+              "choices": [],
+              "answer": "",
+              "correctAnswer": "",
+              "subQuestions": [
+                {
+                  "id": "660be51de26e3459974a",
+                  "content": "Complete the summary below. Choose<b>&#160;NO MORE THAN TWO WORDS&#160;</b>from the passage for each answer. Write your answers in boxes 19- 22 on your answer sheet.<br><br><div><b>The impact of driverless cars</b></div>&#160; &#160; &#160;Figures from the Transport Research Laboratory indicate that most motor accidents are partly due to (19) ___________ so the introduction of driverless vehicles will result in greater safety. In addition to the direct benefits of automation, it may bring other advantages. For example, schemes for (20) ___________ will be more workable, especially in towns and cities, resulting in fewer cars on the road.<br><div><br></div><div>&#160; &#160; &#160;According to the University of Michigan Transportation Research Institute, there could be a 43 percent drop in (21) ___________ of cars. However, this would mean that the yearly (22) ___________ of each car would, on average, be twice as high as it currently is. This would lead to a higher turnover of vehicles, and therefore no reduction in automotive manufacturing.</div>",
+                  "type": 1,
+                  "choices": [
+                    {
+                      "id": "660be520c000768677ea",
+                      "content": "",
+                      "index": "22.",
+                      "correctAnswer": "mileage"
+                    }
+                  ],
+                  "answer": [],
+                  "correctAnswer": []
+                }
+              ],
+              "name": "Questions 19 - 22\n"
+            },
+            {
+              "id": "660bd76c34000e518fa9",
+              "content": "",
+              "type": 2,
+              "choices": [],
+              "answer": "",
+              "correctAnswer": "",
+              "subQuestions": [
+                {
+                  "id": "660bd7747a1876b415cb",
+                  "content": "Choose<b> TWO letters, A-E.</b> Write the correct letters in boxes <b>23</b> and<b> 24</b> on your answer sheet. Which <b>TWO</b> benefits of automated vehicles does the writer mention?&#160;<div><br></div><div><b>A</b>. Car travellers could enjoy considerable cost savings.</div><div><br></div><div><b>B. </b>It would be easier to find parking spaces in urban areas.&#160;</div><div><br></div><div><b>C.</b> Travellers could spend journeys doing something other than driving.</div><div><br></div><div><span><b>D.</b></span><span> People who find driving physically difficult could travel independently.&#160;</span></div><div><span><br></span></div><div><b>E.</b> A reduction in the number of cars would mean a reduction in pollution.</div>",
+                  "type": 1,
+                  "choices": [
+                    {
+                      "id": "660bd7c310524b992622",
+                      "content": "",
+                      "index": "23.",
+                      "correctAnswer": "C/D"
+                    }
+                  ],
+                  "answer": [],
+                  "correctAnswer": []
+                }
+              ],
+              "name": "Questions 23 and 24"
+            },
+            {
+              "id": "660bd7d4e349deded791",
+              "content": "",
+              "type": 2,
+              "choices": [],
+              "answer": "",
+              "correctAnswer": "",
+              "subQuestions": [
+                {
+                  "id": "660bd7747a1876b415cb",
+                  "content": "Choose<b> TWO letters, A-E.</b> Write the correct letters in boxes <b>23</b> and<b> 24</b> on your answer sheet. Which <b>TWO</b> benefits of automated vehicles does the writer mention?&#160;<div><br></div><div><b>A</b>. Car travellers could enjoy considerable cost savings.</div><div><br></div><div><b>B. </b>It would be easier to find parking spaces in urban areas.&#160;</div><div><br></div><div><b>C.</b> Travellers could spend journeys doing something other than driving.</div><div><br></div><div><span><b>D.</b></span><span> People who find driving physically difficult could travel independently.&#160;</span></div><div><span><br></span></div><div><b>E.</b> A reduction in the number of cars would mean a reduction in pollution.</div>",
+                  "type": 1,
+                  "choices": [
+                    {
+                      "id": "660bd7c310524b992622",
+                      "content": "",
+                      "index": "24.",
+                      "correctAnswer": "C/D"
+                    }
+                  ],
+                  "answer": [],
+                  "correctAnswer": []
+                }
+              ],
+              "name": "Questions 23 and 24"
+            },
+            {
+              "id": "660bd7ec9a5159e17b01",
+              "content": "",
+              "type": 2,
+              "choices": [],
+              "answer": "",
+              "correctAnswer": "",
+              "subQuestions": [
+                {
+                  "id": "660bd7747a1876b415cb",
+                  "content": "Choose<b> TWO letters, A-E.</b> Write the correct letters in boxes <b>25</b> and<b> 26</b> on your answer sheet. Which <b>TWO</b> challenges to automated vehicle development does the writer mention?<div><br></div><div><b>A</b>. making sure the general public has confidence in automated vehicles.</div><div><br></div><div><b>B. </b>managing the pace of transition from conventional to automated vehicles.</div><div><br></div><div><b>C.&#160;</b>deciding how to compensate professional drivers who become redundant.</div><div><br></div><div><span><b>D.</b></span><span>&#160;</span>setting up the infrastructure to make roads suitable for automated vehicles.</div><div><span><br></span></div><div><b>E.</b> getting automated vehicles to adapt to various different driving conditions.</div>",
+                  "type": 1,
+                  "choices": [
+                    {
+                      "id": "660bd7c310524b992622",
+                      "content": "",
+                      "index": "25.",
+                      "correctAnswer": "A/E"
+                    }
+                  ],
+                  "answer": [],
+                  "correctAnswer": []
+                }
+              ],
+              "name": "Questions 25 and 26"
+            },
+            {
+              "id": "660bd8642f578220a8be",
+              "content": "",
+              "type": 2,
+              "choices": [],
+              "answer": "",
+              "correctAnswer": "",
+              "subQuestions": [
+                {
+                  "id": "660bd7747a1876b415cb",
+                  "content": "Choose<b> TWO letters, A-E.</b> Write the correct letters in boxes <b>25</b> and<b> 26</b> on your answer sheet. Which <b>TWO</b> challenges to automated vehicle development does the writer mention?<div><br></div><div><b>A</b>. making sure the general public has confidence in automated vehicles.</div><div><br></div><div><b>B. </b>managing the pace of transition from conventional to automated vehicles.</div><div><br></div><div><b>C.&#160;</b>deciding how to compensate professional drivers who become redundant.</div><div><br></div><div><span><b>D.</b></span><span>&#160;</span>setting up the infrastructure to make roads suitable for automated vehicles.</div><div><span><br></span></div><div><b>E.</b> getting automated vehicles to adapt to various different driving conditions.</div>",
+                  "type": 1,
+                  "choices": [
+                    {
+                      "id": "660bd7c310524b992622",
+                      "content": "",
+                      "index": "26.",
+                      "correctAnswer": "A/E"
+                    }
+                  ],
+                  "answer": [],
+                  "correctAnswer": []
+                }
+              ],
+              "name": "Questions 25 and 26"
+            }
+          ],
+          "imageName": "",
+          "wordCount": 0
+        },
+        {
+          "id": "660bc12a967af6479219",
+          "content": "<b>READING PASSAGE 3 </b><br>You should spend about 20 minutes on Questions 27-40, which are based on Reading Passage 3 below.<br><div><span><b>WHAT IS EXPLORATION?</b><br><div><span>&#160; &#160; &#160;We are all explorers. Our desire to discover, and then share that new-found knowledge, is part of what makes us human - indeed, this has played an important part in our success as a species. Long before the first caveman slumped down beside the fire and grunted news that there were plenty of wildebeest over yonder, our ancestors had learnt the value of sending out scouts to investigate the unknown. This questing nature of ours undoubtedly helped our species spread around the globe, just as it nowadays no doubt helps the last nomadic Penan maintain their existence in the depleted forests of Borneo, and a visitor negotiate the subways of New York.</span><br></div><div><span><br></span></div><div><span>&#160; &#160; &#160;Over the years, we've come to think of explorers as a peculiar breed - different from the rest of us, different from those of us who are merely 'well travelled' , even; and perhaps there is a type of person more suited to seeking out the new, a type of caveman more inclined to risk venturing out. That, however, doesn't take away from the fact that we all have this enquiring instinct, even today; and that in all sorts of professions - whether artist, marine biologist or astronomer - borders of the unknown are being tested each day.</span><br></div><div><span><br></span></div><div><span>&#160; &#160; &#160;Thomas Hardy set some of his novels in Egdon Heath, a fictional area of uncultivated land, and used the landscape to suggest the desires and fears of his characters. He is delving into matters we all recognise because they are common to humanity. This is surely an act of exploration, and into a world as remote as the author chooses. Explorer and travel writer Peter Fleming talks of the moment when the explorer returns to the existence he has left behind with his loved ones. The traveller 'who has for weeks or months seen himself only as a puny and irrelevant alien crawling laboriously over a country in which he has no roots and no background, suddenly encounters his other self, a relatively solid figure, with a place in the minds of certain people'.</span><br></div><div><span><br></span></div><div><span>&#160; &#160; &#160;In this book about the exploration of the earth's surface, I have confined myself to those whose travels were real and who also aimed at more than personal discovery. But that still left me with another problem: the word 'explorer' has become associated with a past era. We think back to a golden age, as if exploration peaked somehow in the 19th century - as if the process of discovery is now on the decline, though the truth is that we have named only one and a half million of this planet's species, and there may be more than 10 million - and that's not including bacteria. We have studied only 5 per cent of the species we know. We have scarcely mapped the ocean floors, and know even less about ourselves; we fully understand the workings of only 10 percent of our brains.</span><br></div><div><span><br></span></div><div><span>&#160; &#160; &#160;Here is how some of today's 'explorers' define the word. Ran Fiennes, dubbed the 'greatest living explorer', said, 'An explorer is someone who has done something that no human has done before - and also done something scientifically useful.' Chris Bonington, a leading mountaineer, felt exploration was to be found in the act of physically touching the unknown: 'You have to have gone somewhere new.' Then Robin Hanbury-Tenison, a campaigner on behalf of remote so-called 'tribal' peoples, said, 'A traveller simply records information about some far-off world, and reports back; but an explorer changes the world.' Wilfred Thesiger, who crossed Arabia's Empty Quarter in 1946, and belongs to an era of unmechanised travel now lost to the rest of us, told me, 'lf I'd gone across by camel when I could have gone by car, it would have been a stunt.' To him, exploration meant bringing back information from a remote place regardless of any great self-discovery.</span><br></div><div><span><br></span></div><div><span>&#160; &#160; &#160;Each definition is slightly different - and tends to reflect the field of endeavour of each pioneer. It was the same whoever I asked: the prominent historian would say exploration was a thing of the past, the cutting-edge scientist would say it was of the present. And so on. They each set their own particular criteria; the common factor in their approach being that they all had, unlike many of us who simply enjoy travel or discovering new things, both a very definite objective from the outset and also a desire to record their findings.</span><br></div></span></div><br><div>&#160; &#160; &#160;I'd best declare my own bias. As a writer, I'm interested in the exploration of ideas. I've done a great many expeditions and each one was unique. I've lived for months alone with isolated groups of people all around the world, even two 'uncontacted tribes'. But none of these things is of the slightest interest to anyone unless, through my books, I've found a new slant, explored a new idea. Why? Because the world has moved on. The time has long passed for the great continental voyages - another walk to the poles, another crossing of the Empty Quarter. We know how the land surface of our planet lies; exploration of it is now down to the details - the habits of microbes, say, or the grazing behaviour of buffalo. Aside from the deep sea and deep underground, it's the era of specialists. However, this is to disregard the role the human mind has in conveying remote places; and this is what interests me: how a fresh interpretation, even of a well-travelled route, can give its readers new insights.<br></div>",
+          "questions": [
+            {
+              "id": "660bd9284fa9e4b1421b",
+              "content": "",
+              "type": 2,
+              "choices": [],
+              "answer": "",
+              "correctAnswer": "",
+              "subQuestions": [
+                {
+                  "id": "660bd9301a61f3b08c3e",
+                  "content": "Choose the correct letter,<b> A, B, C or D.</b> Write the correct letter in boxes <b>27-32</b> on your answer sheet.&#160;<div><br></div><div><b>27.</b> The writer refers to visitors to New York to illustrate the point that</div>",
+                  "type": 0,
+                  "choices": [
+                    {
+                      "id": "660bd930b3cfc6749fe",
+                      "content": "exploration is an intrinsic element of being human. "
+                    },
+                    {
+                      "id": "660bd930f5509a76fd9f",
+                      "content": "most people are enthusiastic about exploring."
+                    },
+                    {
+                      "id": "660bd93058e15d64a70c",
+                      "content": "exploration can lead to surprising results."
+                    },
+                    {
+                      "id": "660bd9302712e86922ba",
+                      "content": "most people find exploration daunting."
+                    }
+                  ],
+                  "answer": [],
+                  "correctAnswer": [
+                    "660bd930b3cfc6749fe"
+                  ]
+                }
+              ],
+              "name": "Questions 27-32"
+            },
+            {
+              "id": "660bd964144c4c8fa249",
+              "content": "",
+              "type": 2,
+              "choices": [],
+              "answer": "",
+              "correctAnswer": "",
+              "subQuestions": [
+                {
+                  "id": "660bd9301a61f3b08c3e",
+                  "content": "Choose the correct letter,<b> A, B, C or D.</b> Write the correct letter in boxes <b>27-32</b> on your answer sheet.&#160;<div><br></div><div><span><p dir=\"ltr\"><span><b>28</b></span><span>. According to the second paragraph, what is the writer's view of explorers?</span></p><div><span><br></span></div></span></div>",
+                  "type": 0,
+                  "choices": [
+                    {
+                      "id": "660bd930b3cfc6749fe",
+                      "content": "Their discoveries have brought both benefits and disadvantages."
+                    },
+                    {
+                      "id": "660bd930f5509a76fd9f",
+                      "content": "Their main value is in teaching others."
+                    },
+                    {
+                      "id": "660bd93058e15d64a70c",
+                      "content": "They act on an urge that is common to everyone."
+                    },
+                    {
+                      "id": "660bd9302712e86922ba",
+                      "content": "They tend to be more attracted to certain professions than to others."
+                    }
+                  ],
+                  "answer": [],
+                  "correctAnswer": [
+                    "660bd93058e15d64a70c"
+                  ]
+                }
+              ],
+              "name": "Questions 27-32"
+            },
+            {
+              "id": "660bd9a897a21212c4c6",
+              "content": "",
+              "type": 2,
+              "choices": [],
+              "answer": "",
+              "correctAnswer": "",
+              "subQuestions": [
+                {
+                  "id": "660bd9301a61f3b08c3e",
+                  "content": "Choose the correct letter,<b> A, B, C or D.</b> Write the correct letter in boxes <b>27-32</b> on your answer sheet.&#160;<div><br></div><div><span><p dir=\"ltr\"><span></span></p><p dir=\"ltr\"><span><b>29</b></span><span>. The writer refers to a description of Egdon Heath to suggest that</span></p></span></div>",
+                  "type": 0,
+                  "choices": [
+                    {
+                      "id": "660bd930b3cfc6749fe",
+                      "content": "Hardy was writing about his own experience of exploration."
+                    },
+                    {
+                      "id": "660bd930f5509a76fd9f",
+                      "content": "Hardy was mistaken about the nature of exploration."
+                    },
+                    {
+                      "id": "660bd93058e15d64a70c",
+                      "content": "Hardy's aim was to investigate people's emotional states."
+                    },
+                    {
+                      "id": "660bd9302712e86922ba",
+                      "content": "Hardy's aim was to show the attraction of isolation."
+                    }
+                  ],
+                  "answer": [],
+                  "correctAnswer": [
+                    "660bd93058e15d64a70c"
+                  ]
+                }
+              ],
+              "name": "Questions 27-32"
+            },
+            {
+              "id": "660bda12e166365f4664",
+              "content": "",
+              "type": 2,
+              "choices": [],
+              "answer": "",
+              "correctAnswer": "",
+              "subQuestions": [
+                {
+                  "id": "660bd9301a61f3b08c3e",
+                  "content": "Choose the correct letter,<b> A, B, C or D.</b> Write the correct letter in boxes <b>27-32</b> on your answer sheet.&#160;<div><br></div><div><span><p dir=\"ltr\"><span></span></p><p dir=\"ltr\"><span></span></p><p dir=\"ltr\"><span><b>30</b></span><span>. In the fourth paragraph, the writer refers to 'a golden age' to suggest that</span></p></span></div>",
+                  "type": 0,
+                  "choices": [
+                    {
+                      "id": "660bd930b3cfc6749fe",
+                      "content": "the amount of useful information produced by exploration has decreased."
+                    },
+                    {
+                      "id": "660bd930f5509a76fd9f",
+                      "content": "fewer people are interested in exploring than in the 19th century."
+                    },
+                    {
+                      "id": "660bd93058e15d64a70c",
+                      "content": "recent developments have made exploration less exciting."
+                    },
+                    {
+                      "id": "660bd9302712e86922ba",
+                      "content": "we are wrong to think that exploration is no longer necessary."
+                    }
+                  ],
+                  "answer": [],
+                  "correctAnswer": [
+                    "660bd9302712e86922ba"
+                  ]
+                }
+              ],
+              "name": "Questions 27-32"
+            },
+            {
+              "id": "660bda398902105ebe5b",
+              "content": "",
+              "type": 2,
+              "choices": [],
+              "answer": "",
+              "correctAnswer": "",
+              "subQuestions": [
+                {
+                  "id": "660bd9301a61f3b08c3e",
+                  "content": "Choose the correct letter,<b> A, B, C or D.</b> Write the correct letter in boxes <b>27-32</b> on your answer sheet.&#160;<div><br></div><div><span><p dir=\"ltr\"><span></span></p><p dir=\"ltr\"><span></span></p><p dir=\"ltr\"><span></span></p><p dir=\"ltr\"><span><b>31</b></span><span>. In the sixth paragraph, when discussing the definition of exploration, the writer argues that</span></p></span></div>",
+                  "type": 0,
+                  "choices": [
+                    {
+                      "id": "660bd930b3cfc6749fe",
+                      "content": "people tend to relate exploration to their own professional interests."
+                    },
+                    {
+                      "id": "660bd930f5509a76fd9f",
+                      "content": "certain people are likely to misunderstand the nature of exploration."
+                    },
+                    {
+                      "id": "660bd93058e15d64a70c",
+                      "content": "the generally accepted definition has changed over time."
+                    },
+                    {
+                      "id": "660bd9302712e86922ba",
+                      "content": "historians and scientists have more valid definitions than the general public."
+                    }
+                  ],
+                  "answer": [],
+                  "correctAnswer": [
+                    "660bd930b3cfc6749fe"
+                  ]
+                }
+              ],
+              "name": "Questions 27-32"
+            },
+            {
+              "id": "660bda67522b9ffeeedb",
+              "content": "",
+              "type": 2,
+              "choices": [],
+              "answer": "",
+              "correctAnswer": "",
+              "subQuestions": [
+                {
+                  "id": "660bd9301a61f3b08c3e",
+                  "content": "Choose the correct letter,<b> A, B, C or D.</b> Write the correct letter in boxes <b>27-32</b> on your answer sheet.&#160;<div><br></div><div><span><p dir=\"ltr\"><span></span></p><p dir=\"ltr\"><span></span></p><p dir=\"ltr\"><span></span></p><p dir=\"ltr\"><span></span></p><p dir=\"ltr\"><span><b>32</b></span><span>. In the last paragraph, the writer explains that he is interested in</span></p></span></div>",
+                  "type": 0,
+                  "choices": [
+                    {
+                      "id": "660bd930b3cfc6749fe",
+                      "content": "how someone's personality is reflected in their choice of places to visit."
+                    },
+                    {
+                      "id": "660bd930f5509a76fd9f",
+                      "content": "the human ability to cast new light on places that may be familiar."
+                    },
+                    {
+                      "id": "660bd93058e15d64a70c",
+                      "content": "how travel writing has evolved to meet changing demands."
+                    },
+                    {
+                      "id": "660bd9302712e86922ba",
+                      "content": "the feelings that writers develop about the places that they explore."
+                    }
+                  ],
+                  "answer": [],
+                  "correctAnswer": [
+                    "660bd930f5509a76fd9f"
+                  ]
+                }
+              ],
+              "name": "Questions 27-32"
+            },
+            {
+              "id": "660bdac2cc51c9243ad1",
+              "content": "",
+              "type": 2,
+              "choices": [],
+              "answer": "",
+              "correctAnswer": "",
+              "subQuestions": [
+                {
+                  "id": "660bdad79f7ad84d792f",
+                  "content": "<span><p dir=\"ltr\"><font color=\"#000000\" face=\"Josefin Sans, sans-serif\"><span><i>Look at the following statements (Questions 33-37) and the list of explorers below. Match each statement with the correct explorer, <b>A-E</b>. </i></span></font></p><p dir=\"ltr\"><font color=\"#000000\" face=\"Josefin Sans, sans-serif\"><span><i>Write the correct letter, <b>A-E</b>, in boxes <b>33-37</b> on your answer sheet. </i></span></font></p><p dir=\"ltr\"><font color=\"#000000\" face=\"Josefin Sans, sans-serif\"><span><i><b>NB</b> You may use any letter more than once.</i></span></font><img src=\"http://localhost:3000/upload/660bdad79f7ad84d792f.png\" width=\"100%\" alt=\"\"><br></p></span>",
+                  "type": 1,
+                  "choices": [
+                    {
+                      "id": "660bdb75b084c0822192",
+                      "content": "",
+                      "index": "33. He referred to the relevance of the form of transport used.",
+                      "correctAnswer": "E"
+                    }
+                  ],
+                  "answer": [],
+                  "correctAnswer": []
+                }
+              ],
+              "name": "Questions 33-37"
+            },
+            {
+              "id": "660bdb428fd7306af745",
+              "content": "",
+              "type": 2,
+              "choices": [],
+              "answer": "",
+              "correctAnswer": "",
+              "subQuestions": [
+                {
+                  "id": "660bdad79f7ad84d792f",
+                  "content": "<span><p dir=\"ltr\"><font color=\"#000000\" face=\"Josefin Sans, sans-serif\"><span><i>Look at the following statements (Questions 33-37) and the list of explorers below. Match each statement with the correct explorer, <b>A-E</b>. </i></span></font></p><p dir=\"ltr\"><font color=\"#000000\" face=\"Josefin Sans, sans-serif\"><span><i>Write the correct letter, <b>A-E</b>, in boxes <b>33-37</b> on your answer sheet. </i></span></font></p><p dir=\"ltr\"><font color=\"#000000\" face=\"Josefin Sans, sans-serif\"><span><i><b>NB</b> You may use any letter more than once.</i></span></font><img src=\"http://localhost:3000/upload/660bdad79f7ad84d792f.png\" width=\"100%\" alt=\"\"><br></p></span>",
+                  "type": 1,
+                  "choices": [
+                    {
+                      "id": "660bdb5bd835a226fe4b",
+                      "content": "",
+                      "index": "34. He described feelings on coming back home after a long journey.",
+                      "correctAnswer": "A"
+                    }
+                  ],
+                  "answer": [],
+                  "correctAnswer": []
+                }
+              ],
+              "name": "Questions 33-37"
+            },
+            {
+              "id": "660bdb8524490c488077",
+              "content": "",
+              "type": 2,
+              "choices": [],
+              "answer": "",
+              "correctAnswer": "",
+              "subQuestions": [
+                {
+                  "id": "660bdad79f7ad84d792f",
+                  "content": "<span><p dir=\"ltr\"><font color=\"#000000\" face=\"Josefin Sans, sans-serif\"><span><i>Look at the following statements (Questions 33-37) and the list of explorers below. Match each statement with the correct explorer, <b>A-E</b>. </i></span></font></p><p dir=\"ltr\"><font color=\"#000000\" face=\"Josefin Sans, sans-serif\"><span><i>Write the correct letter, <b>A-E</b>, in boxes <b>33-37</b> on your answer sheet. </i></span></font></p><p dir=\"ltr\"><font color=\"#000000\" face=\"Josefin Sans, sans-serif\"><span><i><b>NB</b> You may use any letter more than once.</i></span></font><img src=\"http://localhost:3000/upload/660bdad79f7ad84d792f.png\" width=\"100%\" alt=\"\"><br></p></span>",
+                  "type": 1,
+                  "choices": [
+                    {
+                      "id": "660bdb5bd835a226fe4b",
+                      "content": "",
+                      "index": "35. He worked for the benefit of specific groups of people.",
+                      "correctAnswer": "D"
+                    }
+                  ],
+                  "answer": [],
+                  "correctAnswer": []
+                }
+              ],
+              "name": "Questions 33-37"
+            },
+            {
+              "id": "660bdbb384bc1f3395a9",
+              "content": "",
+              "type": 2,
+              "choices": [],
+              "answer": "",
+              "correctAnswer": "",
+              "subQuestions": [
+                {
+                  "id": "660bdad79f7ad84d792f",
+                  "content": "<span><p dir=\"ltr\"><font color=\"#000000\" face=\"Josefin Sans, sans-serif\"><span><i>Look at the following statements (Questions 33-37) and the list of explorers below. Match each statement with the correct explorer, <b>A-E</b>. </i></span></font></p><p dir=\"ltr\"><font color=\"#000000\" face=\"Josefin Sans, sans-serif\"><span><i>Write the correct letter, <b>A-E</b>, in boxes <b>33-37</b> on your answer sheet. </i></span></font></p><p dir=\"ltr\"><font color=\"#000000\" face=\"Josefin Sans, sans-serif\"><span><i><b>NB</b> You may use any letter more than once.</i></span></font><img src=\"http://localhost:3000/upload/660bdad79f7ad84d792f.png\" width=\"100%\" alt=\"\"><br></p></span>",
+                  "type": 1,
+                  "choices": [
+                    {
+                      "id": "660bdb5bd835a226fe4b",
+                      "content": "",
+                      "index": "36 He did not consider learning about oneself an essential part of exploration.",
+                      "correctAnswer": "E"
+                    }
+                  ],
+                  "answer": [],
+                  "correctAnswer": []
+                }
+              ],
+              "name": "Questions 33-37"
+            },
+            {
+              "id": "660bdbd3cbd000eaca9a",
+              "content": "",
+              "type": 2,
+              "choices": [],
+              "answer": "",
+              "correctAnswer": "",
+              "subQuestions": [
+                {
+                  "id": "660bdad79f7ad84d792f",
+                  "content": "<span><p dir=\"ltr\"><font color=\"#000000\" face=\"Josefin Sans, sans-serif\"><span><i>Look at the following statements (Questions 33-37) and the list of explorers below. Match each statement with the correct explorer, <b>A-E</b>. </i></span></font></p><p dir=\"ltr\"><font color=\"#000000\" face=\"Josefin Sans, sans-serif\"><span><i>Write the correct letter, <b>A-E</b>, in boxes <b>33-37</b> on your answer sheet. </i></span></font></p><p dir=\"ltr\"><font color=\"#000000\" face=\"Josefin Sans, sans-serif\"><span><i><b>NB</b> You may use any letter more than once.</i></span></font><img src=\"http://localhost:3000/upload/660bdad79f7ad84d792f.png\" width=\"100%\" alt=\"\"><br></p></span>",
+                  "type": 1,
+                  "choices": [
+                    {
+                      "id": "660bdb5bd835a226fe4b",
+                      "content": "",
+                      "index": "37. He defined exploration as being both unique and of value to others.",
+                      "correctAnswer": "B"
+                    }
+                  ],
+                  "answer": [],
+                  "correctAnswer": []
+                }
+              ],
+              "name": "Questions 33-37"
+            },
+            {
+              "id": "660bdbea69d153ae8ecf",
+              "content": "",
+              "type": 2,
+              "choices": [],
+              "answer": "",
+              "correctAnswer": "",
+              "subQuestions": [
+                {
+                  "id": "660bdbf1325d18cc7543",
+                  "content": "Complete the summary below. Choose<b> NO MORE THAN TWO WORDS</b> from the passage for each answer. Write your answers in boxes<b> 38-40</b> on your answer sheet.<div><br></div><div><b>THE WRITER'S OWN BIAS&#160;</b></div><div>The writer has experience of a large number of (38) ____________, and was the first stranger that certain previously (39) ____________ people had encountered. He believes there is no need for further exploration of Earth's (40) ____________ , except to answer specific questions such as how buffalo eat.<br></div>",
+                  "type": 1,
+                  "choices": [
+                    {
+                      "id": "660bdc157932c727425",
+                      "content": "",
+                      "index": "38.",
+                      "correctAnswer": "expeditions/unique expeditions"
+                    }
+                  ],
+                  "answer": [],
+                  "correctAnswer": []
+                }
+              ],
+              "name": "Questions 38-40\n"
+            },
+            {
+              "id": "660bdc27c204f5ba6089",
+              "content": "",
+              "type": 2,
+              "choices": [],
+              "answer": "",
+              "correctAnswer": "",
+              "subQuestions": [
+                {
+                  "id": "660bdbf1325d18cc7543",
+                  "content": "Complete the summary below. Choose<b> NO MORE THAN TWO WORDS</b> from the passage for each answer. Write your answers in boxes<b> 38-40</b> on your answer sheet.<div><br></div><div><b>THE WRITER'S OWN BIAS&#160;</b></div><div>The writer has experience of a large number of (38) ____________, and was the first stranger that certain previously (39) ____________ people had encountered. He believes there is no need for further exploration of Earth's (40) ____________ , except to answer specific questions such as how buffalo eat.<br></div>",
+                  "type": 1,
+                  "choices": [
+                    {
+                      "id": "660bdc157932c727425",
+                      "content": "",
+                      "index": "39.",
+                      "correctAnswer": "isolated/uncontacted"
+                    }
+                  ],
+                  "answer": [],
+                  "correctAnswer": []
+                }
+              ],
+              "name": "Questions 38-40\n"
+            },
+            {
+              "id": "660bdc3a68c10a69e7c",
+              "content": "",
+              "type": 2,
+              "choices": [],
+              "answer": "",
+              "correctAnswer": "",
+              "subQuestions": [
+                {
+                  "id": "660bdbf1325d18cc7543",
+                  "content": "Complete the summary below. Choose<b> NO MORE THAN TWO WORDS</b> from the passage for each answer. Write your answers in boxes<b> 38-40</b> on your answer sheet.<div><br></div><div><b>THE WRITER'S OWN BIAS&#160;</b></div><div>The writer has experience of a large number of (38) ____________, and was the first stranger that certain previously (39) ____________ people had encountered. He believes there is no need for further exploration of Earth's (40) ____________ , except to answer specific questions such as how buffalo eat.<br></div>",
+                  "type": 1,
+                  "choices": [
+                    {
+                      "id": "660bdc157932c727425",
+                      "content": "",
+                      "index": "40.",
+                      "correctAnswer": "surface/land surface"
+                    }
+                  ],
+                  "answer": [],
+                  "correctAnswer": []
+                }
+              ],
+              "name": "Questions 38-40\n"
+            }
+          ],
+          "imageName": "",
+          "wordCount": 0
+        }
+      ],
+      "writingParts": [
+        {
+          "id": "660bdcd4730606ceca1e",
+          "content": "You should spend about <b>20 minutes</b> on this task.<br><br><b>The chart below&#160;shows the results of a survey about people&#8217;s coffee and tea buying and drinking habits in five Australian cities.</b><p></p><p>Summarise the information by selecting and reporting the main features, and make comparisons where relevant.<br><br>Write at least <b>150 words.</b><br></p><div><br></div><b><div><img src=\"http://localhost:3000/upload/660bdcd4730606ceca1e.png\" alt=\"\" width=\"100%\"></div></b><p></p>",
+          "questions": [],
+          "imageName": "660bdcd4730606ceca1e.png",
+          "answer": [],
+          "wordCount": 0
+        },
+        {
+          "id": "660bdcd8c3da12ab2453",
+          "content": "<p><span>You should spend <b>40 minutes</b> on this task&#160;<br><br>Write about the following topic:<br><b>In&#160;</b></span><b><span>some countries, owning a home rather than renting one is very important for people.&#160;</span><span>Why might this be the case?&#160;</span><span>Do you think this is a positive or negative situation?</span></b></p><p>Give reasons for your answer and include any relevant examples from your own knowledge or experience.<br><br>Write at least <b>250 words.</b></p>",
+          "questions": [],
+          "imageName": "",
+          "answer": [],
+          "wordCount": 0
+        }
+      ],
+      "listeningTimeout": 31,
+      "audioUrl": "http://localhost:3000/upload/Cambridge-15-listening-test-1--IELTS-EXTREMES.mp3",
+      "readingTimeout": 60,
+      "writingTimeout": 60,
+      "folderId": "66b7593c2c989c4aeb51",
+      "order": 0,
+      "studentName": "Q",
+      "currentTab": 2
     }
   ],
   "writings": [
