@@ -58534,63 +58534,6 @@
       "correctReadingPoint": 11,
       "totalReadingPoint": 40,
       "isSubmit": true
-    },
-    {
-      "id": "6948263d825e8077fb52",
-      "name": "",
-      "studentName": "Q",
-      "correctReadingPoint": 0,
-      "totalReadingPoint": 0,
-      "correctListeningPoint": 0,
-      "totalListeningPoint": 0,
-      "testDate": "",
-      "quizId": "",
-      "listeningParts": [],
-      "readingParts": [],
-      "writingParts": [],
-      "isSubmit": false,
-      "feedback": {
-        "rating": 0,
-        "content": ""
-      }
-    },
-    {
-      "id": "69482767170989fbd798",
-      "name": "",
-      "studentName": "Q",
-      "correctReadingPoint": 0,
-      "totalReadingPoint": 0,
-      "correctListeningPoint": 0,
-      "totalListeningPoint": 0,
-      "testDate": "",
-      "quizId": "",
-      "listeningParts": [],
-      "readingParts": [],
-      "writingParts": [],
-      "isSubmit": false,
-      "feedback": {
-        "rating": 0,
-        "content": ""
-      }
-    },
-    {
-      "id": "6948280e74c993272a9b",
-      "name": "",
-      "studentName": "Q",
-      "correctReadingPoint": 0,
-      "totalReadingPoint": 0,
-      "correctListeningPoint": 0,
-      "totalListeningPoint": 0,
-      "testDate": "",
-      "quizId": "",
-      "listeningParts": [],
-      "readingParts": [],
-      "writingParts": [],
-      "isSubmit": false,
-      "feedback": {
-        "rating": 0,
-        "content": ""
-      }
     }
   ],
   "writings": [

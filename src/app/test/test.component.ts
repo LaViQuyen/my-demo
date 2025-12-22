@@ -66,12 +66,12 @@ export class TestComponent extends AddOrEditQuizComponent implements OnInit, OnD
   isStart: boolean = false;
   currentTab = 0;
 
-  // Cần override vì lớp cha đã khai báo
   override selectedListeningPart = 0;
   override selectedReadingPart = 0;
   override selectedWritingPart = 0;
 
   mapDisablePart: Record<number, boolean> = { 0: false, 1: true, 2: true };
+  private quizIdFromState: string | undefined;
 
   constructor(
     protected override quizService: QuizService,
@@ -82,21 +82,32 @@ export class TestComponent extends AddOrEditQuizComponent implements OnInit, OnD
     protected testService: TestService,
   ) {
     super(quizService, fileService, route, router, dialog);
+    // Phải lấy quizId từ Router State ngay trong Constructor
+    const navigation = this.router.getCurrentNavigation();
+    this.quizIdFromState = navigation?.extras.state?.['quizId'];
   }
 
   ngOnInit(): void {
-    const quizId = this.router.getCurrentNavigation()?.extras.state?.['quizId'];
-    if (quizId) {
-      const sub = this.quizService.getById(quizId).subscribe((quiz) => {
-        this.quiz = quiz;
-        this.result = clone(quiz);
-        if (!this.result.listeningTimeout) { this.result.listeningTimeout = 38; }
-        this.getTestTimeout();
-        setTimeout(() => { if (this.audioPlayer) this.audioPlayer.nativeElement.load(); }, 100);
-      });
-      this.subscriptions.push(sub); // Dùng push vì lớp cha là mảng
-      this.startAutoSave();
-    }
+    this.route.paramMap.subscribe(params => {
+      const quizId = params.get('quizId') || this.quizIdFromState;
+      if (quizId) {
+        // Ép kiểu (quizId as any) để bỏ qua lỗi TS2345 nếu service yêu cầu number
+        const sub = this.quizService.getById(quizId as any).subscribe((quiz) => {
+          this.quiz = quiz;
+          this.result = clone(quiz);
+          if (!this.result.listeningTimeout) { this.result.listeningTimeout = 38; }
+          this.getTestTimeout();
+          // Đảm bảo audio được nạp lại sau khi dữ liệu đã sẵn sàng
+          setTimeout(() => { 
+            if (this.audioPlayer) {
+              this.audioPlayer.nativeElement.load();
+            }
+          }, 200);
+        });
+        this.subscriptions.push(sub);
+        this.startAutoSave();
+      }
+    });
 
     const testId = this.router.getCurrentNavigation()?.extras.state?.['testId'];
     if (testId) {
@@ -144,7 +155,8 @@ export class TestComponent extends AddOrEditQuizComponent implements OnInit, OnD
   onStartTest() {
     this.isReady = true;
     this.result.id = CommonUtils.generateRandomId();
-    this.testService.submitTest(this.result).subscribe();
+    const sub = this.testService.submitTest(this.result).subscribe();
+    this.subscriptions.push(sub);
   }
 
   onCtrlSave() {
@@ -216,18 +228,18 @@ export class TestComponent extends AddOrEditQuizComponent implements OnInit, OnD
     if (this.currentTab === 1) {
       if (this.audioPlayer) this.audioPlayer.nativeElement.pause();
       htmlString = ExportUtils.exportListening(this.result);
-      const pdfSub = this.fileService.generatePdfFile('Listening', htmlString, this.result.studentName, this.result.name).subscribe();
-      this.subscriptions.push(pdfSub);
+      const sub = this.fileService.generatePdfFile('Listening', htmlString, this.result.studentName, this.result.name).subscribe();
+      this.subscriptions.push(sub);
     }
     if (this.currentTab === 2) {
       htmlString = ExportUtils.exportReading(this.result);
-      const pdfSub = this.fileService.generatePdfFile('Reading', htmlString, this.result.studentName, this.result.name).subscribe();
-      this.subscriptions.push(pdfSub);
+      const sub = this.fileService.generatePdfFile('Reading', htmlString, this.result.studentName, this.result.name).subscribe();
+      this.subscriptions.push(sub);
     }
     if (this.currentTab === 3) {
       htmlString = ExportUtils.exportWriting(this.result);
-      const pdfSub = this.fileService.generatePdfFile('Writing', htmlString, this.result.studentName, this.result.name).subscribe();
-      this.subscriptions.push(pdfSub);
+      const sub = this.fileService.generatePdfFile('Writing', htmlString, this.result.studentName, this.result.name).subscribe();
+      this.subscriptions.push(sub);
       this.showFeedbackDialog();
     }
     this.result.currentTab = this.currentTab;
@@ -251,8 +263,8 @@ export class TestComponent extends AddOrEditQuizComponent implements OnInit, OnD
       if (feedback) {
         this.result.feedback = feedback;
         const htmlString = ExportUtils.exportFeedback(this.result);
-        const pdfSub = this.fileService.generatePdfFile('Feedback', htmlString, this.result.studentName, this.result.name).subscribe();
-        this.subscriptions.push(pdfSub);
+        const sub = this.fileService.generatePdfFile('Feedback', htmlString, this.result.studentName, this.result.name).subscribe();
+        this.subscriptions.push(sub);
         this.submit();
       }
     });

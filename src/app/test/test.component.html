@@ -109,13 +109,25 @@
   @if (isReady) {
     <footer class="test-footer">
       @if (currentTab === 0) {
-        <app-part-navigation [(selectedPart)]="selectedListeningPart" [parts]="result.listeningParts" (onPartChange)="onTabChange('listening', $event)"></app-part-navigation>
+        <app-part-navigation 
+          [(selectedPart)]="selectedListeningPart" 
+          [parts]="result.listeningParts" 
+          (onPartChange)="onTabChange('listening', $event)">
+        </app-part-navigation>
       }
       @if (currentTab === 1) {
-        <app-part-navigation [(selectedPart)]="selectedReadingPart" [parts]="result.readingParts" (onPartChange)="onTabChange('reading', $event)"></app-part-navigation>
+        <app-part-navigation 
+          [(selectedPart)]="selectedReadingPart" 
+          [parts]="result.readingParts" 
+          (onPartChange)="onTabChange('reading', $event)">
+        </app-part-navigation>
       }
       @if (currentTab === 2) {
-        <app-part-navigation [(selectedPart)]="selectedWritingPart" [parts]="result.writingParts" (onTabChange)="onTabChange('writing', $event)"></app-part-navigation>
+        <app-part-navigation 
+          [(selectedPart)]="selectedWritingPart" 
+          [parts]="result.writingParts" 
+          (onPartChange)="onTabChange('writing', $event)">
+        </app-part-navigation>
       }
     </footer>
   }
