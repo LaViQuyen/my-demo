@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { AbstractPart } from '../../common/models/abstract-part.model';
+import { AbstractPart } from '../../models/abstract-part.model';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -10,16 +10,15 @@ import { CommonModule } from '@angular/common';
   styleUrl: './part-navigation.component.scss',
 })
 export class PartNavigationComponent {
-  @Input() selectedPart = 0; // Đổi từ 1 về 0 để đồng bộ với mảng (0-indexed)
+  @Input() selectedPart = 0; // Mặc định bắt đầu từ 0
   @Output() selectedPartChange = new EventEmitter<number>();
   @Input() parts: AbstractPart[] = [];
   @Output() onPartChange = new EventEmitter<number>();
 
   onPartClick(index: number) {
     this.selectedPart = index;
-    // Cập nhật Two-way binding
+    // Gửi sự kiện để TestComponent cập nhật dữ liệu
     this.selectedPartChange.emit(this.selectedPart);
-    // BÁO CHO PARENT (TestComponent) CẬP NHẬT DỮ LIỆU
     this.onPartChange.emit(index); 
     this.scrollToTop();
   }
